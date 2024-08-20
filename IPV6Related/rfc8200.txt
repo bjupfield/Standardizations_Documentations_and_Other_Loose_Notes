@@ -1,0 +1,265 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+1.0
+
+mentions in intro three necessary further readings as they define parts of the protocol that for some reason could not be included in this document
+ipv6 address format 
+RFC4291
+|||||||||||||||||||||| 
+ipv6 error message control 
+RFC4443
+|||||||||||||||||||||| 
+ipv6 data transmission order, in appendix B
+RFC791
+|||||||||||||||||||||| 
+RFC 4443
+|||||||||||||||||||||| 
+headers are defined at IANA-RH
+|||||||||||||||||||||| 
+next header definition in RFC5871
+|||||||||||||||||||||| 
+rfc 6437 flow label definition
+|||||||||||||||||||||| 
+rfc 2474 and rfc3168 traffic control
+be warned there are many more that occur throughout the document
+at the end of these notes I will compile a list of all the rfcs
+that are required to make a compliant application for IPV6
+
+2.0
+includes terminology, all is pretty self explanotory, but if it is confusing later on I will come back
+and write them down in this section
+
+3.0
+
+here is the header format for IPV6, very simple to be honest
+
+4-bits  - version number of IPVx, in this case always 6
+8-bits  - traffic class field, refer to section 7?
+20-bit  - flow label refer to section 6
+16-bit  - payload length, length of data in bytes following the header,
+	  so the total data sent is equal to header length (320 bits) + payload length
+8-bits  - next header, indicates the next header type... in this protocol there are several headersm
+	  and you can stack header after header, the numbers for header types will be defined later but I 
+	  will include them here
+8-bits  - hop limit, the amount of times this packet can be forwarded, decremented with each forward
+128-bit - source address, the original sender of packet (not the forwarding ports or proxies but the original server)
+128-bit - destination address, the address to receive this packet
+
+4.0
+
+as said above ipv6 can have multiple headers, where you stack headers on top of each other
+discard headers of unknown type
+for a full implementation needs to be able to read these headers
+Hop-by-Hop
+Fragment
+Destination
+Routing
+Authentication - defined in RFC 4302
+Encapsulating Security Payload - defined in RFC4303
+|||||||||||||||||||||| 
+
+.1
+
+the order that headers should be sent in is
+IPv6,
+hop-by-hop
+destination options
+Routing
+fragment
+authentication
+encapsulating security payload header
+destination options
+upper-layer header
+^ upper-layer header means the data-streams protocol header, in almost
+all cases it means the tcp header
+
+the headers dont have to be in these orders but that is the recommended order
+
+.2
+
+headers must be multiples of 8 bytes long, so it cannot be 16 bits, it must be 64 at a minumum,
+and a any multiple of 64 bits
+
+the two headers Hop-By-Hop and Destination options use a syntax called options tp define their data
+the syntax for these options is
+8-bits - option type
+8-bits - option data length
+variable - option data
+
+the option type first three bits define non-specific type parameters, while the final 5 do not
+the first two define the error response to an unknown option with
+00 - skip over this option and continue processing
+01 - discard the packet
+10 - discard the packet and send a ICMP paramter problem code 2 to source address
+11 - discard the packet and only send a ICMP parametr problem code 2 to source address if it is not a multicast address
+the third defines if the packet data can change
+0 - cannot change
+1 - change possible
+
+again, headers must be n * 8 * octects long
+options must be min(n * octects, 2 * octects long) except for the speial ase I am about to mention
+
+because headers must be n * 8 * octects long there needs to be byte padding to achieve this
+the two special options that are given to achieve this are
+
+PAD1 option:
+single byte of value 0,
+this is the exception to the option min value rule
+
+PADN option:
+optiontype - 1
+optionlength - however much to pad - 2 (total option size is datalength + 2) (just make option length equal to 2 to ignore the data)
+optiondata - 0 bytes
+
+.3
+
+the next header value of hop-by-hop is 0
+
+hop-by-hop header structure:
+8-bits - next-header
+8-bits - header length: in terms of n * 8-octects + 8-octects, which means the min-length is 64 bits and the max is 256 * 64 + 64
+header-length * 8octects - options: this is the data that the header holds and its syntax is that as above
+
+|||||||||||||||||||||| 
+doesnt actually define any of the option
+headers are defined at IANA-RH
+
+.4
+
+the next header value of routing header is 43
+
+routing header structure:
+8-bits - next-header
+8-bits - header-length
+8-bits - Routing-Type: variants listed below
+	
+8-bits - Segments-Left: number of route nodes remaining (like the number of ports that were assigned that you have not visited yet)
+header-length * 8octects - type-specific data, the actual information stored
+
+|||||||||||||||||||||| 
+header definition in RFC5871
+
+.5 
+
+the next header value of fragment header is 44
+
+fragment header structure:
+8-bits - next-header
+8-bits - reserved: non-assigned field leave 0
+13-bit - offset: 8-octect offset of data from last sent fragment section, so if you had a package that was 
+		to large say 256 octects and you could only send 192 octects the offset would be 3 I believe
+2-bits - reserved
+1-bit  - M Flag: 1 = more fragments, 0 = last fragment
+32-bit - Identification: a 32-bit identification number generated by the source when data needs to be fragmented, 
+	this identification will be identical for all of the fragmente segments that were created for the original data
+
+to fragment a piece of data, as it will not fit in the window, divide the orignal segment into three parts
+per-fragment headers, ext and upper-layer headers, data
+the per-fragment headers are headers that are sent with every segment like the routing header
+ext-and upper layer are all other headers that only need to be sent once
+the  data is the data
+to divide the segment cut it into pieces, with the offset starting not after the perfragment header
+but after the ext-and upper layer headers, so the first segment will have an offset of 0
+and the second segment will have a offset equal to the data sent in segment one
+all identification values will be the same for all fragment segments for a single oversisze segment
+the last segment will have the M flag set to 0
+no overlapping offset values allowed in fragments
+
+to reconstruct check for these possible errors
+	no original upper header data in orignal packet:
+		ICMP code 3 and discard all fragment segments
+	no M Flag 0 in 60 seconds:
+		ICMP code 0, and discard all fragment segments
+	fragment packet length not multiple of 8 octects:
+		ICMP code 0 and discard all fragment segments
+	total fragment segment lengths exceed 65545:
+		ICMP code 0 discard all fragments
+	overlapping fragments (Check to see if the data exceeds the length it should be as defined by offset of this fragment and offset of the fragment following it)
+		if the fragment is identical to another fragment (accidental fragment duplication can occur)
+		you may discard this fragment and continue processing
+		otherwise discard all fragment segments and do not send an ICMP code
+
+.6
+
+the next header value of the destination options header is 60
+
+destination options header structure:
+8-bits - next header
+8-bits - header length
+header-length * 8octects - options ^ as described in section above
+^ i guess the options are defined somewhere, it doesn't even reference a rfc for the option standards
+
+.7
+
+the next header value for no more headers is 59
+
+^ if a payload contains octects/bits after a header that contains the no next header value
+for its next header than those octects/bits should be ignored but still passed on to the
+next proxy
+
+.8
+
+dont define new extension headers, or at least don't if your not insane...
+
+5.0
+
+all connection nodes in ipv6 must be able to transfer 1280 octects
+the recommended minimum octects is 1500 octects
+
+fragmentation is an option but it is heavily discouraged from ever being implemented
+
+6.0
+
+the flow label segment in the header is meant to define packets as part of a cohesive data transfer
+so sort of like fragmented data, but without fragmenting,
+flow label definition found in rfc below
+|||||||||||||||||||||| 
+rfc 6437
+
+7.0
+
+the traffic class field is used for traffic control,
+refer to 
+|||||||||||||||||||||| 
+rfc 2474 and rfc3168
+for definitions for bit values
+
+8.1
+
+for nodes that are using ipv4 addresses they must send their addresses as thier ipv6 versions
+
+VERY IMPORTANT
+|||||||||||||||||||||| 
+RFC 4443
+includes the information for the Ipv6 "pseudo-header" for the tcp and udp communication,
+this means that the tcp header has another header stapled onto the ipv6 header...
+
+.2
+
+there is no maximum lifetime for packet travel in ipv6, just a maximum hop amount
+
+.3
+
+ipv6 headers are much longer in practice than ipv4 headers, remember this when calculating
+the max transfer size
+
+.4
+
+do not send packets in response that have a routing header that is the reverse of the one
+recieved, this is because the routing header can change
+
+9.0
+
+10.0
+
+dos attacks are outside the scope fo this document
+
+a few security issues include
+eavesdropping
+copying packet design and sending it later
+packet deletion
+
+a few of these considerations are handled in 
+|||||||||||||||||||||| 
+RFC 4301

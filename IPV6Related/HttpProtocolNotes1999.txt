@@ -1,0 +1,1852 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+2616 Notes:
+
+okay implementation of http protocols have to fulfill all must and required protocols
+we should probably implement all but the may and optional requirements
+
+some terminology
+
+connection, a transport layer virutal circuit that establishes communication
+
+message, bsaic http communication, will be defined in section 4
+
+request, an http request message, defined in section 5
+
+response an http response message defined in section 6
+
+resource: data object accesable trhough a url, defined in section 3.2
+
+entity: information transfered through response or request, defined in section 7
+
+representation: entity with a response described in section 12
+
+content negotiation: the mechanism for selecting appropriate represeentation when servicing a request, defined in section 12
+
+variant: various representations that resources have
+
+client: a pprogram that establishes connections for the purpose of sending requests
+
+user agent: the client which initiates a request
+
+server: a program that accepts connections for request and to send back responses
+
+origin server: the server which a resource resides or is created, like where the web page comes from...
+
+proxy: a program that acts as a client and a server to transfer request from a user agent to a another server, transparent is when they don't modify the request, non-transparent is when the request is modified
+
+gateway: a server which acts as an intermediary for some other server, but unlike a proxy the gateway recieves request as if it were the origin server... don't really know what this means i imagine it will be discussesd along with proxys more
+
+tunnel: an intermediary rpogram that axts a s blind relay between two connections... like this is something that sends request without recieving any i think
+
+cache: where the program stores response messages, to have shorter call times on responses so they don't need to be constructed every time
+
+cacheable: a response that can be cached... responses that can be cached are defined in section 13
+
+first-hand: a response is frist hand if it comes directly from origin server or its validity is checked by the origin server
+
+explicit expiration time: the time in which an entity should be expulged from the cache
+
+heuristic experiation time: an expiration time assigned by cache when no explicit expiration time is assigned
+
+age: the response time
+
+freshness lifetime: the length of time between generation of response and its experation time
+
+fresh: a response is fresh if it has not excedded its freshness lifetime
+
+stale: a response is stale if its age has passed its freshness lifetime
+
+semantically transparent: a cache is semantically transparent if it does not affect the responses given, that means it won't try to save server request by just giving an old response even if that response is pretty close to what it should of been, but only gives old responses when they are identical to the request
+
+validator: a protocl element that is used to find if a chche entery is equivalent copy of an entity
+
+upstream/downsteam: messages flow from upstream to downstream
+
+inbound/outbound: inbound travels to the origin server, outbound travels to the user agents
+
+1.4:
+
+doesn't really go over the structure other than proxy-server-client structure
+basically the proxy allows for more efficient server calls by having caches... cool
+the cache systems allows for several proxys to hold caches so when a client request something from a server it will
+go through several proxies which allows for it to go through several lines of caches, which increases the chance that
+the server call won't need to happen, which means a more efficient use of server resources!!!
+
+2.1
+
+SIDENOTES:
+
+BNF (Backus-Naur form):
+this is a way of writing notation, or describing notation "grammarlessly"
+its very simple and the format syntax symbols are 
+<"term">
+::= 
+|
+"object"
+
+<"term">s are the things that are defined, the "classes" that are defined
+::= is the equal term, or sets what a class is defined as
+| is the or symbol, if there is no | present between two classes they are assumed to be and instead
+"object" is the way to represent static constants
+
+ex:
+<formal-name> ::= <first-name> " " <middle-name> " " <last-name>
+here the formal-name class is defined as first name, space, middle name, space, last name
+space is a constant so it is wrapped with "" instead of <>
+first-name is a class that can change so it not an object
+
+ex: with |
+<speech> ::= <intro> <conclusion> | <intro> <body> <conclusion>
+here we see that  after each | it needs a complete redefinition...
+
+ex: recursion
+<integer> ::= <digit> | <integer> <digit>
+
+here is an example of recursion, which says that every integer is comprised of either a single digit, or
+an integer and an ending digit,
+like
+123 consist of an integer 12 and an ending digit of 3, and so on
+
+END OF SIDENOTES
+
+https augmented bnf
+name = definition: the class that is being defined will not have <> around it but will jsut bee the name, and also no ::= just =
+
+"literal": quotation marks mean a literal thing
+
+(): parentheses indicate statements taken as one, so (rule1 rule2 | rule3) | rule1 means either rule1 and rule2 or rule 3 or rule 1
+
+*: means repitition
+
+[]: means optional elements
+
+<n>: indicates a specific amount of repititions
+
+<n>#<m>element: # means a list of elements where n is the minimum and m the maximum in list
+
+;: comment start
+
+basic classes:
+Octet = <any 8 bit sequence of data> ; my comment here lol commonly refered to as bytes
+Char = <any us-acscII character octects 0 - 127> 
+upalpha =  <any upper case us-ascII character>
+loalpha = <any lower case ... >
+alpha = upalpha | loalpha
+digit = <any us-ascII digit, 0-9>
+ctl = <any usascii control character, 0-31 and 127>
+cr = <us-ascii cr, 13>
+lf = <us-ascii lf, 10>
+sp = <us-ascii sp, 32>
+ht = <us-ascii ht, 9>
+<"> = <us-ascii double quote mark, 34>
+the above wasnt really necessary but I think its a good example of how the bnf works
+
+the endofline, like the end of file segment or end of section segment in jpg (ffEO), is classified as
+CRLF, so every package sent is divided by CRLF things, except for the entity-body, which i guess means crlf
+is only used in header parts of the package
+
+Lws = [crlf] 1 *(sp | ht)
+
+all white space types may be replaced with sp... I think
+
+Text = <any octect excluding ctls but including lws>
+
+crlf are only in textwhen they continue the header field
+it is expected that folding lws will be replace by a single sp, before the interpretation of text value
+
+HEX = <hexadecimal character> ;you know what these are so Im not going to write out the complex bfn that they have
+
+a lot of header values are seperated by token seperators
+token seperators = "(" | ")" | "<" | ">" | "@"| "," | ";" | ":" | "\" | <">| "/" | "[" | "]" | "?" | "=" | "{" | "}" | SP | HT
+
+comments are allowed in fields that contain comment as part of the field definition
+comment = "(" * (ctext | quoted-pair | comment) ")"
+ctext = <any text excluding "(" and ")">
+
+this bnf stuff is actually quite clever and readable
+
+string of text are parsed as single word if quoted using double quote marks
+quoted-string = (<"> * (qdtext | quoted-pair) <">)
+qdtext = <any text except <">>
+
+backslash character can be used to designate a single quote
+quoted-pair = "\" CHAR
+
+3.1
+http version is indicated by the first line of the message
+http-version = "HTTP" "/" 1*DIGIT "." 1*DIGIT
+^ html verison is sent with the text HTTP #.# 
+
+only send http 1.1 if your http package is compliant with this document...
+
+the version you send should be the highest version that you are compatible with...
+
+3.2
+
+URIs are urls... whic are simpy formated strings whcih identify, through name location or any other characteristic, a resource
+wait uris are not urls... or it semes not as it is suggested that uri lengths do not exceed 255 bytes
+
+recomends reading of rfc 2396 will read later
+on that note
+|||||||||||||||||||||| 
+will represent a part of the notes that we need to update later, will include this note at the top and bottom
+
+.2
+
+http scheme identifies local network resources via the http protocol
+
+http_url = "http:" "//" host [ ":" port ] [ abs_path [ "?" query ]]
+^ you might recognize this format from somewhere
+^ host, port and abspath are defined in rfc 2396
+port 80 is assumed if port is not specificed, port 80 is the normal http communicating port used by devices
+
+the semantics to identify a resource is that the resource is located at the tcp connection of the host at the port and the resources abs_path
+you should attempt to avoid using ip addresses in urls
+if there is no abs_path the request must replace it with "/"
+
+to compare urls the it is case sensitive with exception of port rules and abs_path rules, and host names are not case-sensitive
+ex:
+http://abc.com:80/~smith/home.html
+http://ABC.com/%7Esmith/home.html
+http://ABC.com:/%7esmith/home.html
+^ are all equivalent
+
+3.3
+
+Sun, 06 Nov 1994 08:49:37 GMT
+Sunday, 06-Nov-94 08:49:37 GMT
+Sun Nov 6 08:49:37 1994 
+these are the three data and time formats a clients and servers need to be able to parse, but the only
+one in common use is the first,
+Day, ##(day digits) Month Year ##:##:##(time) GMT
+all http date/time stamps must be in GMT (Greenwich Mean Time)
+HTTP-date is case sensitive and must not include LWS beyond teh format
+
+some header fields include delta-seconds which is the timevalue after the message was recieved?
+
+3.4
+
+character sets are just two byte to character conversion tables, or more accurately quadrople hexagonomical to character conversion tables
+the paper does not give any specification on the length or data saving techniques to reduce storage space for octets,
+so I imagine all characters are typed encoded in full two byte length, which isnt very effecient but whatever...
+charset should be included in every header
+
+3.5
+
+for encoding (compression) of data encoding methods are included in the IANA registry
+http uses content-coding values in accept-encoding adn content-encoding header fields,
+I think this just meawns the header field will contain the decoding mechanism which also happens to be the encoding method
+^ like said these content-coding algos should be available at IANA
+
+3.6
+
+transfer codings are the message being encoded in a way, this is different from content codings as content codings
+encode the content while transfer codings encode the message...
+transfer coding value s will have the word "chunked" in them and all transfer coding tokens and values can be found
+at IANA again
+|||||||||||||||||||||| 
+
+chunked transfer coding allows for dynamic produced content to be transfered through the web
+heres the bnf syntax for that, as its a bit impossible to explain trhough words
+
+Chunked-Body = *chunk
+last-chunk
+trailer
+CRLF
+chunk = chunk-size [ chunk-extension ] CRLF
+chunk-data CRLF
+chunk-size = 1*HEX
+last-chunk = 1*("0") [ chunk-extension ] CRLF
+chunk-extension= *( ";" chunk-ext-name [ "=" chunk-ext-val ] )
+chunk-ext-name = token
+chunk-ext-val = token | quoted-string
+chunk-data = chunk-size(OCTET)
+trailer = *(entity-header CRLF)
+
+^the above just means that a chunked-body will have a number of chunks with an end chunk and an entity header and endline signifier
+all chunks will have a chunksize than an endline signifier than a chunkdata than an endline signifier
+trailer is just extra header data, and can only be included if it is requested
+
+3.7
+
+media type parameters are included in the header, typed with "mediatype/mediasubtype" notably with no whitespaces
+(IANA [19]) defines all media types
+|||||||||||||||||||||| 
+
+.1
+
+media types must be reperesnted in their canonical form, or otherwise media types must be the correct format, no sending in bitmap when you need a pdf
+
+the one difference is that text types can be represeented in either cr, lf, or crlf form... that is cr, lf, or crlf can be used as endline signifiers
+for text, but for a document you must use one consistently, the standard has almost definitely updated
+
+.2
+
+multipart messages are a thing, whihc means more than one entities in a single message, which means multiple data-types
+in a singlke entity... no trailer can be used in a mulipart message, and theer must be a deliminatiing parameter
+to signify the mediatype change
+
+3.8
+
+product tokens
+product = token ["/" product-version]
+to help with identifieng specific application types to a server you can send product tokens, represented like this
+where it has a token at the start than another token, why being the prodcut type the second being the model,
+sererated by a backslash
+
+3.9
+
+qvalues = ("0" [ "." 0*3DIGIT ] ) | ( "1" [ "." 0*3("0") ] )
+quality requested values sent to a server are from a scale of 0 to 1, with maximum decimal point
+values beings three digits, I don't really know what this means yet
+||||||||||||||||||||||
+
+3.10
+
+language tags are which language is being used.... I guess thats not covered by the character-set which is kinda cool
+sent in this format though
+language-tag = primary-tag *("-" subtag)
+where primary-tag and subtag are both comprised of a maximum of 8 characters
+interestingly in includes common tags like
+en, en-US (english, english US) but it says that specifically
+pig latin will never be registered cruelty beyond worlds
+
+3.11
+
+to tell if an entity does not need to be regenerated but can be accessed through the cache (i think) you can use
+entity tags
+entity-tag = [weak] opaque-tag
+weak = "W/"
+opaqu-tag = string
+enitties only match if they are weak cnd have no significant changes?
+
+3.12
+
+a request can request to have only a specific amount of a response sent back
+this is done through range units in headers of course
+range-unit = bytes-unit | other-range-unit
+bytes-unit is the common one that just means that a program can request a specific amount of bytes and other
+range units are specified by applications, so I could say in this request I only want the starting portion of
+the request to be sent back or something, a clever way to signify how much data you want wihtout changing the whole
+message!
+
+4.1
+
+there are two types of http messages as previously stated, request and response
+
+the generic ormat of a message, both request and response,
+is
+start-line
+*(message-header crlf)
+crlf
+[ message-body ]
+start-line = Request-line | status-line
+
+this means that every message will have a request or status line, than any number of headers
+followed by a crlf,
+and than an optional messagebody
+you can distinguish message body from header by the double crlf that would precede one
+startlines can be equl to a crlf,
+I dont know what startlines are comprised of though
+
+4.2
+
+message headers consist of two things a field name and a field value, syntax:
+field-name ":" [ field-value ]
+field-name = token
+field-value = *(field-content | LWS)
+field-content = <octets making up field-value>
+
+lws preceding field content is considered null, or removable
+there is no ordering to header fields, but follow a general sense of good cnvention
+where more important headers are sent first
+field names are case-insesitive
+field-values can be preceeded by any amount of lws
+
+4.3
+
+message-body = entinty-body (Encoded or not)
+
+message bodies are indicated to be in messages with the message headers content-length or transfer-encoding
+if message-bodies should not be included in request if they are not part of the request message
+
+for response messages there are 4 types of messages that should not include message bodies, all others do but may be of length zero
+the four types that should not include message bodies are for reuest
+HEAD
+1xx
+204
+304
+^the above are request types
+
+4.4
+
+lengths are determined through 4 rules
+
+1.for responses of no message body types, listed above, the message is terminated by the first
+white space after th message header
+
+2.if there is a transfer-encoding field(meaning the message is encoded) it is defined by the
+chunked of the transfer-coding, unless the message is terminated by closing connection
+
+3.if content-length is present its decimal octets represetn the length, importantly content-length
+should not be included with transfer-encoding, if it is interpret the transfer-encoding and ignore content length
+
+4.for multipart nessages the transferlength is defined by the media type
+
+applications should always include content-lenght if there is a message-body,
+error respinses 400 and 411 indicate the lack of this
+
+content-length must be equal to the amount of content in message body, so i guess headers are not included in content length
+
+4.5
+
+these are all general header fields that are used in both request and responses
+
+cache-control; defined in 14.9
+connection; defined in 14.10
+date; defined in 14.18
+pragma; defined in 14.32
+trailer; defined in 14.40
+trnsfer-encoding; define in 14.41
+upgrade; defined in 14.42
+via; defined in 14.45
+warning; defined in 14.46
+
+^general header fields are handled diferently than entity-header fields, ithink.
+
+5.0
+
+a request message consist of
+Request-line
+*(( general-header | request-header | entity-header) CRLF)
+CRLF
+[ message-body ]
+
+^ which means a request message consist of the request line, any number of headers of any type, followed by the a crlf, and than an optional message-body
+
+5.1
+
+a request line is sort of like the distinguisher for a jfif file
+the formal bnf is
+request-line = Method SP Request-URI SP HTTP-Version CRLF
+which means it is method followed by a space symbol followed by request-uri followed by space followed by http-version followed by crlf
+
+.1
+
+here are what method can be
+method = 
+"OPTIONS"; defined in 9.2
+"GET"; defined in 9.3
+"HEAD"; defined in 9.4
+"POST"; defined in 9.5
+"PUT"; defined in 9.6
+"DELETE"; defined in 9.7
+"TRACE"; defiend in 9.8
+"CONNECT"; defined in 9.9
+any extension-method
+extension-method = token
+^ as you can see you recognize most fo these from http request
+extension methods just mean custom request
+
+a resource should include the allow header field to list which methods are allwoed,
+a server should return 405 if not allowed
+get and head must be implemented by all servers... and all general methods need to be implemented to the standards defined in section 9
+
+.2
+
+recomends reading of rfc 2396 will read later
+|||||||||||||||||||||| 
+
+request-uri = "*" | absolute-URI | abs_path | authority
+
+absolute-uri seems to be the standard that they wish to implement so I will only go over that and
+"*" and authority
+authoirty is only used in connet method; defined in 9.9
+"*" means that the request applies to the server and not a resource
+
+here is an example that they provided for your enlightemnent
+OPTIONS * HTTP/1.1
+^ this is the whole request line
+
+absolute-uris are done with this
+GET http://www.w3.org/pub/WWW/TheProject.html HTTP/1.1
+^ as you can see it is literally just the address of the resource
+
+a hostheader, syntax
+Host: www.host.com
+can also be used, but is not required
+
+5.2
+
+host is really only used if there are multiple servers for the same site...
+if there are multiple host the host must be determined by either the absoluteuri
+or the host header field,
+if the host cannot be determined return the error 400
+
+5.3
+
+Request headers fields are like parameters...
+here is the list
+Accept; defined in 14.1
+Accept-Charset; defiend in 14.2
+Accept-Encoding; defined in 14.3
+Accept-Language; defined in 14.4
+Accept-Authorization; defined in 14.8
+Expect; defined in 14.20
+From; defined in 14.22
+Host; defined in 14.23
+If-Match; defined in 14.24
+If-Mdofied-Since; defiend in 14.25
+If-None-Match; defiend in 14.26
+If-Range; defined in 14.27
+If-Unmodified-Since; defined in 14.28
+Max-Forwards; defined in 14.31
+Proxy-Authorization; defined in 14.34
+Range; defiend in 14.35
+Refererer; defined in 14.36
+TE; defined in 14.39
+User-Agent; defined in 14.43
+
+6.0
+
+server responses syntax is:
+Status-Line
+*( ( general-header | Response-Header | entity-header ) CRLF) 
+CRLF
+[Message-body]
+^ whcih means status-line followed by any amount of headers followed by a crlf follwoed by the message-body
+
+6.1
+
+status-line = HTTP-VERSION SP Status-COde SP Reason-Phrase CRLF
+
+HTTP-VERSION = "HTTP/" # "." #
+^where the # are the corresponding version digits
+
+.1
+
+status code are the 3-digit result codes from  server response
+they are all defined in section 10
+the reason phrase is a debug message, and does not need to be displaed by the client
+the types of status codes are
+1xx - request recieved, processing
+2xx - success
+3xx - redirect
+4xx - client error, request is bad message
+5xx - server error, server was unable to fulfill request
+
+the reason phrase is wholly comprsied of text
+ex response:
+HTTP/1.1 402 gib money
+
+clients are not requried to display all status codes, but it is desirable to do so
+clients must not cache any unrecognized responses, but hsould isplay the status-line to the user
+for debugging reasons
+
+6.2
+
+below are the list of response-header fields
+Accept-Ranges; defined in 14.5
+Age; defined in 14.6
+ETag; defined in 14.19
+Location; defined in 14.30
+Proxy-Authenticate; defined in 14.33
+Retry-After; defiend in 14.37
+Server; defined in 14.38
+Vary; defined in 14.44
+WWW-Authenticate; dfeined in 14.47
+
+7.0
+
+Entitys are the message body...
+and can be sent by both servers and client, in request and responses
+
+7.1
+
+entity-headers are included in the same place that message-headers are incuded,
+as shown by definition of response and request ehaders
+
+the entity-header that is required is
+content-length; defined in 14.12
+the others I think arent always required but dependng on entity type might be
+listed
+Allow; define din 14.7
+Content-Encoding; defined in 14.11
+Content-Language; defiend in 14.12
+Content-Location; defined in 14.14
+Content-MD5; defined in 14.15
+Content-Range; defined in 14.16
+Content-Tpye; defined in 14.17
+Expires; defined in 14.21
+Last-Modified; defiend in 14.21
+extension-header
+^extension header refer to custom entity headesrs
+
+7.2
+
+entity-bodys are the message body and are comprised entirely of octets, or commonly refered to as bytes
+
+.1
+
+content-type is improtant and defines what type of content it is
+to decrypt an entity-body the bnf is
+entity-body := content-encoding (content-type(data))
+where the content-encoding wraps the content-type which wraps the actuall data
+an if a message is included a content-type must be included, but content-encoding
+is only necessary if compression is wanted
+
+.2
+
+entity-lenght is length before any transfer-coding, whcih is ot the same as content-coding
+as sepcified by 4.4
+
+8.1
+
+.1
+
+apparently this new version of http, http 1.1 was the first to implement persistent connections,
+and before they would establish a new connection between server and client for every call
+both are qutie cool, and the paper list several reason, whcih boil down to conenction time and efficiency
+to use persistent connections
+
+.2
+
+persistent connections are closed through the connection headerfield where if a close signal is sent
+the tcp will be shut down
+||||||||||||||||||||||
+tcp will be soemthing i need to look into to create my own server
+
+.2.1
+
+it seems connections are closed just wiht the header
+Connection : close
+^ so pretty 
+also a single connection can still be used by justsending the reqeust or whatever and snding close the same time
+
+.2.2
+
+if sending multiple reqeuest without waiting for responses before sending more
+the server must send back the clients request back in the order recieved
+
+if the server fails one request it will not attempt the rest, so the client must
+send all request again
+
+.3
+
+this applies to proxy servers,
+bascially proxy must maintain consistent connection based of header fields
+
+.4
+
+connections should have connection time outs
+servers or clients that have a connection timeout should issue a graceful close
+on the tcp, whatever that means
+|||||||||||||||||||||| 
+because of the possibility of servers closing the connection with the client not
+the client and vise-versa the client needs to be listening for a close and be
+able to handle all problems that can arise from a non-expected close
+
+clients should have no more than 2 connection to a given server
+
+8.2
+
+.1 
+
+to prevent the villanous users from being villains and retrying server calls excessively
+servers should use tcp flow control mechanisms to resolve overloads instead of terminating connections
+
+.2
+
+if the client recieves an error message from teh server while sending a message it must
+either
+close the connecton if the message it is sending contained a content-length
+or
+cease transmitting the chunk encoded section with a zerolength chunk and empty trailer
+
+.3
+
+continue status code is used to see if a server will accept a body-message dependent on its
+header, in case if the body is dense and long
+it is not needed in any message but if a lcient does use it
+include the header
+Expect : 100-continue,
+and if ti does it must send a message body
+
+a server must send the response 100 back if it recievs a 100-continue header
+before it reads the message-body, it should not send a 100 back to anything
+that does not request it
+a server can omit a the 100 response if it has already recieved the message body
+a server needs to send a final response once the message body is recieved
+a server cannot close the connection with a client if it sends a 100 response unless the client is
+attacking the server
+
+.4
+
+if a server closes the connection prematurely a client can attempt to resend
+the call for as many times as it likes, but should decreasing the frequency 
+of request based on the amount of times it fails
+T= R * (2**N)
+
+9.0
+
+Method defintiions,
+host requets header-field is needed in every request
+
+9.1
+
+.1
+
+get and head methods should only be used for retrieval
+post, put, delete, and other methods should be used for less safe methods,
+like deleting, posting, and putting...
+
+.2
+
+idempotent methods are methods of whom any amount of request of the same message will have the same effect on the server
+an example of this is the delete message where no matter the amount of times you request the deleteion of an object the server will only delete that one object
+so any amount of messages result in the same action
+
+9.2
+
+the rest of this chapter covers the common methods, which are only request messages definitions (only request messages have methods in them)
+
+for the options method the respons eshould be comprised of the methods and interactions that a client can
+request form a server
+
+option responses must be able to handle message bodies and content-length/transfer-enconding and if the
+messge has either of those it must indicate a content-field
+* request indicate a question over the entire server so it should send a response
+of what the entire servers methods are
+
+9.3
+
+Get methods retrieve whatever information in the entity form,
+so a get method response will always have a message body, and the responses
+can be static or dynamic depending on the resource requested, and remember
+the resource requested is dependent on the request-uri
+
+9.4
+
+a head method request is jsut requesting the header information from a get request
+so a response to a head request will not have a message-body but otherwise will
+be identical to the get method request
+
+9.5
+
+the post method request ask the server to save the entity-data as a new resource in the server
+this is handled by the server on an individual basis dependent on the server use
+
+if succesful server should return a response of 201 witha  location header for the new resource and an entity-body describing the new resource
+
+9.6
+
+the put method is similar to the request method but instead of a assigning the data to a specific
+resource the user is requesting that a new resource is created at whatever uri is providded
+
+same response method applies
+
+9.7
+
+the delete method request ask the server to delete a resource, the server does not have to of coruse
+but if the server does delete the resource a response message of ok should be sent with an entity describing the status
+
+9.8
+
+the trace method request is used to see where the client informatin is going, a serer should respond with 200 ok and location message
+
+9.9
+
+the onnect method is used to connect with a proxy to swithc to a tunnel?
+
+10.0
+
+this section describes the status codes
+
+10.1
+
+1xx
+status codes of this type are provisional responses, responses used in case of continue 100...
+they must not incude headers
+
+.1
+
+100 continue, the client should continue the request
+
+.2
+
+101 switching protocols this ones wierd and i dont understand it and am getting sleepy
+
+10.2
+
+2xx
+request recieved and processed
+
+.1
+
+200 ok
+the request has succeded,
+previous definition provide syntax for each type of ok response, included in get, head, post, and trace method definitions
+
+.2
+
+201 Created
+
+the request to a creation has succeded,
+response must include location and description of created entity
+
+.3
+
+202 Accepted
+the request has been accepted but has not been processed yet
+
+.4
+
+203 Non-Authorative Information
+
+metainformation in this response is not definitive?
+
+.5
+
+204 No Content
+
+sent if no message body is sent with an okay response...
+must not include message body
+
+.6
+
+205 Reset Content
+
+server has fulfilled request and webpage should be reset to signify this
+
+.7
+
+206 Partial Conent
+
+Server has fulfilled partial get request.. I dont care about this for now, im too tired
+
+10.3
+
+3xx
+request need to be changed
+
+.1
+
+300 Multiple Choices
+
+The requested resource has multiple options and the user has not given enoguh information to determine one
+unless the request was a head request the repsonse should include a body with the necessary information to determine
+which request the user wants
+
+.2 301 Moved Permanently
+
+the request location has been changed, repsonse should include the location field with the new repsonse location
+and a body with a hyperlink to the new location if applicable
+
+.3
+
+302 Found
+
+the request url has been termporarily changed, thus the client shouldnt change where it request usually but it should for this specific instance
+make a new request to the server at the lcoation provided in the response headers
+
+.4
+
+303 See Other
+
+Request should be forwarded to another uri, provided by location field header...
+client should issue request again to this uri
+
+.5
+
+304 Not Modified
+
+returned if a client has requested a resource that it has already requested and the resource is not modified
+if sent the response must include the header fields, date, etag, and expires
+
+.6
+
+305 Use Proxy
+
+the request recieed needs to be accessed throguh a proxy,
+responses need to include a location field that specifies the proxies
+
+.7
+
+306 (Unused)
+this is not used, but reserved
+
+.8
+
+307 Temprorary Redirect
+
+if a uir has temporarily changed location this can be used to tell a client to request from the new uri
+again given through location field, but the response body should also contain
+a hyperlink to the new uri
+
+10.4.0
+
+4xx handle client errors
+
+responses should always include an entity (message-body) that describes how the client
+gave a bad request, except for head request
+
+when closing TCP the server should always make sure the client bad request response before closing the onnection
+
+.1
+
+400 Bad Request
+
+the request has bad syntax, client should not repeat request
+
+.2
+
+401 Unauthorized
+
+the client has requested something without authentication,
+the response must include a WWW-AUthenticate header contianing
+a challenge applicable to request resource
+the lient may repeat the request with authorization headers
+
+.3
+
+402 Payment Require
+
+code reserved for future use
+
+.4
+
+403 Forbidden
+
+The server will not fulfill this request and is saying to not repeat it under
+any circumstances
+if server wishes to say why request is forbidden include it in the message-body
+
+.5
+
+404 Not Found
+
+resource is not found, 410 should be used if the resource was previously available but removed
+
+.6
+
+405 Method Not Allowed
+
+the method used on this resource is not allowed by the server (not implemented)
+responses must include a allow header with all the methods that the server allows for that resoruce
+
+.7
+
+406 Not Acceptable
+
+the client sent a reqeuest for a resource that included headers that disclude the content-type of the resource response
+ex:
+request forbids a response containing a jpg, but request something that includes a contnet of jpg
+
+for responses in this type include a body-message describing what the client needs to accept
+
+.8
+
+407 Proxy Authentication Required
+
+Client must authenticate with proxy, proxy needs to respond with a proxy-authenticate header-field
+and client in future request needs to include the correct proxy-authorization header
+
+.9
+
+408 Request Timeout
+
+sent when the server cuts tcp, or when the server has waited for long enough and the
+client has not sent any request, just when you want to cut connection
+
+.10
+
+409 Conflict
+
+sent when a user request is incompatible with current server data, like chanigng a resource that used to be 3 into 4,
+but now the resource is equal to 5
+responses should include information for the client and user to understand how to solve the conflict
+
+.11
+
+410 Gone
+
+resource is no longer at server
+clients should remove references to resource
+
+.12
+
+411 Length Required
+
+client needs to send a content0length header in their request
+
+.13
+
+412 PRecondition Failed
+
+a header precondition is false
+
+.14
+
+413 Request Entity Too Large
+
+request is to large at the moment, server can't handle the traffic I guess...
+server is allowed to close connection after response is sent
+
+.15
+
+414 Request-URI Too Long
+
+when the uri sent is to large and non-interpretable for the server
+
+.16
+
+415 Unsupported Media Type
+
+Content-Type request sent by client is not the right content-type for the resource
+
+.17
+
+416 Requested Range Not Satisifiable
+
+the request sent does not have a suitable range for the resource,
+responses must include a content-range header that includes the range needed for the resource
+
+.18
+
+417 Expectation Faield
+
+the request Expect header field could not be fulfilled by the server
+
+10.5.0
+
+5xx codes means the server has failed in some way, 
+all responses should include a message-body that tells the client what went wrong
+
+.1
+
+500 Internal Server Error
+
+server exploded... not literally
+
+.2
+
+501 Not Implemented
+
+the server does not support the functionality of the request
+
+.3
+
+502 Bad Gateway
+
+a proxy or gateway recieved an invalid response from the server
+
+.4
+
+503 Service Unavailable
+
+the server is currently unable to handle request
+if the time untill request can be fulfilled is known include a retry-after header
+clients should treat this response like a 500 ersponse if retry after is not included
+
+.5
+
+504 Gateway Timeout
+
+the proxy or gaateway did not recieve a response from the server before the timeout period
+
+.6
+
+505 Http Version Not SUpported
+
+the server does not support the http version that the client sent the request in...
+response-body should include which versions are supported and why that version is not
+
+11.0
+
+For access authentication refer to 
+HTTP Authentication: Basic and Digest Access Authentication
+|||||||||||||||||||||| 
+
+12.0
+
+content-negotiation is the process by which the server and client can decide
+what form or type of content should be supplied to a user
+this is for when the user ccannot accept a certain media type or
+when the user is in a different language or so on... just different
+content needs to be displayed for the same resource
+
+.1
+
+server-driven communication is when the server handles what it would think is the best
+response by itself. it does this by a self-imposed algorithim
+however to help the server choose a good response several headers can be provided,
+Accept => to accept certain types of medi
+Accept-Charset => to return the right type of chars
+Accept-Encoding => to return the right type of encoding
+ACcept-Language => to return the right language
+User-Agent => to return information based on the user-agent...
+^ this might be useful for me could make the certain request dependent on being the right user
+Vary => server-specific parameters
+
+.2
+
+Agent-driven Negotiation
+this is where the server sends a response which list the available response types to the request
+in the response-body and response header
+the user would than send a second request with the correct header information
+servers should use responses 300 and 406 to communicate with client
+what types of resources are available
+
+.3
+
+transparent negotiation is a combination of the two i don't really understand 
+the principal
+
+13.0
+
+cachings purpose is to reduce the amount of request and responses that are sent
+transparency for caching can only be relaxed when the client or origin servver rallows it or
+when the client tells the user
+transperency  here means whether you tell the client or not if response has
+been pulled from the cache, so whether you tell the client if the request was not actually 
+sent but you are just using old data instead... I think its pretty clear that
+this protocol is not obeyed usually
+
+13.1.1
+
+a cache is correct if it fulfills 1 of 3 things
+
+1) it has checked if the response is the same as the server would send by requesting the server
+
+2) the caches response is fresh enough as determined by server or client requirements
+
+3) if the server gives the 304 not modified response or any 4xx or 5xx responses the cache can use the previous response sent by the server
+
+.2
+
+When a cache returns a response that isnt fresh it must attach a warning header
+
+warning headers are comprised of 3 digit codes like the response types...
+1xx codes mean the cache must update its response as soon as possible
+2xx means there is some loss of data due to lossy compression
+
+wawrnings can contain text and can contain multiple types of text
+more description in 14.46
+
+.3
+
+cache-contorl header allows for the server or client to affect how the cache
+operates, like it can say to delete a response stored in cache or something, more description in 
+14.9
+
+.4
+
+if a user or user-agent disregards the servers caching mechanisms, that is
+the user/user-agent decides to delete sections of cached rules like the freshness time
+than the user-agent needs to inform the user of that case
+
+.5
+
+clients can decide to return stale-responses, but if they do a warning header
+must be attached
+they would decide to do this in the case of something like to much server traffic
+
+.6
+
+clients can control the stale-time of cache-responses, which they can do with
+the cache-control header
+
+13.2.1
+
+as previously said caches are used to reduce server calls
+servers set expiration times with the expires header
+max-age directive of the cache-control header
+or the must-revalidate directive in the cache-control header
+expiration times do not force users to refresh their page just to revalidate the cache upon new request for resources
+
+.2
+
+if a server does not provide an expiratino time use a heurisitc experiation
+algo to determine when the client should make a new request, although
+servers should always provide ane expiration time if possible
+
+.3
+
+to calculate the age of a response or cache, to determine when the cache should
+revalidate said response, is very simple...
+http gives a recommendation in this chapter, but any human on this planet could think of it
+in http the date header includes when the response was genearted and this can be used to calculate
+how old the repsons eis by subtracting the current time by this date and adding the request travvel time
+to the orignial server
+if the response came from a proxy the same could be done with the age header, which include show old the response
+is and to get the age from this simply add the reqeust travel time to it and you have age
+so using these two methods depending on where the response was sent from we can get the age of any response
+
+.4
+
+to calculate if a cached-response is stale simply compare the age caclulated
+above with the frehsness lifetime
+the freshness lifetime is either the max-age, whcih is actually a number
+or the expires-value - curr date, which apparently the expires-value is a set
+date by the server while max-age is just a length of time... weird,
+both are header values, expires and cache-controle: max-age
+if none of these values are set the client must decide when to revalidate, http
+suggest to revalidate after 10% of the time since the last-modififed time provided
+in a response, if that header is provided. 
+if the response is more than 24 hours old the response must include a 113  warning
+
+.5
+
+if a client wishes to force a response from a server use the reqeust cache-control: max-age=0
+a cache must provvide responses with the more recent date headers
+
+.6
+
+if a client recieves a response with an older date then its current resource it must
+revalidate the with cache-control: max-age 0 or cache-control: no-cache to force
+proxies to revaldiate their own caches
+
+13.3.0
+
+validating if a cached item is good does not require the server to always send 
+the cache a response with a new item. it is only necessary to transmit a new repsonse-body
+if the item has been updated
+if not insteda tranmit a 304 not modifed response, this way the server or proxies can handle
+the message and reduce traffic by not having to always send back a message-body
+
+.1
+
+the last-modified entity header value can be used by a client in a request to a server
+to tell the server when the entity was last-modified in their respone, the server
+can than check if the resource has been modified since that time and than revalidate based of that
+
+.2
+
+e-tags can provide servers with a validication methods of their own as etags can contain variable server defined data
+
+.3
+
+validators weak and strong allow for validication to only be done when it is needed
+say some sort of auxillery data that is not needed in the response of a resource is update
+a server can assign this as a weak validator such that it will not cause the request to need to
+update upon revalidication.
+importantly clients can only request with weak validators in a get request, otherwise
+they may not use weak validators in their headers
+tags are asusmed to be strong unless specified otherwise
+I don't know how these validators are requested
+
+.4
+
+okay servers should provide either a last-modified value or a strong entity tag
+it is preferable to send both, strong entity tags must change whenever a entity is updated a weak tag
+may be updated wheneer a entity is changed signifiantly
+for clients they must request with all the information provided by aserver
+if the server provides an enitty tag it must use the if-match or if-non-match headers iwth the entity tag
+if they have teh last-odififed value it must use the if-modified-since header
+
+.5
+
+entity tags are used because only the server can really know what an appropriate
+time to update a response is...
+
+13.4.0
+
+caches can use wahtever cahce logic they want, but provide subsequent warning to the cleint,
+however a few items must not be cached
+206 responses,
+302responses,
+307 responses
+
+13.5.0
+
+i think what they say here is a cache might recieve a partial response sometimes and have
+to reconstruct a full response by combining that partial response and a previous response
+
+.1
+
+there are two types of headers that need to be revalidated i think...
+hopy by hop need to be vrevalidate every time, I think
+and end-to-end must be stored in caches every times
+the hop-by-hop headers are
+Connection
+Keep-ALive
+Proxy-Authenticate
+Proxy-Authroization
+TE
+Trailers
+Transfer-Encoding
+Upgrade
+all other headers are end-to-end
+
+.2
+
+if a proxy modififed any of the request listed below it must include a 214 warning
+content-encoding
+content-range
+content-type
+content-location
+content-md5
+etag
+last-modified
+expires
+content-length
+
+.3
+
+if a cache recieves a response from a server that is aprtial it must replace all headers
+in the cached response except for 2xx warn-codes with the recieved partial responses
+and send that to the client
+if the cache reiceves a notmodified just update the modified since things and all
+
+.4
+
+if the response incldues a bit range only use the response with the most recet date
+discard rest
+
+13.6.0
+
+for negotitated responses, whcih mean the request has a vary header a cache can only
+used the stored responses if they exactly match the vary header, all other cache
+rules apply as well
+
+13.7.0
+
+be secure and private with your caches as is reasonable
+
+13.8.0
+
+If a cache reieves a response that is not the length it should be as specified
+by its content-length header the cache may store the response but must treat it as a partial
+response with all that goes along with that
+
+if it recieves a 5xx response it may either re-attempt validitcation or respnond with the previously cached response
+
+13.9.0
+
+get and head should have no side effects on the application that would effect
+their cached states, so if you have get cached response selecting get again shouldnt
+significantly change the response based on you sending get, so the response shouldnt change from a dog
+to a cat based on how many users have sent get request
+
+13.10.0
+
+there are trhee methods that immdeitalty invaldite a caches entitys,
+put
+delete
+post
+it says the cache must be invalidated, but I dont know if it means the client
+who sent the methods cache or all caches, and if the later it doesn't provide any
+information on  how to do such a request to all servers clients
+
+13.11.0
+
+all methods but get and head must be sent to the origin, that is because
+all methods other than those direcly adjust the servers information... or should
+
+13.12.0
+
+always use the most recently recieved resource and expel any caches that are
+overwritten by more recently recieved resources
+
+13.13.0
+
+the back-button in browsers apparently doesn't send the server new request
+but instead uses the cached responses to repopulate the page!!! how cool! so pretty!
+
+14.0
+
+This section contains definitions for header fields
+for all but the more complicated headers Im going to just the bnf first
+then include more information if needed
+Header | Header-type
+14.1.0
+
+Accept | Request
+used to declare which media types will be accepted in response
+it is used to identify media-type and subtype and the expected quality
+of each media-type
+the more-specific is the more prefered, and preference past specificiity is
+determined by the q value
+the bnf for it is
+AcceptHeader = "Accept" ":" mediatype "/" (mediasubtype | "*" ) ";" [paramter] [(";q" "=" (digit "." digit) *(token | quoted-string))] ","
+the above means an acceptheader has
+accept: mediatype/mediasubtype; q=1.0, mediatype/mediasubtype
+^ the above means the second mediatype and mediasubtype are prefered if they are in perfect quality
+but if that is not available send the first mediatype
+
+14.2.0
+
+Accept-Charset | Request
+= "Accept-Charset" ":" 1#( (charset | "*")[";" "q" "=" digit "." digit])
+just accept-charset chars
+
+et type than the preference, preferably only 1
+charset as indicated
+if it includes * instead of charset all charsets are allowed
+
+14.3.0
+
+Accept-Encoding | Request
+= "Accept-Encoding" ":" 1#(((content-encoding-types) | "*") [";" "q" "=" digit "." digit] )
+same q value stuff applies from 0 to 1 indicating preference, any number of content types
+allowed but preferably 1
+if either * or no accept-encoding headers are present the server can asume that
+all content-encoding types are acceptable
+if the server is not able to provide for the acceptable content-encoding types
+send an error response of 406
+
+14.4.0
+
+Accept-Language | Request
+= "Accept-Language" ":" 1#( (1*8Alpha * ( "-" 1*8Alpha) ) | "*" ) [ ";" "q" "=" qvalue ] )
+just acceptlanguage than type-subtype and than q-value preference
+interestingly clients must ask the user their language preference to provide
+the accept-language header
+
+14.5.0
+
+Accept-Ranges | Response
+= "Accept-Ranges" ":" (range-unit | "none"))
+^ this field allows servers to tell clients which range unit types are acceptable,
+or if no range request are acceptable to send none
+
+14.6.0
+
+Age | Response
+= "Age" ":" delta-seconds
+if delta-seconds is larger than max int send max int
+
+14.7.0
+
+Allow | entity
+= "Allow" ":" *method
+
+allows the server to tell what methods are acceptable to the client
+
+14.8.0
+
+Authorizatin | Response
+= "Authorization" ":" credentials
+furhter defined in
+HTTP Authentication: Basic and DIgest ACcess Authentication
+
+14.9.0
+
+This is a general purpose header that sepcificies a lot of stuff about
+how the cache should operate in respect ot this resource.
+All cache-request and cache-response-directive are defined in subsequent sections
+
+Cache-Control | Response
+= "Cache-Control" ":" *(cache-request-directive | cache-response-directive)
+^ cache-control : any number of cache-request or cache response directives
+
+field--name means it applies to either request or response only...
+
+14.9.1
+cache-response-directives
+
+"public" => can be cached by any cache
+"private" [ "=" <"> 1#field-name <"> ] => can only e cached by user-agent not any proxies
+"no-cache" [ "=" <"> 1#field-name <"> ] => cannot be cached
+
+cache-request-directives
+"no-cache" => cannot be cached
+
+14.9.2
+cache-request-directives
+
+no-store"=> must not be stored anywhere, used for sensitive information
+
+14.9.3
+
+max-age overrieds expires header
+
+cache-response-directive
+
+| "max-age" "=" delta-seconds => sets clients max age
+| "s-maxage" "=" delta-seconds => sets proxies caches max age
+
+cache-request-directive
+
+| "max-age" "=" delta-seconds => client will only accept a age of
+| "max-stale" [ "=" delta-seconds ]  => client will acccept age going beyond max-age
+| "min-fresh" "=" delta-seconds  => client wants a certain freshenss, how many seconds the response needs to be before its age limit
+
+14.9.4
+
+cache-response-directives
+
+must-revalidate => cache-entity must be revalidated after stale, if provided, or on each use
+proxy-revalidate => ^ same as above but only applies to proxies
+
+cache-request-directives:
+
+only-if-cached => only respond with entity if entity is stored in cache
+
+here goes over several wats clients and servers can force revaldiation for caches
+to perform a reload throguhout the entire server doa  no-cache reqeuest with no field names
+for a specific revaldiation (i think it means for a specfic resourece) do a ma-age=0 whcih will revalidate all proxies and the client caches
+
+for proxies and server supply a 304 response if the response is unchanged for max-age=0,
+if not supply with entity
+request with no-cache directie should not contain any age-regulating directives in cache-control... as the item is not meant to be cached and therefor shouldnt have any specifications on how long to cache it
+
+only-if-cached
+this directive is sent when their is bad connection, servers and proxies should only reply with a response if it is in their cache
+otherwise send a 504 response
+
+must-revalidate
+this directive means the entity must be revalidated after it has become stale
+
+14.9.5
+
+cache-response-directives
+
+no-transform => tells proxies and client to not change the response in any way, to ensure entity accuracy or non-lossy compression
+
+14.9.6
+
+unrecoqnized directives must be ignored
+to creat custom directives use the private directive
+bnf
+"private, " custom-token
+
+14.10.0
+
+connection header field... this specifies the conenction desired from client to whatever client is connecting too
+whether that be origin server or proxy... importantly connections are only communicated ot the server the client is talking to
+so it must e deleted from message after recieved
+
+bnf
+Connection = "Connection" ":" 1#(connection-token)
+
+proxies must parse connection before forwarding
+
+the only connection token that http defines is the close connection,
+Connection: close
+whcih indicates that a server should close connection after sending the respnse,
+servers can define custom connection-tokens for their application uses
+
+14.11.0
+
+content-encoding header is done in the same way as the connection
+Content-encoding = "Content-Encoding" ":" 1#content-encoding
+if the content-encoding is not identity than the response must include an entity-header that list the non-identity content-codings used? i think
+this just means to include content-encodings if they are not identity
+
+if a server cannot supply the requested content-encodings respond with 415 code
+
+14.12
+
+content-language = "Content-Language" ":" 1#langauge-tag
+language tags defined in section 3.10
+^only include language tags that are used to understand the entity in its entirity
+if none are provided it is assumed to be for all audiences
+
+14.13
+
+content-length = "Content-Length" ":" 1*digit
+^content legnth is done is length in bytes unless other content type is provided, which is defined by another header that I cannot remember
+
+14.14
+
+content-location = "Content-Location" ":" ( absoluteURI | relativeURI)
+content-location responses relativeurl is defined in comparison to request message
+content-location is where a resource is stored
+
+14.15
+
+Content-MD5 = "Content-"MD5" ":" <base64 of 128 bit MD5 digest as per RFC1864>
+i dont know what the rfc1864 is
+|||||||||||||||||||||| 
+it appears that the MD5 is a generated code based on the entities bits
+that is used to check if the integrity of the entity has been preserved...
+so the header contains the full code in the content-md5 header...
+I don't know how this is done but I assume its based on bit density distribution
+
+14.16
+
+Content-Range = "Content-Range" ":" bytes-unit SP ((first-byte-pos "-" last-byte-pos) | "*" ) "/" (instance-length | "*")
+this header is provided with partial responses to indicate where the partial response should be stappled together with its father
+the byte-unit is whaterver unit is being used to define length
+
+the first-bytepos is where the byte should be inserted and last-bytepos the end of insertia,
+done n 0 index
+the instance-length is the length of the content
+for multiple part messages use the multipart/byteranges defined in appendix 19.2
+
+14.17
+
+content-type = "Content-Type" ":" media-type
+media-type is defined in 3.7, adn this just says what type of content the client wants to recieve
+
+14.18
+
+all servers must include a date header
+except for
+100 or 101 response
+500 or 503 responses
+if the server is incapable of proividng accurate dates
+date-header = "Date" ":" three-Alpha-day "," 2-digit-day 3-alpha-month 4-digit-year 00:00:00 time-space
+ex:
+Date: Mon, 13 Sep 04:11:59 GMT
+
+if a message doesnt contain a date to store it the cache must create a date field for it
+
+clients should send date headers but are not required to
+
+14.18.1
+
+servers without clocks cannot assign expires or last-modifed values unless these are pre-defined
+
+14.19
+
+etag is used to provide validation, strong and weak entity checks
+
+ETag = "Etage" ":" entity-tag
+entity-tags ae defined by a server to record resource updates, like version 1 of a resource might be
+Etag: oaps2
+while the update of the resource version 2 would be
+Etag: sadp6
+^ just randomly generated codes to indicate resource change
+
+14.20
+
+Expect-header = "Expect" ":" 1#("100-continue" | (token ["=" (token) *(token ["=" (token)]])
+^ custom expectation are provided for by the token part 100-continue is the http defined one
+servers that cant comply should send 417 responses
+
+14.21
+
+Expires-Header = "Expires" ":" date-as-shown-above
+
+this defines exactly when an entity would expire or become stale, instead of an age thing
+
+14.22
+
+from-header = "From" ":" email-address
+this is used to identify what is sending a request i think?
+
+14.24
+
+host-header = "host" ":" host [":" port]
+ex:
+host: www.w3.org:23
+going to server hsoting w3.org at port 23
+clients must include host headers in all request
+
+14.24
+
+if-match-header - "IfMatch" ":" (1#entity-tag | "*")
+used to revalidate tags, if the servers current entity matchs the entity tags provided it can send a content-unchagned message 304
+if not revaldite the entity by sending a new 200 resposne or relevant response
+
+14.25
+
+if-modified-since-header = "If-Modified-Since" ":" date
+if server has modifed since return the proper response otherwise 304
+if sent iwth a range it is checking if that range has been modified since
+
+14.26
+
+if-none-matcch-header = "If-None-Match" ":" #1entity-tags
+
+this is used to see if a entity previously exist before attempting to modify the server data
+if used with a get adn head reqeust treat like an ifmatchheader
+if used with any other type of request if the tags match perfrom the operation on the resource,
+otherwise send a 412 resposne
+entity tag example in 14.19
+
+14.27
+
+if-range-header = "If-Range" ":" (entity-tag | date)
+must be used with the range header, checks to see if the range has been updated and if not request the range
+from the cache, otherwise request a whol new entity from the server
+
+14.28
+
+if-unmodified-since-header = "If-Unmodified-Since" ":" date
+
+^ this header checks to see if the resource has been updated and if it has not it performs request
+else send a 412 status code resonse
+
+14.29
+
+last-modified-header = "Last-Modified" ":" date
+
+this is the last time a resource was modified
+
+14.30
+
+location=-header = "Location" ":" absoluteURI
+
+this is used when the recepient doesn't send the right location for a resoruce in several respinse coes, or for 201
+
+14.31
+
+max-proxies = "Max-Forwards" ":" 1*digit
+this limits the amount of proxies that can be used to communicate with the origin server, so like
+Max-Forwards: 2 would mean 2 proxies can be used and so forth
+^ it actually is used to say how many times the message can be forwarded
+so if max-forwards: 0 is recieved by a proxy it has to be the one that responds with all the baggage that comes with that
+
+14.32
+
+pragma i think is a ancient field header that is unused will reference back to 
+|||||||||||||||||||||| 
+
+14.33
+
+Porxy-Authenticate-header = "Proxy-Authenticate" ":" 1#challenge
+this allows for servers to tell the porxies to authenticate themselves challenges are tokens
+that indicate which authorizations are needed
+
+14.34
+
+Proxy-Authorization-header = "Proxy-Authorization" ":" credientals
+this is the authentication resquest to a authetnication response, it allows
+orixues ti aytgiruze themselves with the credientals indicated by the challenge recieved
+
+14.35
+
+ranges
+
+14.35.1
+
+Ranges-request-header = "Range" ":" 1#(("bytes" | other-custom-unit-type) 1#(first-index "-" last-index))
+ex: 
+Range: bytes 25-34, 0-14
+
+14.36
+
+I dont really know what this is used for...
+|||||||||||||||||||||| 
+
+14.37
+
+Retry-After-Header = "Retry-After" ":" (date | delta-seconds)
+used in 503 response
+
+14.38
+
+server-header = "Server" ":" 1*(product | comment)
+^ this allows servers to tell clients what they are using to process their data
+
+14.39
+
+|||||||||||||||||||||| 
+I do not understand trailers
+
+14.40
+
+same^
+
+14.41
+
+trasnfer-encoding-header = "Transfer-Encodign" ":" 1#transfer-coding
+^remember the client doesnt actually need to decript this stuff
+
+14.42
+
+Upgrade-header = "Upgrade" ":" 1#product
+this allows for clients to request transfers through different protocols, in hope of updated http
+prodcut would be something like HTTP\2.3
+
+14.43
+
+user-agent-header = "User-Agent" ":" 1*(product | Comment)
+^ this allows the client to tell teh server about itself, like
+User-Agent: toaster/Coffee-Mug
+
+14.44
+
+Vary-header = "Vary" ":" ("*" | 1#field-name)
+
+13.6 defines the use of vary
+
+14.45
+
+via-header = "Via" ":" 1#([protocol-name "/"] protocol-version ((host [":" port]) | pseudonym) [comment])
+
+^ this header is used to request certain proxies to retrieve from servers
+the origin server is the host section and the proxy
+pr protocol i sthe protocol name and versions ection
+
+14.46
+
+warning-header = "Warning" ":" 1#(warn-code SP warn-agent SP warn-text [Sp warn-date])
+the warn agent is the host or the pseudonym assigned to tbe host by the server,
+the coede the http defined response codes, lik 110 or 200, text must be included,
+and a date needs to be included on the first warn entry but is optional on later entries
+warn-dates must be equal to the date of the response or request
+
+i really feel like this is stapled to the end where it should be at the beginning before the status
+code examples... because this is what does half o the status code stuff
+
+14.47
+
+www-authenticate-header = "WWW-Authenticate" ":" 1#challenge,
+this is only used by the 401 response, adn is defined in HTTP Authentication: Basic and Digest Access Authentication
+
+15.0
+
+section goes over security limitations
+
+15.1
+
+says browsers should include controls over access to perrsonal information, very nice http team
+
+.1
+
+http actually suggest that servers dont track users access to them, wow its saying
+dont track peoples data! thats crazy, this recommendation is ignored
+
+.2
+
+servers should be careful who they send referer, server, and via codes to
+servers should try not to save user-agent and from headers from users for privacy concerns
+
+.3
+
+clients should not include referer fields or from in non secure http request
+do not require get forms to have referer fieldds or other user sensitive data
+
+.4
+
+an easy attack on a file system based server would be to use the .. attribute to go beyond
+the root of the system and then attack beyond the servers files... dont allow things like .. to be part of a request to restrict the attacking capabilities
+
+15.3
+
+if clients save host names Ip and use that to navigate the web this can be used for
+bad redirecting as when an ip address changes that you used to use for your site it could redirect your
+clients to a bad site... this I've seen personallly used...
+
+15.4
+
+servers need to check location and content-location before overridding content
+
+15.5
+
+Content-dispostion header is handled under RFC 1806
+|||||||||||||||||||||| 
+
+
+15.6
+
+interestingly they havent come up wiht a solution of not caching authentication credientals
+on clients yet, after a certain period of time...
+just suggest a reprompting which should invalidate the cache
+and suggest that application sides should wipe the cache after a timeout
+
+15.7
+
+proxies are very open to attack, beware of storring personal informations on them
+as they are easy to attack, and take proper precautions agianst attacks.
+
+.1
+
+denial of service attacks on proxies exist... thats literally what it says lol. BEWARE.
+

@@ -1,0 +1,145 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+2.0
+
+what is the goal of TCP, to establish a reliable transfer protocol 
+
+important structure points:
+the transfer is done in-order
+transfer is done in byte-stream
+
+uses sequence checksums to detect for errors
+
+3.0
+Specification
+3.1
+Header Format
+
+Tcp segements ares sent as interent datagrams
+interestingly IP means internet protocol, so an IP address is the internet protocol address
+^ makes sense
+
+reading all of 3.x first than taking notes on it because its pretty complex
+at pg 18
+
+NOTWS START NOW setion 3.0 is apparently the rest of the protocol...
+6 bits 
+okay the tcp datastream is organized into two sections, the header and the actual data-stream
+the header labels what the data number, size, and reports the last bit of data recieved betweeen tcp
+communicators, below is the size of each piece of the header and i have recorded them in the order they are sent
+
+16 bits SP; source port number
+16 bit DP; destination port number, these two numbers are not the IP addresses of the two TCP communicators
+^but are instead the actual port numbers excluding the the IP address
+32 bits SN; this is the sequence number which tells the tcp reciever what the last byte read is or was, such that if you just sent 250 bytes the sequence number would be 250, which means that the next byte would be 251
+32 bits ACK; this is the last sequence number that the sender has read, such that if the reciever previously sent 122 bytes the ack would be 122
+^ to be clear the SN and ACK are seperate numbers, SN is the number of bytes that have been sent ACK is the number of bytes that have been recieved
+^ each communicator SN should be the ACK of the other communicators, this is a way that corruption or synchranization is checked for
+^ if after an iteration of back and forth communication the SN and ACK recieved are different from those sent, such that the ACK recieved from a client is different than the SN + Byte count sent by the server in the last transfer
+^ than the server would know that at the very least the client is desynchrinized from the server
+4 bits DO; data offset, this is the length of the header in d-words (4 bytes)
+4 bits Reserved; bits reserved for future use... will probably never be used as these haven't changed in the past 20 years
+8 bits Control bits; these bits are labels for the transfer that tell the respective tcp clients what type of message this is
+	1 bit CWR; congestion window reduced
+	1 bit ECE; CN-ECHO
+	1 bit URG; Urgent pointer is used, this is only in use for old tcp clients otherwise it is depricated
+	1 bit ACK; acknowledgement field is signifiant, this is always set to 1 (true) unless it is the connecting method where no sequence or acknowldgement numbers have been recorded so none need to be sent
+	1 bit PSH; push function
+	1 bit RST; reset connection, signifies that the connection needs to be set
+	1 bit SYN; synchranizes data, tells the client to reset the synchranization data, essentially saying to ignore the desynchranization and redo the connection
+	1 bit FIN; no more data to send, data "finished" lol
+16 bits WINDOW; this the the data-length that the sender is willing to accept from the sender
+^ this is the bytelength that the sender can handle, due to buffer sizes and whatever, what am I saying lol, this is obvious why you dont fucking program the infiinite buffer program...
+16 bits Checksum; okay previously I thought this checksum was only to check the header data, which would be kinda uselesss
+^ instead this checksum is equal to
+= (sum((byte(n),byte(n+1))'))'
+or otherwise the sum of every 2 bytes bit-flipped or ones-complemented then that sum bit flipped
+is the checksum value, which is used to check for corruption in bits
+^ later when we talk about how to check for corruption of the data I believe the formula is you just sum the complements of the
+^16 bit words of the data recieved but you don't bit flip that sum and instead add it to the checksum, if the result is equal to 0 than the data is uncorrupted... or just so happens to have the same bit array, this means that a correct checksum doesnt mean that data is uncorrupt but if it is incorrect it does mean it is corrupt
+16 bits URGENT POINTER; this is a depricated section but is still used by ancient protocl clients, it is only used if the
+^option URG is set to true and means that a certain set of the bits are needed to be urgently processed
+^I think its just first data to whatever number of data the urgent pointer is
+Variable length of 32 bits * n, 0 < n <= 11 Options; the options header data is which contians miscellaneous data but there are three that must be readable
+^options are not necessarily 32 bits, they can be less or more (mabye?), 
+	End of Option: 1 byte = 0; means no more options...
+	No-opertion option: 1 byte = 1; just a buffer option for reasons?
+	MSS: 1 byte = 2
+	     1 byte = 4
+	     2 bytes = recieve segment size
+	     this option can only be sent in a connecting sequence and I think it just repeats the window size or says what the maximum window size will e as the window size is supposebly supposed to change based on how large ofa  buffer that you have available...
+ 
+3.3
+
+.1
+
+These are the necessary variables needed to make use of the acknowledgedment and sendinging sequence numbers, or at least are the TCP recommendend ones
+
+^i WILL FILL THESE OUT AND PROVIDE REFERENCE TO WHICH SECTIONS DEFINE WHY THERE USE IS ESSENTIAL AS I READ THE PAPER
+
+im going to do this in a struct
+struct sndData {
+	/*for these variables I don't really know why they are here and they look like they aren't necessary, but this can be used as reference for the rest of the notes
+	int? una; -> oldest unacknowledge sequence number 3.4.0:
+		this is used to save what should be the previous messages sequence number is
+		so lets say you just recieved a message, the final octect of the message number
+		index woulld be the una
+	int? nxt; -> next sequence number to be sent 3.4.0:
+		this is the next sequence number that you plan to send... it should be equal to the previous next + the length of the most recent data transfer
+	end weird bariables	*/
+	int window; -> window size that you are sending
+	int/bool up; -> true if sending an urgent pointer, or maybe the position of the urgent pointer
+	int wl.1; -> i dont know why they symbalize it as wl.1, as it represents the last sequence number used for a window update
+	^ so the last term sent in the SN header field
+	int wl.2; -> again dont know why they use this, represents last sequence acknowledgement number recieved?
+	^ so the last term recieved in the SN header field
+	^ i think the proper term for these variables would be preSN ad preACK, although using the TCP names for the variables might be standard practice
+	ISS; -> first squence number sent in connection, I think this should almost always be equal to zero but lets see for later, again iniSN would make more sense...
+}
+
+//they include two data structs for some reason, or two tables for data that is necessary to stroe, I don't know why wouldnt it be more reasonabe to host  it in a single struct, and doesnt some of the data overlap, like rcv.wnd and send.wnd
+struct rcvData {
+	/* dont know what teh below variable is for
+	int? nxt; -> next sequence number expected from peer
+		this would be the sequence number we expect after having recieved the previous sequence (message),
+		and tabulating that messages first sequence number and length 
+	*/
+	wnd; -> window recieved, so just window size I think
+	up; -> urgent pointer number I assume
+	IRS; -> first sequence number recieved 
+}
+
+.2
+play states for the clients:
+listen - waiting for a request from a TCP peer, this means that a connection has not been made not that its waiting for a response
+SYN-SENT - waiting for a connection request after having sent one, means that a tcp "peer" will wait for the requested peer to send back a matching responserequest
+SYN-Recieved - waiting for a confirmation of a connection being established
+ESTABLISHED - means the connection has been established
+FIN-WAIT-1 - means waiting for a termination request from a tcp peer or an acknowledgement of it
+FIN-WAIT-2 - means waiting for a connection termination from a tcp peer, wait why a second time
+CLOSE-WAIT - waiting for the TCP to be closed from the client? I think this means its waiting for the tcp to be closed by the tcp, not the peer but the literal tcp
+CLOSING - waiting for the tcp termination request from the peer
+LAST-ACK - represents waiting for acknowledgement of the connection termination request
+TIME-WAIT - represents waiting for enough time for the LAST-ACK to have reached its peer before closing
+ClOSED - a fictional state of the tcp connection being closed
+the play states are entered and exited based on what the user-client wants, if the user wants to send data and a connection is not present the tcp client enters into the SYN-SENT state having requested a connection, and etc....
+
+3.4.0
+
+all octects have a sequence number, which is just an index that labels their position
+this is used to check integrity of data and when the data has been recieved
+
+they suggest several data structure that are defined above... but a few variables that they suggest that I have not included are
+SEQ.Len -> lenght of data segment
+SEQ.ACK -> acknowledgement of peer
+SEQ.SEQ -> sequence number of segment
+^ segment in this case would mean a message, message meaning an individual communication between two peers
+
+imporantly
+a segment (message) is only valid if the length is less than or equal to its window length... ths is obvious
+however this does bring interesting implementation, as it allows for a zero-length window which means a one-way communication is legal
+and possible where a messanger simply acknowledges the previous sequence number
+
+.1
+
