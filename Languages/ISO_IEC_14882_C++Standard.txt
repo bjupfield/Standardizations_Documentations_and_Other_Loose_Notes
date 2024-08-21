@@ -1,0 +1,82 @@
+C++ Its a thing
+
+but anyways 
+C++ as a language is a programming language that is an implementation of c and also includes additional data-types,
+templates, exceptions, namespaces, operator overloading, function name overloading, references, free store management operators
+and additional library facilities
+
+
+All documents refered to in this book considered "required reading material"
+—(1.1) Ecma International, ECMAScript Language Specification, Standard Ecma-262, third edition, 1999.
+—(1.2) ISO/IEC 2382 (all parts), Information technology — Vocabulary
+—(1.3) ISO/IEC 9899:2011, Programming languages — C
+—(1.4) ISO/IEC 9899:2011/Cor.1:2012(E), Programming languages — C, Technical Corrigendum 1
+—(1.5) ISO/IEC 9945:2003, Information Technology — Portable Operating System Interface (POSIX)
+—(1.6) ISO/IEC 10646-1:1993, Information technology — Universal Multiple-Octet Coded Character Set (UCS)
+— Part 1: Architecture and Basic Multilingual Plane
+—(1.7) ISO/IEC 10967-1:2012, Information technology — Language independent arithmetic — Part 1: Integer
+and floating point arithmetic
+—(1.8) ISO/IEC/IEEE 60559:2011, Information technology — Microprocessor Systems — Floating-Point
+arithmetic
+—(1.9) ISO 80000-2:2009, Quantities and units — Part 2: Mathematical signs and symbols to be used in the
+natural sciences and technology
+
+|||
+3 Terms and Definitions
+|||
+
+some definitions that are probably used a lot in the text, just copying pasting pretty much
+
+access:
+	-(execution-time): to read or modify the value of an object
+
+argument:
+	-(function call expression): expression in the comma-seperated list bounded by the parentheses? what does this mean?
+	-(function-like macro): sequence of preprocessing tokens in comma-seperated list bounded by the parentheses
+	-(throw expression): the operand of throw?!?!?!?!
+	-(template instantiation): constant-expression, type-id, or id-expression in comma-seperated list bounded by the angle brackets
+block:
+	-a thread of execution that blocks is waiting for some condition to happen before execution (ie a code block is a section of code that is dependent on some sort of condition from another portion of code)
+conditionally-supported:
+	-construct that is not necessary for a language to be compliant to the standard
+diagnostic message:
+	-message defined by implementations for the implementations output messages
+dynamic type:
+	-(glvalue) the type of the most derived object, i think this means the ultra-parent or the most parent of any child class
+	-(prvalue) static type of the prvalue expression!?!??!?!?!
+ill-formed program:
+	-ill thing
+implementation-defined behavior:
+	-behavior of an implementation taht the implementation documents
+implementation-limits:
+	-restrictions placed on programs by the implementation
+locale-specific behavior:
+	-local convention behavior, not even defined by the implementation but could just be a convention held by a specific ocmpany or something
+multibyte character:
+	-seuqence of one or more bytes that represents a memebr of extended characters for an execution enviroment
+parameter:
+	-(function or catch clause): object or reference declared as part of function or in the catch clause of an exception handler that acquires a value
+	on entry to the function or handler
+	-(function-lie macro): identifier from the comma-seperated list bounded by the parentheses immediately after following the macro name
+	-(template): member of a template-parameter-list
+signature:
+	-(funnction): name and parameter list and enclosing namespace
+	-(function template): ^ same and return type and template parameter list
+	-(function template specialization): signature of the template of which it is a specialization and its template arguments
+	-(class member function): name, parameter type list, and class it is member of, cv-qualifiers, and ref-qualifier
+	-(class member function template): name, parameter tpye list, calss of which is a member, cv-qualifiers, ref-qualifier, return type, and template parameter list
+static type:
+	-type of expressionr esulting from analysis of the program without considering execution semantics
+unblock:
+	-satisfy the condition of a block
+undefined behavior:
+	-behaviro that the internation standard imposes no requirements
+unspecified behavior:
+	-behavior that a well formm program that depends on implementation, that different implementations can have different behavior
+well-formed program:
+	program that follwos all syntax rules and on definition rule
+
+|||
+4 General Principles
+|||
+
