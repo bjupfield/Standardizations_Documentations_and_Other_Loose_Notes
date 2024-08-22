@@ -80,3 +80,64 @@ well-formed program:
 4 General Principles
 |||
 
+the standardization document will refer to programs frequently in the paper, however when
+refering to programs being compliant it really means implementations of c++ will correctly compile
+these programs
+
+names defined in library have namespace scope. C++ units obtain access through headers
+
+implementations of c++ may have more libraries than is required but they must not intefere with any execution
+
+.2
+
+sections 5-19 describe the programming language
+sections 21-33 describe the c++ standard library
+
+.4
+
+c memory is ni bytes, their terminolgy for high and low order bits is
+lsb = low-order bit
+msb = high-order bit
+all bytes in c++ have their own memory address
+
+c++ has an object called bit field that are intialize with
+myVarName:11
+where myVarName is the name reference for the field and 11 is the location which it is in,
+in reference to the struct or object it is intitialized in,
+importantly if a bit field is overlapping with another by 1 byte, that is if it is within
+8 bits of another field it cannot be updated congruently, as the system would be modifieng
+the same byte and this has undefined outcomes
+
+.5
+
+c++ objects
+c++ objects can only be intialized by declarations, union overwritting, or dynamic memory allocation
+arrays will only store objects if it fits in said array and the object exist
+
+.6
+
+on compile the c standard allows for the re-grouping or association of any data-types as long
+as it does not disturb the results. an example of results being changed due to regrouping are overflows on math,
+where one expression may cause an overflow while another might not. However, they do not require
+that the maximum capable program be written, just that whatever machine it is being compiled for works,
+so with this rule the compilation will be very different for a 64bit in comparison to a 32bit machine
+
+.7
+
+threads are not created by parented threads but by newly initialized threads
+
+.7.1
+
+the std library defines synchronization operations that relaese, acquire, or consume new sections
+of memory across threads
+
+load atomics are treated as seperate objects that two threads update concurently, with each
+thread being flagged by the other if the object is updated in anyway, and than the threads
+are each allowed to perform differentl based on those flags
+
+a data race occurs when two or more threads have concrrent actions that do not update an atomic
+
+|||
+5 Lexical Conventions
+|||
+
