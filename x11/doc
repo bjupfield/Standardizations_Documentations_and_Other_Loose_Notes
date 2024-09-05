@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+  <head>
+    <title>Documentation for the X Window System</title>
+    <base href="https://www.x.org/releases/current/doc/" />
+    <link rel="canonical" href="/releases/current/doc/" />
+    <link rel="home" href="https://www.x.org/" />
+    <link rel="SHORTCUT ICON" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../xorg.css" />
+	<style type="text/css">
+	  h3 { margin-left: 0.5em; }
+	</style>
+  </head>
+  <body itemscope itemtype="https://schema.org/WebPage">
+    <div style="text-align: center;" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <meta itemprop="name" content="X.Org Foundation" />
+      <a href="https://www.x.org/" rel="home" itemprop="url"><img border="0" src="../logo.png" width="377" height="80" alt="X.Org Foundation" itemprop="image" /></a>
+    </div>
+    <h1 itemprop="about">Documentation for the <a href=".." rel="up">X Window System</a></h1>
+      <hr />
+      <ul>
+	<li><a href="xorg-docs/ReleaseNotes.html">Release Notes for X11R7.7</a> <a href="xorg-docs/ReleaseNotes.pdf" type="application/pdf" title="Release Notes for X11R7.7">[PDF]</a> <a href="xorg-docs/ReleaseNotes.txt" type="application/txt;charset=utf-8" title="Release Notes for X11R7.7">[TXT]</a></li>
+	<li><a href="xorg-docs/README.html">README for X11R7.7</a> <a href="xorg-docs/README.pdf" type="application/pdf" title="README for X11R7.7">[PDF]</a> <a href="xorg-docs/README.txt" type="application/txt;charset=utf-8" title="README for X11R7.7">[TXT]</a></li>
+	<li><a href="xorg-docs/License.html">Licenses for X11R7.7</a> <a href="xorg-docs/License.pdf" type="application/pdf" title="Licenses for X11R7.7">[PDF]</a> <a href="xorg-docs/License.txt" type="application/txt;charset=utf-8" title="Licenses for X11R7.7">[TXT]</a></li>
+	<li><a href="xorg-docs/Versions.html">X.Org and XFree86 Version Numbering Schemes</a> <a href="xorg-docs/Versions.pdf" type="application/pdf" title="X.Org and XFree86 Version Numbering Schemes">[PDF]</a> <a href="xorg-docs/Versions.txt" type="application/txt;charset=utf-8" title="X.Org and XFree86 Version Numbering Schemes">[TXT]</a></li>
+	<li><a href="xorg-docs/fonts/fonts.html">Fonts in X11R7.7</a> <a href="xorg-docs/fonts/fonts.pdf" type="application/pdf" title="Fonts in X11R7.7">[PDF]</a> <a href="xorg-docs/fonts/fonts.txt" type="application/txt;charset=utf-8" title="Fonts in X11R7.7">[TXT]</a></li>
+	<li><a href="xorg-docs/graphics/dps.html">X and DPS</a> <a href="xorg-docs/graphics/dps.pdf" type="application/pdf" title="X and DPS">[PDF]</a> <a href="xorg-docs/graphics/dps.txt" type="application/txt;charset=utf-8" title="X and DPS">[TXT]</a></li>
+	<li><a href="xorg-docs/input/XKB-Config.html">The XKB Configuration Guide</a> <a href="xorg-docs/input/XKB-Config.pdf" type="application/pdf" title="The XKB Configuration Guide">[PDF]</a> <a href="xorg-docs/input/XKB-Config.txt" type="application/txt;charset=utf-8" title="The XKB Configuration Guide">[TXT]</a></li>
+	<li><a href="xorg-docs/input/XKB-Enhancing.html">How to further enhance XKB configuration</a> <a href="xorg-docs/input/XKB-Enhancing.pdf" type="application/pdf" title="How to further enhance XKB configuration">[PDF]</a> <a href="xorg-docs/input/XKB-Enhancing.txt" type="application/txt;charset=utf-8" title="How to further enhance XKB configuration">[TXT]</a></li>
+	<li><a href="libX11/i18n/compose/libX11-keys.html">Xlib Compose Key Sequence Charts</a></li>
+      </ul>
+
+      <h2 id="platform">Platform-specific documentation:</h2>
+      <ul>
+	<li><a href="xorg-docs/platforms/Darwin.html">X.Org X on Darwin and Mac OS X</a> <a href="xorg-docs/platforms/Darwin.pdf" type="application/pdf" title="X.Org X on Darwin and Mac OS X">[PDF]</a> <a href="xorg-docs/platforms/Darwin.txt" type="application/txt;charset=utf-8" title="X.Org X on Darwin and Mac OS X">[TXT]</a></li>
+	<li><a href="xorg-docs/platforms/Solaris.html">Information for Solaris and OpenSolaris</a> <a href="xorg-docs/platforms/Solaris.pdf" type="application/pdf" title="Information for Solaris and OpenSolaris">[PDF]</a> <a href="xorg-docs/platforms/Solaris.txt" type="application/txt;charset=utf-8" title="Information for Solaris and OpenSolaris">[TXT]</a></li>
+      </ul>
+
+      <h2 id="device">Device-specific documentation:</h2>
+      <ul>
+	<li><a href="ati.txt">Information for ATI Mach64 Users</a></li>
+	<li><a href="DECtga.txt">Information for DEC 21030 (aka TGA) Users</a></li>
+	<li><a href="I128.txt">Information for Number Nine I128 Users</a></li>
+	<li><a href="intel.txt">Information for Intel Users</a></li>
+	<li><a href="newport.txt">Information for newport Users</a></li>
+	<li><a href="r128.txt">Information for ATI Rage 128 Users</a></li>
+	<li><a href="SiS.txt">Information for SiS and XGI Users</a></li>
+      </ul>
+
+      <h2 id="manpage">Manual pages:</h2>
+      <ul>
+	<li><a href="man/man1/index.xhtml">Section 1</a>: Commands</li>
+	<li><a href="man/man3/index.xhtml">Section 3</a>: Library Functions</li>
+	<li><a href="man/man4/index.xhtml">Section 4</a>: Drivers</li>
+	<li><a href="man/man5/index.xhtml">Section 5</a>: Files and file formats</li>
+	<li><a href="man/man7/index.xhtml">Section 7</a>: Miscellaneous</li>
+      </ul>
+
+      <h2 id="devel">Developer documentation:</h2>
+      <h3 id="client-devel">Client-side:</h3>
+      <ul>
+	<li><a href="libxcb/tutorial/index.html">Basic Graphics Programming With The XCB Library</a></li>
+
+	<li><a href="libX11/libX11/libX11.html">Xlib &ndash; C Language X Interface</a> <a href="libX11/libX11/libX11.pdf" type="application/pdf" title="Xlib &ndash; C Language X Interface">[PDF]</a> <a href="libX11/libX11/libX11.txt" type="application/txt;charset=utf-8" title="Xlib &ndash; C Language X Interface">[TXT]</a></li>
+	<li><a href="libX11/i18n/framework/framework.html">Xlib Locale Framework</a> <a href="libX11/i18n/framework/framework.pdf" type="application/pdf" title="Xlib Locale Framework">[PDF]</a> <a href="libX11/i18n/framework/framework.txt" type="application/txt;charset=utf-8" title="Xlib Locale Framework">[TXT]</a></li>
+	<li><a href="libX11/i18n/localedb/localedb.html">Xlib Locale Database Definition</a> <a href="libX11/i18n/localedb/localedb.pdf" type="application/pdf" title="Xlib Locale Database Definition">[PDF]</a> <a href="libX11/i18n/localedb/localedb.txt" type="application/txt;charset=utf-8" title="Xlib Locale Database Definition">[TXT]</a></li>
+
+	<li><a href="libXext/dpmslib.html">Display Power Management Signaling (DPMS) Extension Library, Version 1.0</a> <a href="libXext/dpmslib.pdf" type="application/pdf" title="Display Power Management Signaling (DPMS) Extension Library, Version 1.0">[PDF]</a> <a href="libXext/dpmslib.txt" type="application/txt;charset=utf-8" title="Display Power Management Signaling (DPMS) Extension Library, Version 1.0">[TXT]</a></li>
+	<li><a href="libXext/dbelib.html">Double Buffer Extension Library, Version 1.0</a> <a href="libXext/dbelib.pdf" type="application/pdf" title="Double Buffer Extension Library, Version 1.0">[PDF]</a> <a href="libXext/dbelib.txt" type="application/txt;charset=utf-8" title="Double Buffer Extension Library, Version 1.0">[TXT]</a></li>
+	<li><a href="libXtst/recordlib.html">Record Extension Library, Version 1.13</a> <a href="libXtst/recordlib.pdf" type="application/pdf" title="Record Extension Library, Version 1.13">[PDF]</a> <a href="libXtst/recordlib.txt" type="application/txt;charset=utf-8" title="Record Extension Library, Version 1.13">[TXT]</a></li>
+	<li><a href="libX11/XKB/xkblib.html">X Keyboard Extension: Library Specification</a> <a href="libX11/XKB/xkblib.pdf" type="application/pdf" title="X Keyboard Extension: Library Specification">[PDF]</a> <a href="libX11/XKB/xkblib.txt" type="application/txt;charset=utf-8" title="X Keyboard Extension: Library Specification">[TXT]</a></li>
+	<li><a href="libXi/inputlib.html">X Input Device Extension Library, Version 1.0</a> <a href="libXi/inputlib.pdf" type="application/pdf" title="X Input Device Extension Library, Version 1.0">[PDF]</a> <a href="libXi/inputlib.txt" type="application/txt;charset=utf-8" title="X Input Device Extension Library, Version 1.0">[TXT]</a></li>
+
+	<li><a href="libXrender/libXrender.txt">The Xrender Library, Version 0.7</a></li>
+	<li><a href="libXext/shapelib.html">X Nonrectangular Window Shape Extension Library, Version 1.0</a> <a href="libXext/shapelib.pdf" type="application/pdf" title="X Nonrectangular Window Shape Extension Library, Version 1.0">[PDF]</a> <a href="libXext/shapelib.txt" type="application/txt;charset=utf-8" title="X Nonrectangular Window Shape Extension Library, Version 1.0">[TXT]</a></li>
+	<li><a href="libXext/synclib.html">X Synchronization Extension Library, Version 3.0</a> <a href="libXext/synclib.pdf" type="application/pdf" title="X Synchronization Extension Library, Version 3.0">[PDF]</a> <a href="libXext/synclib.txt" type="application/txt;charset=utf-8" title="X Synchronization Extension Library, Version 3.0">[TXT]</a></li>
+	<li><a href="libXtst/xtestlib.html">XTEST Extension Library, Version 2.2</a> <a href="libXtst/xtestlib.pdf" type="application/pdf" title="XTEST Extension Library, Version 2.2">[PDF]</a> <a href="libXtst/xtestlib.txt" type="application/txt;charset=utf-8" title="XTEST Extension Library, Version 2.2">[TXT]</a></li>
+	<li><a href="libXvMC/XvMC_API.txt">X-Video Motion Compensation - API specification v. 1.0</a></li>
+
+	<li><a href="libICE/ICElib.html">Inter-Client Exchange Library</a> <a href="libICE/ICElib.pdf" type="application/pdf" title="Inter-Client Exchange Library">[PDF]</a> <a href="libICE/ICElib.txt" type="application/txt;charset=utf-8" title="Inter-Client Exchange Library">[TXT]</a></li>
+	<li><a href="libSM/SMlib.html">X Session Management Library</a> <a href="libSM/SMlib.pdf" type="application/pdf" title="X Session Management Library">[PDF]</a> <a href="libSM/SMlib.txt" type="application/txt;charset=utf-8" title="X Session Management Library">[TXT]</a></li>
+	<li><a href="libXt/intrinsics.html">X Toolkit Intrinsics &ndash; C Language Interface</a> <a href="libXt/intrinsics.pdf" type="application/pdf" title="X Toolkit Intrinsics &ndash; C Language Interface">[PDF]</a> <a href="libXt/intrinsics.txt" type="application/txt;charset=utf-8" title="X Toolkit Intrinsics &ndash; C Language Interface">[TXT]</a> </li> 
+	<li><a href="libXaw/libXaw.html">Athena Widget Set &ndash; C Language Interface</a> <a href="libXaw/libXaw.pdf" type="application/pdf" title="Athena Widget Set &ndash; C Language Interface">[PDF]</a> <a href="libXaw/libXaw.txt" type="application/txt;charset=utf-8" title="Athena Widget Set &ndash; C Language Interface">[TXT]</a></li>
+	<li><a href="libXmu/Xmu.html">Xmu and Xmuu Library API Reference</a> <a href="libXmu/Xmu.pdf" type="application/pdf" title="Xmu and Xmuu Library API Reference">[PDF]</a> <a href="libXmu/Xmu.txt" type="application/txt;charset=utf-8" title="Xmu and Xmuu Library API Reference">[TXT]</a></li>
+	<li><a href="xorg-docs/icccm/icccm.html">Inter-Client Communication Conventions Manual (ICCCM), Version 2.0</a> <a href="xorg-docs/icccm/icccm.pdf" type="application/pdf" title="Inter-Client Communication Conventions Manual (ICCCM), Version 2.0">[PDF]</a> <a href="xorg-docs/icccm/icccm.txt" type="application/txt;charset=utf-8" title="Inter-Client Communication Conventions Manual (ICCCM), Version 2.0">[TXT]</a></li>
+      </ul>
+
+      <h3 id="server-devel">Server-side:</h3>
+      <ul>
+	<li><a href="xorg-server/Xserver-DTrace.html">Xserver provider for DTrace</a> <a href="xorg-server/Xserver-DTrace.pdf" type="application/pdf" title="Xserver provider for DTrace">[PDF]</a> <a href="xorg-server/Xserver-DTrace.txt"type="application/txt;charset=utf-8" title="Xserver provider for DTrace">[TXT]</a></li>
+	<li><a href="xorg-server/Xserver-spec.html">Definition of the Porting Layer for the X v11 Sample Server</a> <a href="xorg-server/Xserver-spec.pdf" type="application/pdf" title="Definition of the Porting Layer for the X v11 Sample Server">[PDF]</a> <a href="xorg-server/Xserver-spec.txt" type="application/txt;charset=utf-8" title="Definition of the Porting Layer for the X v11 Sample Server">[TXT]</a></li>
+	<li><a href="xorg-server/ddxDesign.html">XFree86 DDX Design (Xorg server version 1.12.1)</a> <a href="xorg-server/ddxDesign.pdf" type="application/pdf" title="XFree86 DDX Design (Xorg server version 1.12.1)">[PDF]</a> <a href="xorg-server/ddxDesign.txt" type="application/txt;charset=utf-8" title="XFree86 DDX Design (Xorg server version 1.12.1)">[TXT]</a></li>
+	<li><a href="libXfont/fontlib.html">The X Font Library</a> <a href="libXfont/fontlib.pdf" type="application/pdf" title="The X Font Library">[PDF]</a> <a href="libXfont/fontlib.txt" type="application/txt;charset=utf-8" title="The X Font Library">[TXT]</a></li>
+	<li><a href="xorg-docs/Xserver/XACE-Spec.html">X Access Control Extension Specification</a> <a href="xorg-docs/Xserver/XACE-Spec.pdf" type="application/pdf" title="X Access Control Extension Specification">[PDF]</a> <a href="xorg-docs/Xserver/XACE-Spec.txt" type="application/txt;charset=utf-8" title="X Access Control Extension Specification">[TXT]</a></li>
+
+	<li><a href="xorg-server/Xinput.html">X Input Extension Porting</a> <a href="xorg-server/Xinput.pdf" type="application/pdf" title="X Input Extension Porting">[PDF]</a> <a href="xorg-server/Xinput.txt" type="application/txt;charset=utf-8" title="X Input Extension Porting">[TXT]</a></li>
+	<li><a href="xtrans/xtrans.html">X Transport Interface</a> <a href="xtrans/xtrans.pdf" type="application/pdf" title="X Transport Interface">[PDF]</a> <a href="xtrans/xtrans.txt" type="application/txt;charset=utf-8" title="X Transport Interface">[TXT]</a></li>
+      </ul>
+
+      <h2 id="protocol">Protocol specifications:</h2>
+
+      <h3 id="x11-protocol">X11 Protocol &amp; Extensions:</h3>
+      <ul>
+	<li><a href="xproto/x11protocol.html">X Window System Protocol, Version 11, Release 6.8</a> <a href="xproto/x11protocol.pdf" type="application/pdf" title="X Window System Protocol, Version 11, Release 6.8">[PDF]</a> <a href="xproto/x11protocol.txt" type="application/txt;charset=utf-8" title="X Window System Protocol, Version 11, Release 6.8">[TXT]</a></li>
+	<li><a href="bigreqsproto/bigreq.html">Big Requests Extension, Version 2.0</a> <a href="bigreqsproto/bigreq.pdf" type="application/pdf" title="Big Requests Extension, Version 2.0">[PDF]</a> <a href="bigreqsproto/bigreq.txt" type="application/txt;charset=utf-8" title="Big Requests Extension, Version 2.0">[TXT]</a></li>
+	<li><a href="compositeproto/compositeproto.txt">Composite Extension, Version 0.4</a></li>
+	<li><a href="damageproto/damageproto.txt">DAMAGE Extension Protocol Version 1.1</a></li>
+	<li><a href="xextproto/dpms.html">Display Power Management Signaling (DPMS) Extension, Version 1.0</a> <a href="xextproto/dpms.pdf" type="application/pdf" title="Display Power Management Signaling (DPMS) Extension, Version 1.0">[PDF]</a> <a href="xextproto/dpms.txt" type="application/txt;charset=utf-8" title="Display Power Management Signaling (DPMS) Extension, Version 1.0">[TXT]</a></li>
+	<li><a href="xextproto/dbe.html">Double Buffer Extension Protocol</a> <a href="xextproto/dbe.pdf" type="application/pdf" title="Double Buffer Extension Protocol">[PDF]</a> <a href="xextproto/dbe.txt" type="application/txt;charset=utf-8" title="Double Buffer Extension Protocol">[TXT]</a></li>
+	<li><a href="xextproto/evi.html">Extended Visual Information Extension</a> <a href="xextproto/evi.pdf" type="application/pdf" title="Extended Visual Information Extension">[PDF]</a> <a href="xextproto/evi.txt" type="application/txt;charset=utf-8" title="Extended Visual Information Extension">[TXT]</a></li>
+	<li><a href="dri2proto/dri2proto.txt">DRI2 Extension Version 2.0</a></li>
+	<li><a href="xextproto/geproto.html">X Generic Event Extension</a> <a href="xextproto/geproto.pdf" type="application/pdf" title="X Generic Event Extension">[PDF]</a> <a href="xextproto/geproto.txt" type="application/txt;charset=utf-8" title="X Generic Event Extension">[TXT]</a></li>
+	<li><a href="fixesproto/fixesproto.txt">XFIXES Extension Version 5.0</a></li>
+	<li><a href="inputproto/XIproto.txt">X Input Extension Version 1.5</a></li>
+	<li><a href="inputproto/XI2proto.txt">X Input Extension Version 2.x</a></li>
+	<li><a href="kbproto/xkbproto.html">X Keyboard Extension</a> <a href="kbproto/xkbproto.pdf" type="application/pdf" title="The X Keyboard Extension: Protocol Specification">[PDF]</a> <a href="kbproto/xkbproto.txt" type="application/txt;charset=utf-8" title="The X Keyboard Extension: Protocol Specification">[TXT]</a></li>
+	<li><a href="xextproto/shm.html">MIT-SHM &mdash; The MIT Shared Memory Extension</a> <a href="xextproto/shm.pdf" type="application/pdf" title="MIT-SHM &mdash; The MIT Shared Memory Extension">[PDF]</a> <a href="xextproto/shm.txt" type="application/txt;charset=utf-8" title="MIT-SHM &mdash; The MIT Shared Memory Extension">[TXT]</a></li>
+	<li><a href="randrproto/randrproto.txt">RandR &mdash; X Resize, Rotate and Reflect Extension Version 1.4.0</a></li>
+	<li><a href="recordproto/record.html">Record Extension Protocol Specification, Version 1.13</a> <a href="recordproto/record.pdf" type="application/pdf" title="Record Extension Protocol Specification, Version 1.13">[PDF]</a> <a href="recordproto/record.txt" type="application/txt;charset=utf-8" title="Record Extension Protocol Specification, Version 1.13">[TXT]</a></li>
+	<li><a href="renderproto/renderproto.txt">X Rendering Extension Version 0.11</a></li>
+	<li><a href="resourceproto/resproto.txt">X Resource Extension Version 1.2</a></li>
+	<li><a href="xextproto/security.html">Security Extension Specification</a> <a href="xextproto/security.pdf" type="application/pdf" title="Security Extension Specification">[PDF]</a> <a href="xextproto/security.txt" type="application/txt;charset=utf-8" title="Security Extension Specification">[TXT]</a></li>
+	<li><a href="xextproto/shape.html">X Nonrectangular Window Shape Extension Protocol, Version 1.1</a> <a href="xextproto/shape.pdf" type="application/pdf" title="X Nonrectangular Window Shape Extension Protocol, Version 1.1">[PDF]</a> <a href="xextproto/shape.txt" type="application/txt;charset=utf-8" title="X Nonrectangular Window Shape Extension Protocol, Version 1.1">[TXT]</a></li>
+	<li><a href="scrnsaverproto/saver.html">X11 Screen Saver Extension, Version 1.0</a> <a href="scrnsaverproto/saver.pdf" type="application/pdf" title="X11 Screen Saver Extension, Version 1.0">[PDF]</a> <a href="scrnsaverproto/saver.txt" type="application/txt;charset=utf-8" title="X11 Screen Saver Extension, Version 1.0">[TXT]</a></li>
+	<li><a href="xextproto/sync.html">X Synchronization Extension Protocol, Version 3.1</a> <a href="xextproto/sync.pdf" type="application/pdf" title="X Synchronization Extension Protocol, Version 3.1">[PDF]</a> <a href="xextproto/sync.txt" type="application/txt;charset=utf-8" title="X Synchronization Extension Protocol, Version 3.1">[TXT]</a></li>
+	<li><a href="xcmiscproto/xc-misc.html">XC-MISC Extension</a> <a href="xcmiscproto/xc-misc.pdf" type="application/pdf" title="XC-MISC Extension">[PDF]</a> <a href="xcmiscproto/xc-misc.txt" type="application/txt;charset=utf-8" title="XC-MISC Extension">[TXT]</a></li>
+	<li><a href="xextproto/xtest.html">XTEST Extension Protocol, Version 2.2</a> <a href="xextproto/xtest.pdf" type="application/pdf" title="XTEST Extension Protocol, Version 2.2">[PDF]</a> <a href="xextproto/xtest.txt" type="application/txt;charset=utf-8" title="XTEST Extension Protocol, Version 2.2">[TXT]</a></li>
+	<li><a href="videoproto/xv-protocol-v2.txt">X Video Extension Protocol Description Version 2</a></li>
+      </ul>
+
+      <h3 id="other-protocol">Other Protocols:</h3>
+      <ul>
+	<li><a href="libXdmcp/xdmcp.html">X Display Manager Control Protocol, Version 1.1</a> <a href="libXdmcp/xdmcp.pdf" type="application/pdf" title="X Display Manager Control Protocol, Version 1.1">[PDF]</a> <a href="libXdmcp/xdmcp.txt" type="application/txt;charset=utf-8" title="X Display Manager Control Protocol, Version 1.1">[TXT]</a></li>
+	<li><a href="fontsproto/fsproto.html">X Font Service Protocol, Version 2.0</a> <a href="fontsproto/fsproto.pdf" type="application/pdf" title="X Font Service Protocol, Version 2.0">[PDF]</a> <a href="fontsproto/fsproto.txt" type="application/txt;charset=utf-8" title="X Font Service Protocol, Version 2.0">[TXT]</a></li>
+	<li><a href="libX11/XIM/xim.html">X Input Method Protocol</a> <a href="libX11/XIM/xim.pdf" type="application/pdf" title="X Input Method Protocol">[PDF]</a> <a href="libX11/XIM/xim.txt" type="application/txt;charset=utf-8" title="X Input Method Protocol">[TXT]</a></li>
+	<li><a href="libSM/xsmp.html">X Session Management Protocol</a> <a href="libSM/xsmp.pdf" type="application/pdf" title="X Session Management Protocol">[PDF]</a> <a href="libSM/xsmp.txt" type="application/txt;charset=utf-8" title="X Session Management Protocol">[TXT]</a></li>
+	<li><a href="libICE/ice.html">Inter-Client Exchange (ICE) Protocol</a> <a href="libICE/ice.pdf" type="application/pdf" title="Inter-Client Exchange (ICE) Protocol">[PDF]</a> <a href="libICE/ice.txt" type="application/txt;charset=utf-8" title="Inter-Client Exchange (ICE) Protocol">[TXT]</a></li>
+      </ul>
+
+      <h3 id="other-spec">Other Specifications:</h3>
+      <ul>
+	<li><a href="xorg-docs/ctext/ctext.html">Compound Text Encoding, Version 1.1</a> <a href="xorg-docs/ctext/ctext.pdf" type="application/pdf" title="Compound Text Encoding, Version 1.1">[PDF]</a> <a href="xorg-docs/ctext/ctext.txt" type="application/txt;charset=utf-8" title="Compound Text Encoding, Version 1.1">[TXT]</a></li>
+	<li><a href="xorg-docs/xlfd/xlfd.html">X Logical Font Description Conventions, Version 1.5</a> <a href="xorg-docs/xlfd/xlfd.pdf" type="application/pdf" title="X Logical Font Description Conventions, Version 1.5">[PDF]</a> <a href="xorg-docs/xlfd/xlfd.txt" type="application/txt;charset=utf-8" title="X Logical Font Description Conventions, Version 1.5">[TXT]</a></li>
+      </ul>
+
+      <hr />
+      
+
+    </body>
+</html>
