@@ -48,3 +48,5 @@ to set all output variables to invariant
 
 coherent is the qualifier used on images to say this image is being changed and accesed my multiple shaders
 section 7.12 defines memory access
+
+currently on 6.1
