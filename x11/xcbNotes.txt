@@ -1,0 +1,14 @@
+
+
+
+
+
+xcb_windows: a struct containing data about a window in the x server taht
+the xcb connection uses to access the x11 window, i think...
+
+
+
+
+chapter 10 colorMaps:
+
+

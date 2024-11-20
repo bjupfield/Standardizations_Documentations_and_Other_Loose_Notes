@@ -1,0 +1,50 @@
+okay thing is normal c/c++ with a few added stuff, obviously also working on vertexes not cpus...
+
+
+out -> linkage out of shader to subsequent stage, this variable is copied out and accessible in the next stages of the vertex
+in -> linkage from a previous stage, this variable is copied from a previous out variable
+uniform -> value is the same across all processes
+varying -> value changes over preocesses, equivalent to out in vertex shader and in on fragment shader
+buffer -> value is stored in buffer and can be written by api and shader stuff
+shared -> compute shader only?
+
+input variables are declared with the in storage qualifer, and they must be declared in global scope
+i think this means for a shader
+
+//shader.shade=>
+//
+//in int gaben;
+//
+//main(shadermain)
+//{
+//	return gaben;
+//}
+//
+
+this would
+declare a input variable of type int that is named gaben, i dont know how to link input to previous output though
+input variables cannot be written to
+
+okay outputs are declared in the same way but are written to instead of readonly
+
+locations are declerations that allow the access of input from previous shader stages and even different program objects
+i dont know how they do this though
+okay for a non-vertex input to match an output from a previous shader stage the location layout qualifier must match
+so location is used for non-vertex variables (global variables from the perspective of the gpu)
+components can be used to pack more data into single locations, but obviously data is constrained by location
+size, refer to sepcification pg 73 for more on this
+
+interpolation qualifiers:
+flat -> no interpolation
+smooth -> perspective correct manner
+noperspective -> linearly
+
+default precisions for types can be delared with
+precision precision-qualifier type
+
+use
+#pragma STDGL invariat(all)
+to set all output variables to invariant
+
+coherent is the qualifier used on images to say this image is being changed and accesed my multiple shaders
+section 7.12 defines memory access
