@@ -1,0 +1,101 @@
+refer to GLSL specification document to complete these notes
+also refer to GLX specification for X org bindings... thats only 50 pgs :)
+
+the GL draws primitives onto the framebuffer, or something like that?
+primitives are all comprised of vertices, that is all primitives are
+vertices in some way
+vertices can define multiple things, from actual points to color, positional coordiates,
+and texture coordinates
+
+commands are processed in order they are recieved
+
+data is passed by value
+
+framebuffers come in two types, client provided (the windows frame buffer)
+and gl created, ones you create for gl
+
+the default frame buffer is the windows provided frame buffer
+the default frame buffers structure and data access is completely controlled
+by the window, not by gl
+
+errors can be detected with GetError(void)
+
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+use no error_mode on release applications
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+graphics can be reset by afilure in coding, use GetGraphicsResetStatus to find
+what the error was, or if it ws caued by your apliaction, refer to pg 19 for specifics
+
+the only time flush works is on single depth buffer frames,
+Flush() is used to send all commands in the pipe straight to the executor
+Finish() forces Gl to execute all commands that it has, and will not return
+untill those commands are exectued
+
+there floating point definition literally does not conform to the 754
+special floats of Inf, -Inf, and NaN all oeprate in ways applicable
+
+they also have a special definition for a 16 bit float, 
+
+no errors from division by zero
+
+rendering is done by 5 commands:
+Draw() -> refer to 10.4
+BlitFrameBuffer() -> 18.3.1
+Clear() -> 17.4.3
+ClearBUffer() -> 17.4.3.1
+DispatchCompute() -> 19
+
+context states.... states... state driven programming... context aren't
+yeah context state just means the context of the "driver" (by driver I mean gl)
+as a whole. almost all context states are server driven, some are client driven, will be refered to later on
+find context in chapter 22
+
+okay objects specifically refer to shaders, buffer data, framebuffer memory, and textures
+
+all objects have specific delete commands, very anti-x lol
+
+again shader decleration is actually insane, loading dyanmically as strings, what are they doing
+
+texture objects are comprised of textures of a certain depth, like lod and depth can determine how many textures that comprise a texture
+
+renderbuffer are those funny things that framebuffers for offscreen rendering
+
+i was going t say only a fw points of the dataflow diagram was important,
+but now that I've looked a the application a bit more my ideas have fallen from my rotted skull
+no all of the diagram is important, the most important being that
+framebuffer is built from all shaders into itself, all taking from texture/fetching, image-loading. and all other application defined passes
+but imporatntly creation of the rendered pixels is created from application defined functions,
+with packing, assembly, and operations all defined by openSL and independent aplications
+
+synchronization is done through syncronization objects, the most basic
+being FenceSync which just holds the Gl conditions untill whatever section
+it is signaled in is completed
+all synch objects are set to unsignaled at the start a boolean value,
+they than are set to signaled once the pass is made, obviously objects
+are set to unsignaled at the start of each pass
+to be clear, fencesync is an object that sends signals throughout the gl stream,
+it is not the signal itself, anyways fairly normal atomization have fun :(
+
+to wait for fencesync signal pass the sync to a func like ClientWaitSync()
+very normal stuff refer to pg 39
+
+you can 
+GenQueries()
+lol...
+
+timequeries are fun, use is obvious, like I don't know you know checking to see runtime and adjust
+buffer rates accordingly uses these pg 51 for specifics not complicated
+
+c# style debinding of current context, queriable objects will have name/reference point deleted
+but will be allowed to be accessed by multi-vector functions untill the name is comlpetely dereferenced
+
+
+uhhh differetn contexts are different the changes made to an object in
+one context do not necessarily mean another contexts same object is updated
+(what this means is it varies implementation wise)
+
+on buffer implementation section 6
+
+
