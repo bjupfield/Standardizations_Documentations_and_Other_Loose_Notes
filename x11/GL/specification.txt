@@ -98,4 +98,215 @@ one context do not necessarily mean another contexts same object is updated
 
 on buffer implementation section 6
 
+okay
+this section goes over buffers and their creations, i will not go into specifics just re-read it
+but he is the general
+it uses the same type of object generation and naming as classic c style langauges like x11,
+objects are created and named... these names are integers that the client must hold in memory to be
+able to reference these objects, which are the buffers, all other things are auxillery
+
+chapter 7
+
+shader objects are created the same way, with an initial call to create the name/handle than a call
+to either compile the shader strings or to load previous compiled shader binary
+shaders are attached to objects called programs (nice and confusing) that are not like source code of over-arching
+progams that direct the shaders, but are just the linkage of a bunch of shaders. to do this
+createprogram()
+than
+attachShader()
+than
+linkProgram()
+than (optionally)
+detachshader()
+
+on 7.3.1
+
+
+skippin gpipelinning for now (section 7.4) want to do stuff with this so trying to read a  bit faster
+
+Section 8
+Textures and Samplers
+
+textures are objects used for rapid reads, ummm they are created like all other objects
+in this specification, with genTextures(), bindTextures(), and create TextureObjects()
+there are also samplers which I think are texture objects used for only read and no writing?
+
+pixelstorage modes effects how textures are made, and also how readpixels operate
+they are set with PixelStore{if}(enum, T param)
+refer to table 8.1 or 18.1 to find how to use this command
+
+8.4 continues to dsicuss the storage methods of pixels, and data conversion => basically
+don't convert unwisely, refer to section if needed but mostly irrevelant
+
+they provide one method (so far) for texture creation
+TexImage3D()
+which tkaes a datastream pointer and converts the data found there based on the formating given
+to the argument, its complex
+TexImage1d and TexImage2D exist, but they will be discussed later?
+
+okay three-dimensional images are just 2d images stacked on top of each other
+In case you wanted to know how images are actually stored, they are stored from
+bottom left corner up, and I think they mean they are stared in an expanding
+corner way, so first the left corner, than all its surrounding points, than those points
+surrounding points and so on
+
+3d textures can have a lod (level of detail) argument, this will be discussed in section 8.14.3
+
+on pg 214ish going over the texImage*d pages
+
+TexImage2D is equivalent to TexImage3D with deoth of 1 and corresponding images
+
+TexImage1D is equivalent to TexImage2D with height of 1
+
+copyTexImage2D can be used to copy textures from a framebuffer, and the arguments are specififed
+
+CompressedTexImage*D is used to generate create textures based of datastreams of encoded images
+look back at this section as it links to another document that provides more on compressed formats that are acceptable,
+i think appendix d holds the link
+
+
+okay mipmaps, I think I understand them, this is section 8.14
+mipmaps are the lod functionality, they are the things that provide less and less level of detail for whatever
+you need
+textures will have mipmaps inside them if they are 3d textures, the multiple layers are mipmaps,
+the layers that will be accessed upon a request are than defined by the level of detail requested, and than
+it will attempt to give the level of detail closest to whatever you want, this is actually determined by the
+options you define for the texture object
+usualy you just load multiple maps onto one texture, but you can also use GenerateMipMap to generate mipmaps,
+though you need to supply your own algo?
+
+textures must be complete to be accessed in shaders, more on this in 11.1.3.5 and 15.2.1
+
+fake textures can be created with textureview which uses the datastream stored in a texture to create a new texture
+dont know why this is used but its here
+
+TexStorage*D is used to create immutable textures, so I guess theese are the readonly textures other textures may
+be adjusted later on
+
+
+teximagedatat can be cleared/invalidated with corresponding commands InvalidateTexImage and ClearTex(Sub)Image
+with cleartexImage replacing all texels with specified texel type
+
+finally
+texture image loads and stroes 8.26
+
+textures are made availablke for shaders to read and write by binding the texture to one of a colleciton of image units
+
+textures are bound to imageunits with teh commands bindimageTexture and BindImageTextures,
+it is not clear as of yet how programs (shader collections) access the textures through these images
+
+section 9
+Framebuffers and Framebuffer Objects
+
+the initial and default framebuffer is the window systems default framebuffer
+
+framebuffers are the description of the pixel information
+that description is divided into things called bitplanes, these being the
+color planes, depth plane, and stencil plane buffers
+
+the color plane is actually divided into 4 different planes, the front left, front right, back left, back right,
+but I think the front left is the one that is usuall y used, with the framebuffer not having to implement the depth, stencil, right or back
+buffers
+
+framebuffer objects -> these are not the default/window framebuffers
+are not visible, they are not linked to the default framebbuffer
+
+
+rendering pipelines can be attached to framebuffers?
+
+there are three steps to creating framebuffers, genbuffers, createbuffesr, bindframebuffer,
+okay no, I do not know what the difference between createbuffers and genbuffers is, they both do the same thing?
+okay the difference is the state they are created in, createbuffers generates framebuffers at the default state or whatever,
+while genbuffers gerneates buffers with undeclared states
+
+images can be bound to buffers, but I know not how, they are attached to logical buffers attachment points, whaterver that is
+okay attachments are the buffers, so an attachment point would be the Stencil buffer or Depth buffer...
+or
+STENCIL_ATTACHMENT DEPTHATTACHMENT (table 9.2)
+
+
+i think i see, so a framebuffer is used as a pipeline point to pipe a frame into a texture or another framebuffer (eventually onto the monitor)
+the attachment points are not the points that the framebuffer recieves data from, it is
+where is sends data to
+like this is done with
+FrameBufferTexture*D
+which specifies the point of a texture that a framebuffer will be rendering into
+
+okay so textures can both be the data the framebuffer takes from to render and what the framebuffer renders onto, although
+i dont know how the framebuffer takes data from the texture, this is probably just throguh code...
+
+feedback textures are undefined...
+to prevent feedback loops use the atomic function TextureBarrier to garuntee a write to the texture before the next read is called
+
+okay so I thought they were defining a weird thing with framebuffer completeness, this being just a semantic definition of whether
+the framebuffer is good enough to be used by the collective coding mind, but no it is an actual definition that can be checked
+with
+CheckFramebufferStatus
+which returns true if complete or whatever, and rendering is only posisble if the framebuffer is complete
+
+read pixels is the command that reads pixels from a framebuffer, though it looks like this section does not go over it
+
+when the framebuffer is not the default framebuffer (9.5) the buffer reads and writes to the attached points, if image
+it takes corresponding cordinates and so on
+
+color values of framebuffers are converted to the internal components that there buffers are comprised of
+
+section 10
+Vertex Specification and Drawing Commands
+
+okay so in gl they provide geometric definitions to render simple geometry consisting of triangles and lines, this rendering is done through the vertex commands
+which allow you to define lines and triangles and store them in vertex array objects to than render
+
+each vertex array has attributes linked to it which describe what it contains, it looks like each vertex array can only contain one type of primitive, triangles, lines, etc...
+
+to create arrays the simple name scheme is used again, with GetVertexArrays returning available names, BindVertexArray returnning a default vertexarray object
+vertexarrayobjects seem to just be descriptors of buffer objects that actually hold the data, will come back to this point
+yes "all state related to the definition of data used by the vertex processor is encapsulated in a vertex array object."
+
+a buffer object can be bound to vertexarrays with VertexArrayElementBuffer, but I don't exactly know what a buffer object referes too, is it a framebuffer object?
+okay section 6 seems to go over buffer objects, as its called buffer objects, yes it looks like buffers are just datastorage
+like there is a definition for the buffer data that is VertexArrayElementBufferStorage
+
+to specify datatype stored in these buffers use VertexAttribFormat to define what type of vertex is being storedd, the number of values per vertex...
+
+okay well it went over draw commands, but those flew over my head, as they used theoretical commands to describe real commands, which is just funny
+but what I can say is a general theory of how the drawing of primitives works
+first the primitives are defined by the stroing of them in buffers and assignments to vertex array objects
+than all the attributes are set in vertex array objects to interpret the data in the buffers
+than a draw command is called
+this does not like directly draw to the screen, or directly process these primitives,
+it just tells gl to pass the primitives to the program that the vertex array is attached too, however I don't really understand how the vertex array is attached to the program (compiled/processed shaders)
+than eventually those shaders draw to the framebuffer, which is described in section 17 and 18
+i guess the gl holds the program data as sort of a state machine? i dont know
+okay I think the gl targets arrays by there literal number, the name of course, I'm so dumb, and they just refer to the name/number as the instance in the ommands, so
+when a DrawArrays() commands is called it draws instance 0 through instance count
+
+conditional rendering commands can be used to discard primitives that need to be occluded from the pipeline dependent on the you know the z buffer and stuff
+
+Section 11
+Programmable Vertex Processing
+
+vertex shaders process vertex attributes, which are jus the data available to vertexes I guess? section 10.2
+defines these attributes, but it just looks like data?
+
+okay so it goes over the important information of binding variables, which I think is the naming of variables
+across shader programs and like tesselation programs. So the things that are named are the vertex attributes
+(the data each individual vertex contains) these must be bound to be used
+i dont know exactly what this binding does, does it just change the memory location, or does it rename
+the variable for easier access through programs?
+okay I think what binding does is it assigns the program produced variables to the vertex attributes, that is
+it writes the data the program produces to the vertex location the variable is bound too.
+
+okay apparently this is not the case as vertex outputs is discussed in 11.1.2
+they seem to be able to write anything as output as long as it doesnt exceed the allowed size
+
+texelfetch allows for the access of textures within shader programs, works as imagined, fetches coordinates,
+cannot fetch from texturecubes, will fail if below or above the allowed LOD (level of detail)
+
+there is a maximum amount of textures that can be used... memory is limited :) check with MAX_-COMBINED_TEXTURE_IMAGE_UNITS
+
+shaders also get the fun shader indexes that they can access, with gl_DrawID, gl_InstanceID, gl_VertexID,
+gl_BaseVertex, gl_BaseInstance
+
+11.2 tesselation
 
