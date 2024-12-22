@@ -310,3 +310,59 @@ gl_BaseVertex, gl_BaseInstance
 
 11.2 tesselation
 
+tessalation produces new primitves from provided primitives... instead of adjusting them?
+tesssalation only operates on patch primitives, which are a type of primitive which I think always
+have surrounding vertices?
+
+okay so tesselation creates a new type of vertex when operating on a set of vertices, it changes
+a mat3x4 to a mat4x4, or something of similar quality
+
+the output type of variable created by a tesselation control shader is determined on program link
+based of the shader codes "layout qualifier vertices"
+
+tessalators can also fetch textures and images the same way as vertex shaders
+
+barrier is the atomic function t prevent execution of further code in tesselators
+
+tessalations use non-cartesian vertex positions to detail triangles... hmmmmm... kill me...
+like triangles are set to (u,v,w)
+where u, v, w are the progress along edges 1, 2, 3
+
+okay when a tessalation control shader is pressent the geometric primitive needs to be processed
+before being passed to the tessalator as a collection of lines and points, 11.2.2.1-3 describe
+this but ill attempt to summarize
+the way the primitives are split is based of the primitive mode of the tessalator, if
+triangles:
+split it by inserting a concentric triangles, with the amount of triangles being based of the
+tessalation level, level 1 resulting in 1 trianlge, concentric triangles can be a single point
+all triangles edges are than divided so that every concentric vertex can attach to a point
+on the edge that is not the maximum vertex of any triangle
+quads:
+subdivide similar to triangle, if tessalation level is greater than 1 concentric quads
+are created where every quad is divided in such that all vertexes of the lesser quad are 
+attached to non maximal vertexs in the quad, quads can also be solid lines
+isoline:
+i will never use these
+
+tesselation shaders other than these weird things operate the same way as vertex shaders,
+there a built-in and user-defined input/output with a maximum amount, and all things are linked
+on progam creation?
+
+11.3 Geometry Shaders
+
+okay i missed something from tessalation shaders, but I'll put it here. Tessalation 
+shaders only operate on patch primitives, which are sort of user defined primitives,
+they than for some reason have the tessalation control shader, which will operate on these
+user-defined primitives to turn them into more standard primitives? i don't really know why
+that would be done but I guess its an option. Geometry shadersoperate on all
+the other primitives instead, refer to section 10 for the lsit of available primitives
+also I think section 13.3 goes into stages of the pipeline (which shaders go first)
+
+the primitive that shaders process are defined in the geometry shader wiht the input layout
+qualifier, and this can be queried by opengl with the getprograiv command, with pname GEOMETRY_INPUT_TYPE
+
+geometry shaders if wanting to only process points can use multiple vertex streams to process
+points quicker, with the obvious drawbacks
+
+
+geometry shaders can be used to render cubemaps onto complex geometry, although I do not know how
