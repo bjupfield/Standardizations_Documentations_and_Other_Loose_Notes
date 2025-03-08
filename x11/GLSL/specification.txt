@@ -50,3 +50,35 @@ coherent is the qualifier used on images to say this image is being changed and 
 section 7.12 defines memory access
 
 currently on 6.1
+
+c-style function declerations
+function overloading is implemented
+void main()
+{
+}
+is the entry point to the shader logic
+
+parameters can use these keywords to determine the reference type of the parameter
+in -> parameter will be copied into function but will not be changed due to the logic of the function
+out -> parameter will be copied out, so like c# out variable
+inout -> combine both of the above terms, like c# ref variable
+noparameter -> assumes in
+
+subroutines are variable functions and they are declaerd with the keyword
+subroutine
+
+7.2 is something i think were interested in, at least mainly, maybe?
+
+need to look at chapter 11 of the opengl specification, lot of stufff in there is referenced by this document
+
+pg 182 gives functions for using cordinates to find texture samples
+cam do simple projections with linear division on texutres, pg 183
+
+noise functions are depreceated
+
+image writing is on pg 201
+
+barrier() or stop points in the shader are defiend on pg 205-208
+they are important for actually implementing multi-stage shaders
+
+

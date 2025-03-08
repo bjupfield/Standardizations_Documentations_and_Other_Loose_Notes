@@ -366,3 +366,19 @@ points quicker, with the obvious drawbacks
 
 
 geometry shaders can be used to render cubemaps onto complex geometry, although I do not know how
+
+
+13 Fixed Function Vertex Post-Processing
+Section 12 is skipped? only in the compatability profile?
+
+okay wrapping all discussion of this chapter into this one blob.
+this chapter goes over transform feedback, which I think includes flatshading, and clipping. The chapter also covers viewport mapping
+transform feedback are some sort of program that operates after the last shader performed, whether that be geometry tesselation or
+vertex shaders. transforms allow for the recording of shader information, inclusive of the amount of primitives, the program
+assigned data, and there clip distance. as with all other shader objects im not to sure how this works,
+for the viewport though it is simple. it can be defined to have a range as is maximum that the implementation provides,
+there can be multiple...
+
+14 Fixed-Function Primitive ASsembly and Rasterization
+
+read through will take notes later, i think most anti-aliasing is handled by the gl context though
