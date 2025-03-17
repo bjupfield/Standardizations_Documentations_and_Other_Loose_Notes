@@ -382,3 +382,79 @@ there can be multiple...
 14 Fixed-Function Primitive ASsembly and Rasterization
 
 read through will take notes later, i think most anti-aliasing is handled by the gl context though
+okay to begin i guess i missed this definition, fragments are the results after all processed shaders, and included
+data for that grid(which is part of the window)
+
+lots of things regulate how fragments are handled in the rasteriation process, you can literally
+just discard the fragments with RASTERIZER_DISCARD
+
+basically anti-analiasing is cooked, Gl implementation will handle it in the best
+way possible, but to even describe how the implementation will hadnle
+it is overwhelmingly complicated
+
+multisampling handles anti-analiasing by just sampling all primitives at every point
+and mixing the color output?
+
+gl implementations need not consider point widths other than point width 1, so like
+never use points I guess beccause an implementation is not trustworthy
+
+lines rasterize fragments of a diamond pattern following a grid, that the places
+that the line intersects with the grid that diamond region will be rasterized as a fragment
+nasty linear rationalization of the diamond grid, such that all info is stored in
+a linear buffer
+
+just moving onto polygon rasterization
+
+okay so the first part of polygon rasterization is determining if a polygon
+is front-facing or back-facing, with front-facing having the vertexes of the
+polygon ragganged in a counter-clockwise position in reference to the
+window viewport and the backfacing having a clockwise. They have a cool
+summation equation thaat displays how to calculate this, basically just
+sum the area of 1 point - the area of the point after
+
+1/2 f sum xy1 - xy2
+where f either -1 or 1 depending on the origin of the loop,
+the equation and explanation are in 14.6.1
+
+you can than cullfaces, which can either cull front-facing or back-facing and
+the default is culling backfaces
+
+polygon data is than arranged via barycentric coordinates
+polygons without barycentric vertex counts must still be accessiable via
+barycentric coordinates... I think, believe it or not this section is quite complicated
+
+okay so believe it or not a polygon is antialized whenever it is displayed
+on screen, or more correctly whenever its interior intersects with a 
+fragment square(pixel) it produces a fragment
+
+okay so there are some things that they discuss about rasterization based off
+of depth, and based off the maximumdepth and stuff, it went right over my head
+now onto perfragment render or not test
+
+pixel-ownership:
+is pixel inside the current glcontext ownership, is this fragment offscreen, why
+are you sending it to the context
+scissortest:
+same thing but a user-defined region
+multi-sampling:
+actually crack-cocaine
+okay how this works is that a fragment(pixel) will be sampled multiple times, but
+each sample will have slightly different sub-sample positions, like .2,.4,.6,.8,1
+and these might all target different polygons, these can than be blended together,
+and this sounds like it might make weird edges that are blended... but think about it
+if like a triangle is being rendered and it has a slanted edge that runs with a non-1-slope,
+the edge would be ridged if it was not multisampled, as one time the pixel would
+fall within the pixel and one time it would not, but multisampling makes it where
+the edge would be more disseminated, i dont know i cant speak right now my language
+is not a match for what i need to type
+
+15 Programmable Fragment Processing
+
+Fragment shaders are kind of what unity/game-engines present as shaders. They
+are the post processing shaders that can operate fragments producd from rasterization
+yeah i dont think i can really take the information in this section in without
+using it immediately, or using it as a referenne while working on stuff, its just too
+technical, but not like in a mathematical way, more in like a use case way
+
+17 Writing Fragments and Samples to Framebuffer
+
