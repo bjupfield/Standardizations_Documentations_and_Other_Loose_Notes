@@ -1,4 +1,4 @@
-refer to GLSL specification document to complete these notes
+crefer to GLSL specification document to complete these notes
 also refer to GLX specification for X org bindings... thats only 50 pgs :)
 
 the GL draws primitives onto the framebuffer, or something like that?
@@ -123,16 +123,6 @@ on 7.3.1
 
 
 skippin gpipelinning for now (section 7.4) want to do stuff with this so trying to read a  bit faster
-
-7.6
-
-uniforms, what are uniforms, they are constants across all shaders in a program
-they are described in the opengl specification in sectio 4.3.5
-uniforms can be handled in two ways, with the default uniform block or creating
-independent uniform blocks, we will almost certainly only use the default uniform block
-if not refer to section 7.6 again. To set the variables use getuniformlocation to
-gain the uniform location, than use this location use programuniform to set the uniforms
-value
 
 Section 8
 Textures and Samplers

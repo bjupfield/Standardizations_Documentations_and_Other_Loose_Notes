@@ -81,4 +81,13 @@ image writing is on pg 201
 barrier() or stop points in the shader are defiend on pg 205-208
 they are important for actually implementing multi-stage shaders
 
+NOTES ON Uniforms Section 4.3.5:
+Okay taking these notes because uniforms are obviously very important,
+uniforms are constants across all shaders in a program. declared with
+the qualifier uniform, they are assigned to a program under a uniform block,
+the usual way to handle a uniform is under the default uniform block which can
+than be accessed and modified with opengl as described in the specification
+under section 7.6
+
+
 
