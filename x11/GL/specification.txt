@@ -1,0 +1,615 @@
+refer to GLSL specification document to complete these notes
+also refer to GLX specification for X org bindings... thats only 50 pgs :)
+
+the GL draws primitives onto the framebuffer, or something like that?
+primitives are all comprised of vertices, that is all primitives are
+vertices in some way
+vertices can define multiple things, from actual points to color, positional coordiates,
+and texture coordinates
+
+commands are processed in order they are recieved
+
+data is passed by value
+
+framebuffers come in two types, client provided (the windows frame buffer)
+and gl created, ones you create for gl
+
+the default frame buffer is the windows provided frame buffer
+the default frame buffers structure and data access is completely controlled
+by the window, not by gl
+
+errors can be detected with GetError(void)
+
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+use no error_mode on release applications
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+graphics can be reset by afilure in coding, use GetGraphicsResetStatus to find
+what the error was, or if it ws caued by your apliaction, refer to pg 19 for specifics
+
+the only time flush works is on single depth buffer frames,
+Flush() is used to send all commands in the pipe straight to the executor
+Finish() forces Gl to execute all commands that it has, and will not return
+untill those commands are exectued
+
+there floating point definition literally does not conform to the 754
+special floats of Inf, -Inf, and NaN all oeprate in ways applicable
+
+they also have a special definition for a 16 bit float, 
+
+no errors from division by zero
+
+rendering is done by 5 commands:
+Draw() -> refer to 10.4
+BlitFrameBuffer() -> 18.3.1
+Clear() -> 17.4.3
+ClearBUffer() -> 17.4.3.1
+DispatchCompute() -> 19
+
+context states.... states... state driven programming... context aren't
+yeah context state just means the context of the "driver" (by driver I mean gl)
+as a whole. almost all context states are server driven, some are client driven, will be refered to later on
+find context in chapter 22
+
+okay objects specifically refer to shaders, buffer data, framebuffer memory, and textures
+
+all objects have specific delete commands, very anti-x lol
+
+again shader decleration is actually insane, loading dyanmically as strings, what are they doing
+
+texture objects are comprised of textures of a certain depth, like lod and depth can determine how many textures that comprise a texture
+
+renderbuffer are those funny things that framebuffers for offscreen rendering
+
+i was going t say only a fw points of the dataflow diagram was important,
+but now that I've looked a the application a bit more my ideas have fallen from my rotted skull
+no all of the diagram is important, the most important being that
+framebuffer is built from all shaders into itself, all taking from texture/fetching, image-loading. and all other application defined passes
+but imporatntly creation of the rendered pixels is created from application defined functions,
+with packing, assembly, and operations all defined by openSL and independent aplications
+
+synchronization is done through syncronization objects, the most basic
+being FenceSync which just holds the Gl conditions untill whatever section
+it is signaled in is completed
+all synch objects are set to unsignaled at the start a boolean value,
+they than are set to signaled once the pass is made, obviously objects
+are set to unsignaled at the start of each pass
+to be clear, fencesync is an object that sends signals throughout the gl stream,
+it is not the signal itself, anyways fairly normal atomization have fun :(
+
+to wait for fencesync signal pass the sync to a func like ClientWaitSync()
+very normal stuff refer to pg 39
+
+you can 
+GenQueries()
+lol...
+
+timequeries are fun, use is obvious, like I don't know you know checking to see runtime and adjust
+buffer rates accordingly uses these pg 51 for specifics not complicated
+
+c# style debinding of current context, queriable objects will have name/reference point deleted
+but will be allowed to be accessed by multi-vector functions untill the name is comlpetely dereferenced
+
+
+uhhh differetn contexts are different the changes made to an object in
+one context do not necessarily mean another contexts same object is updated
+(what this means is it varies implementation wise)
+
+on buffer implementation section 6
+
+okay
+this section goes over buffers and their creations, i will not go into specifics just re-read it
+but he is the general
+it uses the same type of object generation and naming as classic c style langauges like x11,
+objects are created and named... these names are integers that the client must hold in memory to be
+able to reference these objects, which are the buffers, all other things are auxillery
+
+chapter 7
+
+shader objects are created the same way, with an initial call to create the name/handle than a call
+to either compile the shader strings or to load previous compiled shader binary
+shaders are attached to objects called programs (nice and confusing) that are not like source code of over-arching
+progams that direct the shaders, but are just the linkage of a bunch of shaders. to do this
+createprogram()
+than
+attachShader()
+than
+linkProgram()
+than (optionally)
+detachshader()
+
+on 7.3.1
+
+
+skippin gpipelinning for now (section 7.4) want to do stuff with this so trying to read a  bit faster
+
+Section 8
+Textures and Samplers
+
+textures are objects used for rapid reads, ummm they are created like all other objects
+in this specification, with genTextures(), bindTextures(), and create TextureObjects()
+there are also samplers which I think are texture objects used for only read and no writing?
+
+pixelstorage modes effects how textures are made, and also how readpixels operate
+they are set with PixelStore{if}(enum, T param)
+refer to table 8.1 or 18.1 to find how to use this command
+
+8.4 continues to dsicuss the storage methods of pixels, and data conversion => basically
+don't convert unwisely, refer to section if needed but mostly irrevelant
+
+they provide one method (so far) for texture creation
+TexImage3D()
+which tkaes a datastream pointer and converts the data found there based on the formating given
+to the argument, its complex
+TexImage1d and TexImage2D exist, but they will be discussed later?
+
+okay three-dimensional images are just 2d images stacked on top of each other
+In case you wanted to know how images are actually stored, they are stored from
+bottom left corner up, and I think they mean they are stared in an expanding
+corner way, so first the left corner, than all its surrounding points, than those points
+surrounding points and so on
+
+3d textures can have a lod (level of detail) argument, this will be discussed in section 8.14.3
+
+on pg 214ish going over the texImage*d pages
+
+TexImage2D is equivalent to TexImage3D with deoth of 1 and corresponding images
+
+TexImage1D is equivalent to TexImage2D with height of 1
+
+copyTexImage2D can be used to copy textures from a framebuffer, and the arguments are specififed
+
+CompressedTexImage*D is used to generate create textures based of datastreams of encoded images
+look back at this section as it links to another document that provides more on compressed formats that are acceptable,
+i think appendix d holds the link
+
+
+okay mipmaps, I think I understand them, this is section 8.14
+mipmaps are the lod functionality, they are the things that provide less and less level of detail for whatever
+you need
+textures will have mipmaps inside them if they are 3d textures, the multiple layers are mipmaps,
+the layers that will be accessed upon a request are than defined by the level of detail requested, and than
+it will attempt to give the level of detail closest to whatever you want, this is actually determined by the
+options you define for the texture object
+usualy you just load multiple maps onto one texture, but you can also use GenerateMipMap to generate mipmaps,
+though you need to supply your own algo?
+
+textures must be complete to be accessed in shaders, more on this in 11.1.3.5 and 15.2.1
+
+fake textures can be created with textureview which uses the datastream stored in a texture to create a new texture
+dont know why this is used but its here
+
+TexStorage*D is used to create immutable textures, so I guess theese are the readonly textures other textures may
+be adjusted later on
+
+
+teximagedatat can be cleared/invalidated with corresponding commands InvalidateTexImage and ClearTex(Sub)Image
+with cleartexImage replacing all texels with specified texel type
+
+finally
+texture image loads and stroes 8.26
+
+textures are made availablke for shaders to read and write by binding the texture to one of a colleciton of image units
+
+textures are bound to imageunits with teh commands bindimageTexture and BindImageTextures,
+it is not clear as of yet how programs (shader collections) access the textures through these images
+
+section 9
+Framebuffers and Framebuffer Objects
+
+the initial and default framebuffer is the window systems default framebuffer
+
+framebuffers are the description of the pixel information
+that description is divided into things called bitplanes, these being the
+color planes, depth plane, and stencil plane buffers
+
+the color plane is actually divided into 4 different planes, the front left, front right, back left, back right,
+but I think the front left is the one that is usuall y used, with the framebuffer not having to implement the depth, stencil, right or back
+buffers
+
+framebuffer objects -> these are not the default/window framebuffers
+are not visible, they are not linked to the default framebbuffer
+
+
+rendering pipelines can be attached to framebuffers?
+
+there are three steps to creating framebuffers, genbuffers, createbuffesr, bindframebuffer,
+okay no, I do not know what the difference between createbuffers and genbuffers is, they both do the same thing?
+okay the difference is the state they are created in, createbuffers generates framebuffers at the default state or whatever,
+while genbuffers gerneates buffers with undeclared states
+
+images can be bound to buffers, but I know not how, they are attached to logical buffers attachment points, whaterver that is
+okay attachments are the buffers, so an attachment point would be the Stencil buffer or Depth buffer...
+or
+STENCIL_ATTACHMENT DEPTHATTACHMENT (table 9.2)
+
+
+i think i see, so a framebuffer is used as a pipeline point to pipe a frame into a texture or another framebuffer (eventually onto the monitor)
+the attachment points are not the points that the framebuffer recieves data from, it is
+where is sends data to
+like this is done with
+FrameBufferTexture*D
+which specifies the point of a texture that a framebuffer will be rendering into
+
+okay so textures can both be the data the framebuffer takes from to render and what the framebuffer renders onto, although
+i dont know how the framebuffer takes data from the texture, this is probably just throguh code...
+
+feedback textures are undefined...
+to prevent feedback loops use the atomic function TextureBarrier to garuntee a write to the texture before the next read is called
+
+okay so I thought they were defining a weird thing with framebuffer completeness, this being just a semantic definition of whether
+the framebuffer is good enough to be used by the collective coding mind, but no it is an actual definition that can be checked
+with
+CheckFramebufferStatus
+which returns true if complete or whatever, and rendering is only posisble if the framebuffer is complete
+
+read pixels is the command that reads pixels from a framebuffer, though it looks like this section does not go over it
+
+when the framebuffer is not the default framebuffer (9.5) the buffer reads and writes to the attached points, if image
+it takes corresponding cordinates and so on
+
+color values of framebuffers are converted to the internal components that there buffers are comprised of
+
+section 10
+Vertex Specification and Drawing Commands
+
+okay so in gl they provide geometric definitions to render simple geometry consisting of triangles and lines, this rendering is done through the vertex commands
+which allow you to define lines and triangles and store them in vertex array objects to than render
+
+each vertex array has attributes linked to it which describe what it contains, it looks like each vertex array can only contain one type of primitive, triangles, lines, etc...
+
+to create arrays the simple name scheme is used again, with GetVertexArrays returning available names, BindVertexArray returnning a default vertexarray object
+vertexarrayobjects seem to just be descriptors of buffer objects that actually hold the data, will come back to this point
+yes "all state related to the definition of data used by the vertex processor is encapsulated in a vertex array object."
+
+a buffer object can be bound to vertexarrays with VertexArrayElementBuffer, but I don't exactly know what a buffer object referes too, is it a framebuffer object?
+okay section 6 seems to go over buffer objects, as its called buffer objects, yes it looks like buffers are just datastorage
+like there is a definition for the buffer data that is VertexArrayElementBufferStorage
+
+to specify datatype stored in these buffers use VertexAttribFormat to define what type of vertex is being storedd, the number of values per vertex...
+
+okay well it went over draw commands, but those flew over my head, as they used theoretical commands to describe real commands, which is just funny
+but what I can say is a general theory of how the drawing of primitives works
+first the primitives are defined by the stroing of them in buffers and assignments to vertex array objects
+than all the attributes are set in vertex array objects to interpret the data in the buffers
+than a draw command is called
+this does not like directly draw to the screen, or directly process these primitives,
+it just tells gl to pass the primitives to the program that the vertex array is attached too, however I don't really understand how the vertex array is attached to the program (compiled/processed shaders)
+than eventually those shaders draw to the framebuffer, which is described in section 17 and 18
+i guess the gl holds the program data as sort of a state machine? i dont know
+okay I think the gl targets arrays by there literal number, the name of course, I'm so dumb, and they just refer to the name/number as the instance in the ommands, so
+when a DrawArrays() commands is called it draws instance 0 through instance count
+
+conditional rendering commands can be used to discard primitives that need to be occluded from the pipeline dependent on the you know the z buffer and stuff
+
+Section 11
+Programmable Vertex Processing
+
+vertex shaders process vertex attributes, which are jus the data available to vertexes I guess? section 10.2
+defines these attributes, but it just looks like data?
+
+okay so it goes over the important information of binding variables, which I think is the naming of variables
+across shader programs and like tesselation programs. So the things that are named are the vertex attributes
+(the data each individual vertex contains) these must be bound to be used
+i dont know exactly what this binding does, does it just change the memory location, or does it rename
+the variable for easier access through programs?
+okay I think what binding does is it assigns the program produced variables to the vertex attributes, that is
+it writes the data the program produces to the vertex location the variable is bound too.
+
+okay apparently this is not the case as vertex outputs is discussed in 11.1.2
+they seem to be able to write anything as output as long as it doesnt exceed the allowed size
+
+texelfetch allows for the access of textures within shader programs, works as imagined, fetches coordinates,
+cannot fetch from texturecubes, will fail if below or above the allowed LOD (level of detail)
+
+there is a maximum amount of textures that can be used... memory is limited :) check with MAX_-COMBINED_TEXTURE_IMAGE_UNITS
+
+shaders also get the fun shader indexes that they can access, with gl_DrawID, gl_InstanceID, gl_VertexID,
+gl_BaseVertex, gl_BaseInstance
+
+11.2 tesselation
+
+tessalation produces new primitves from provided primitives... instead of adjusting them?
+tesssalation only operates on patch primitives, which are a type of primitive which I think always
+have surrounding vertices?
+
+okay so tesselation creates a new type of vertex when operating on a set of vertices, it changes
+a mat3x4 to a mat4x4, or something of similar quality
+
+the output type of variable created by a tesselation control shader is determined on program link
+based of the shader codes "layout qualifier vertices"
+
+tessalators can also fetch textures and images the same way as vertex shaders
+
+barrier is the atomic function t prevent execution of further code in tesselators
+
+tessalations use non-cartesian vertex positions to detail triangles... hmmmmm... kill me...
+like triangles are set to (u,v,w)
+where u, v, w are the progress along edges 1, 2, 3
+
+okay when a tessalation control shader is pressent the geometric primitive needs to be processed
+before being passed to the tessalator as a collection of lines and points, 11.2.2.1-3 describe
+this but ill attempt to summarize
+the way the primitives are split is based of the primitive mode of the tessalator, if
+triangles:
+split it by inserting a concentric triangles, with the amount of triangles being based of the
+tessalation level, level 1 resulting in 1 trianlge, concentric triangles can be a single point
+all triangles edges are than divided so that every concentric vertex can attach to a point
+on the edge that is not the maximum vertex of any triangle
+quads:
+subdivide similar to triangle, if tessalation level is greater than 1 concentric quads
+are created where every quad is divided in such that all vertexes of the lesser quad are 
+attached to non maximal vertexs in the quad, quads can also be solid lines
+isoline:
+i will never use these
+
+tesselation shaders other than these weird things operate the same way as vertex shaders,
+there a built-in and user-defined input/output with a maximum amount, and all things are linked
+on progam creation?
+
+11.3 Geometry Shaders
+
+okay i missed something from tessalation shaders, but I'll put it here. Tessalation 
+shaders only operate on patch primitives, which are sort of user defined primitives,
+they than for some reason have the tessalation control shader, which will operate on these
+user-defined primitives to turn them into more standard primitives? i don't really know why
+that would be done but I guess its an option. Geometry shadersoperate on all
+the other primitives instead, refer to section 10 for the lsit of available primitives
+also I think section 13.3 goes into stages of the pipeline (which shaders go first)
+
+the primitive that shaders process are defined in the geometry shader wiht the input layout
+qualifier, and this can be queried by opengl with the getprograiv command, with pname GEOMETRY_INPUT_TYPE
+
+geometry shaders if wanting to only process points can use multiple vertex streams to process
+points quicker, with the obvious drawbacks
+
+
+geometry shaders can be used to render cubemaps onto complex geometry, although I do not know how
+
+
+13 Fixed Function Vertex Post-Processing
+Section 12 is skipped? only in the compatability profile?
+
+okay wrapping all discussion of this chapter into this one blob.
+this chapter goes over transform feedback, which I think includes flatshading, and clipping. The chapter also covers viewport mapping
+transform feedback are some sort of program that operates after the last shader performed, whether that be geometry tesselation or
+vertex shaders. transforms allow for the recording of shader information, inclusive of the amount of primitives, the program
+assigned data, and there clip distance. as with all other shader objects im not to sure how this works,
+for the viewport though it is simple. it can be defined to have a range as is maximum that the implementation provides,
+there can be multiple...
+
+14 Fixed-Function Primitive ASsembly and Rasterization
+
+read through will take notes later, i think most anti-aliasing is handled by the gl context though
+okay to begin i guess i missed this definition, fragments are the results after all processed shaders, and included
+data for that grid(which is part of the window)
+
+lots of things regulate how fragments are handled in the rasteriation process, you can literally
+just discard the fragments with RASTERIZER_DISCARD
+
+basically anti-analiasing is cooked, Gl implementation will handle it in the best
+way possible, but to even describe how the implementation will hadnle
+it is overwhelmingly complicated
+
+multisampling handles anti-analiasing by just sampling all primitives at every point
+and mixing the color output?
+
+gl implementations need not consider point widths other than point width 1, so like
+never use points I guess beccause an implementation is not trustworthy
+
+lines rasterize fragments of a diamond pattern following a grid, that the places
+that the line intersects with the grid that diamond region will be rasterized as a fragment
+nasty linear rationalization of the diamond grid, such that all info is stored in
+a linear buffer
+
+just moving onto polygon rasterization
+
+okay so the first part of polygon rasterization is determining if a polygon
+is front-facing or back-facing, with front-facing having the vertexes of the
+polygon ragganged in a counter-clockwise position in reference to the
+window viewport and the backfacing having a clockwise. They have a cool
+summation equation thaat displays how to calculate this, basically just
+sum the area of 1 point - the area of the point after
+
+1/2 f sum xy1 - xy2
+where f either -1 or 1 depending on the origin of the loop,
+the equation and explanation are in 14.6.1
+
+you can than cullfaces, which can either cull front-facing or back-facing and
+the default is culling backfaces
+
+polygon data is than arranged via barycentric coordinates
+polygons without barycentric vertex counts must still be accessiable via
+barycentric coordinates... I think, believe it or not this section is quite complicated
+
+okay so believe it or not a polygon is antialized whenever it is displayed
+on screen, or more correctly whenever its interior intersects with a 
+fragment square(pixel) it produces a fragment
+
+okay so there are some things that they discuss about rasterization based off
+of depth, and based off the maximumdepth and stuff, it went right over my head
+now onto perfragment render or not test
+
+pixel-ownership:
+is pixel inside the current glcontext ownership, is this fragment offscreen, why
+are you sending it to the context
+scissortest:
+same thing but a user-defined region
+multi-sampling:
+actually crack-cocaine
+okay how this works is that a fragment(pixel) will be sampled multiple times, but
+each sample will have slightly different sub-sample positions, like .2,.4,.6,.8,1
+and these might all target different polygons, these can than be blended together,
+and this sounds like it might make weird edges that are blended... but think about it
+if like a triangle is being rendered and it has a slanted edge that runs with a non-1-slope,
+the edge would be ridged if it was not multisampled, as one time the pixel would
+fall within the pixel and one time it would not, but multisampling makes it where
+the edge would be more disseminated, i dont know i cant speak right now my language
+is not a match for what i need to type
+
+15 Programmable Fragment Processing
+
+Fragment shaders are kind of what unity/game-engines present as shaders. They
+are the post processing shaders that can operate fragments producd from rasterization
+yeah i dont think i can really take the information in this section in without
+using it immediately, or using it as a referenne while working on stuff, its just too
+technical, but not like in a mathematical way, more in like a use case way
+
+17 Writing Fragments and Samples to Framebuffer
+
+.1
+This section seems really important but its really short, just how
+I think antialiasing written per application is applied to fragments
+
+.3.
+okay, fragment operations like, stencil, dpth, and occlusion can also be performed
+after rasterization operations
+
+1
+alpha sampling can either be normal, made dependent on multisampled area,
+or all set to maximum alpha value
+
+3
+stencil buffer
+the stencil buffer is essentially a second depth buffer, but instead of
+storing floating point data it defaults to integer storage, standard 8 bits
+okay there are two versions of stencils front and back stencil states,
+with back being usedd for back-facing polygons exclusively and front
+covering everything else
+there are two functions corresponding to the operation of the stencil
+buffer onto the fragment(pixel)
+they are
+stencilFunc{Seperate}
+and
+stencilOp{Seperate}
+(seperate is used to indicate you are targeting either the back
+or front stencil)
+stencilFunc sets the opengl state machine to check the stencil values
+against whatever value is passed to the operation. it can check for any
+equality, and never and always values
+stencilop decides what is done with the values in the stencil buffer that
+pass the stencilFunc, you an do anything to it, its actually crazy and I don't
+know what they are used for
+the stencilfunc decides if the fragment passes the stencil test, bassed off
+whats in the stencil buffer, if it fails the fragment is discarded
+
+4
+Depth buffer
+discards fragments if depth test fails
+the depth test is not like the stencil test, the stencil value isnt 
+generated by the application but by gl itself, and the test consist of
+testing the current fragments depth (which is generated during polygon
+sampling) against the fragments previous depth value which is stored in the 
+depth buffer.
+the single func that gl provides in this section is
+DepthFunc
+which allows the selection of what equality to test against for the depth test
+
+5
+
+occlusion queries just check hhow many fragments have been discarded by previous
+test, if all fragments are discarded the state machine completes itself
+
+6.1
+you can blend
+okay blend is used for post processing effects, and for fake glass effects
+(by that I mean not raytraced glass effects), and like ui and stuff, so these
+operations would be used on multi-stage pipelines, with multiple renders needed
+
+...
+basically for blending theres a lot of different operations that one can
+use, or different funcs to have different types of blending enabled
+
+8
+dithering is used to either clamp generated color values to a stylistic chocie
+or to the only choices that are available through the color pallete
+
+9
+logical operations
+these are simpler operations that operate individually on each value of
+an rgb fragment, they are logical operation, not subtraction, but bit
+wise logic
+
+10
+multisampling can also enable individual sampling test, of the
+above mentioned test, instead of test on the generalized fragment produced
+by the multisample
+
+.4.
+Whole Framebuffer Operations (not on individual fragments/pixels)
+
+1
+draw operations
+pretty much two drawoperations
+DrawBuffer
+and
+NameFrameBufferDrawBuffer
+the first is to designate drawing to a drawbuffer, so the usual operation
+while nameframebuffer
+draws to a framebuffer for further processing
+
+2
+mask and buffer operations
+you can use a colormask on the drawbuffer,
+depthmask,
+stenclmask
+
+3.0
+buffers can be cleared
+with commands
+clearcolor
+clear
+cleardepth
+cleaddepthf
+clearstencil
+with clearcolor setting the color that clear will set the framebuffer/drawbuffers
+fragmetns too
+
+3.1
+clearbuffer{if ui}v
+and
+clearnameframebuffer{if ui}v
+can also be used
+
+4
+invalidatesubframebuffer
+invalidatenamedframebuffersubdata
+invalidateframebuffer
+invalidatenamedframebufferdata
+
+can be used to discard regions of buffers, or mark them to be discarded
+
+18
+just putting this into one section, it just goes over the reading and copying
+pixel data from different buffer/image sources, with image meaning things
+like textures that are stored in the gpu memory, while buffers are the framebuffers
+in use by the opengl machine
+reading buffers is simple with
+readbuffer
+and
+nameframebufferreadbuffer 
+allowing the targeting of which buffer to read from
+while
+readpixels
+and
+readnpixels
+uses that targeted buffer to copy the pixel data into a buffer of the clients
+choosing
+copying pixels from one buffer to the next is accomplished with the functions
+blitframebuffer
+and
+blitnameframebuffer
+with the first using the default read and write buffers, with the
+second one allowing for client choosing of buffers
+the function takes a region from the first framebuffer and paste it onto
+the next framebuffer, wherever designtated,
+to copy from one image to the next use
+copyimagesubdata
+remember images are like textures, sort of static non-pipelined buffers,
+or buffers that are not usually adjusted in the rendering pipeline
+
+19
+compute shaders as far as i can recall are shaders that operate on the cpu
+level, this section doesnt provide to much useful information unless we actually
+decide to use them

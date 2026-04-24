@@ -1,0 +1,257 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+this document goes over the Arm conventions in assembly programming to
+assure interoperability
+
+3.2
+
+observe stack alignment and limit... 5.2.1.1
+
+observe Ip in bl jumps? 5.3.1.1
+
+routines that are publicly visible conform to procedure variants
+
+data elements of interfaces follow standard chart layouts
+
+4.1
+
+datatypes
+standard int data types, byte, half-word, word, signed unsigned
+3 types of floats,
+half precision (two bytes)
+single precission (4 bytes)
+double precision (8 bytes)
+
+2 types containerized vector:
+64-bit: 8 bytes
+128-bit: 16 bytes, 8 byte alignment
+
+2 pointer types:
+data pointer: 4 bytes
+code pointer: 4 bytes, with first bit set to 0 equalling arm code and 1 thumb
+
+4.2
+
+apparently the arm ABI (application binary interface, documentation standards to confrom too basically)
+supports both little endian and big endian...
+
+4.3
+
+composite types are arrays/unions/aggregate variable types that
+take one or more of the standard data-types or a composite type
+to form the type. 
+
+memory alignment of a composite type is the maximum
+of each member alignment of the composite types before any alignment
+adjustment is applied
+
+the individual members alignment within the  composite type is 
+the alginment of that member after any language alignment modifiers are
+added
+
+.1
+
+the alginment of an aggregate will be the alginment of its most-algined component
+the size of the aggregate is the smallest multiple
+of its alignment sufficient to hold all of its members
+
+.2
+
+the aligment  of the union is the same as an agregate
+the size of a union is the smallest multiple sufficient to hold its
+largest member
+
+.3
+
+array alignments are the alignments of the base type
+size of array is the size of the base type multiplied
+by the number of elements in the array
+
+.4
+
+complicated...
+
+.5
+
+more weird aggregate only stuff
+
+5.0
+
+register and there use
+
+5.1
+
+table
+register number,  call name,  role
+r15, PC, program counter -> pointer to next instruction in memory
+r14, LR, link register -> this stores the instruction memory to jump back to after completing an instruction
+r13, SP, stack pointer -> points to the memory location of the stack
+r12, IP, intra procedure call scratch reigster -> hmm dont know yet
+|||||||||||||||||||||| 
+r11, r11/v8, variable 8 -> if any of these registers are used the variables in them must be pushed to stack at the start of a sub-routine and popped back unto registers once the sub-routine is complete, so the parent routine can hold variables in its registers
+r10, r10/v7, variable 7
+r9, v6/SB/TR, platform register -> meaning of register is defined by the platform/operating-system in use
+r8, r8/v5, variable 5
+r7, r7/v4, variable 4
+r6, r6/v3, variable 3
+r5, r5/v2, variable 2
+r4, r3/v1, variable 1
+r3, r3/a4, argument/scratch 4 -> argument/scratch registers can be overriden without needing to push and pop with stack
+r2, r2/a3, argument/scratch
+r1, r1/a2, argument/scratch/return -> returns are returned by function calls
+r0, r0/a1, argument/scratch/return
+^notice how there are two 32-bit registers that act as returns so a single routine is capable of
+returning 64-bits with this standard
+
+one more register is defined that holds a collection of flag values in its bits
+CPSR and its "global"
+the bits 27-31 hold the N,Z<C,V and Q bits, with N being signed hcecker, v being overflow, z being the zero flag, and c being carry
+|||||||||||||||||||||| I dont know what q is
+16-19 hold the GE[3:0] bits whatever that means
+bit 8 defines if a application is executing in big endian or little endian, with the endianess matching
+whatever it is at the start and flipping this bit flips the endianess, and upon exit of the subrouting the endianess
+must be set back to normal
+t (bit 5), j (bit 24) are execution state bits... whatever that is
+A, I, F, and M[4:0] bits are privileged bits that can only be modidfed by applications operating in priveleged mdoe
+all other undefined bits must not be modified
+
+.1.1
+
+doubles loaded into consecutive registers, 0-1 or 2-3
+128-bit vectors are loaded into four consecutive registers, 0-3
+
+.2
+
+you can use registers in coprocessors if you are insane, sounds found I want to try it :3
+
+.2.1
+
+if using the VFP-v2/v3 (which is a foating point co-processor) 
+the all 32 registers may be accessed the first 16 can be overwritten but the next 16 must be preserved
+the FPSCR is a status register that hodls ocnditions codes and exceptions fo this coprocessor that is access only
+
+5.2
+
+going over actual process requirements now
+process/routines can have memory or not, if they do it need not be contiguous but it does need to be
+in memory areas designated for it
+stack memory is always contigous
+
+.1
+
+the stack is pointed to by r13, and is full-descending
+
+.1.1
+
+the stack pointer must point somewhere in the stack...
+the stack is word aligned
+a routine may only access the stack from the pointer to the base
+
+5.3
+
+BL is how to call a subroutine and it works by setting the LR reigster to the next
+code memory and the than sets the PC to the provivded code memory of the subroutine
+BLX has the same result
+
+.1.1
+
+i think this is saying that if you are a sub-routine you must perserve the connents
+of Lr if you jump to another subroutine
+
+5.4
+
+half-precision float returned in least sig 16 bits of r0,
+any data-type smaller than 4 bytes is returned in r0,
+fundemental data types of size wrods are retuned in r0,
+double sized data-tpyes are returned in r0 and r1
+128-bit vectors are returned in r0-r3
+composite-types of size 4 bytes or below are returned in r0,
+if composite-types are larger or indeterminate return a pointer in r0 to its location in memory
+
+5.5
+
+arguments are passed when they are normal as follows...
+if returning a memory address the r0 is passed the pointer to the memory address
+that will be returned
+otherwise do as follows,
+integers will be padded if needed or extend into multiple registers, float will be 
+stored in single registers, any excess arguments passed will be pushed onto the stack
+
+6.0
+
+covers argument passing to the floating point co-processor im not writting this down
+
+7.0
+
+Type mapping in c/c++
+
+Backus-naur
+
+char -> unsigned byte
+unsigned char -> unsigned byte
+signed char -> signed byte
+[signed] short -> signed halfword
+unsigend short -> unsigned halfowrd
+[signed] int -> signed word
+unsigned int -> unsigned word
+[signed] long -> signed word
+unsigned long -> unsigned word
+[signed] long long -> signed double-word
+unsigned long long -> unsigned double-word
+__fp16 -> half precision float
+float -> single precision flaot
+double -> double precision float
+long double -> double precision float
+float _Imaginary -> single rpecision
+double _Imaginary -> double precision
+long double _Imaginary -> double precision
+float _Complex -> 2 single precision
+double _Complex -> 2 double preciison
+long double _Complex -> 2 double prrecision
+_Boolbool -> unsigned byte
+wchar_t -> unsigned-int/unsigned-short (dependent on platform)
+T * -> data pointer
+T (*F)() -> code pointer
+T7 -> data pointer
+
+7.1
+
+.3
+
+
+enumarators c/c++
+
+enumrtors are c constants saved in an array like structure with names, such
+as enum color{
+red = 50
+blue = 30
+green = 20
+}
+the mapping of this two assembly is that you will use the smallest type
+available that will fit all variables and that it will be stored just like
+an array otherwise
+
+.6
+
+unions, structures, and classes are all composite types
+
+.7
+
+for bit fields, which are declared in c like
+int a : 3 = 5;
+meaning integer a of size 3 bits is = 5
+
+but in the arm assembly it says that the bit field is the lowest possible size of 
+the bits that are defined, only going as low as the defined integer
+so if say
+long a : 5;
+this a will still be as long as a long,
+and as with
+int a : 3;
+it will still be the size of an int... so i don't know why this is a thing
+
+.7.1
+
+okay cool i think this is enough
+

@@ -1,0 +1,88 @@
+Okay, looks like I was super "rigid" with the previous notes, these are over C, and I just am kinda bored at the airport, otherwise I wouldn't start this.
+
+
+heres the list of things that I don't understand or will need to look up later
+## included in a define in the arguments section
+#pragma, they just didn't explain it, vry annoying
+extern, no explanation
+
+
+okay so like macro functions, what I'm sort of confused by as they seem not only useless but ineffecient...
+that appears to be the case, the directive says that macros dont create a pointer to a environment defined "processed-tokens" 
+(they do not operate like a normal function handing a function pointer/jump marker to go to this seperate place in memory, 
+while filling the stack with the requried pararameters)
+no it seems they do the worst possible thing, they actually insert the defined function into the location that the macro is called...
+so no jumps, instead pasting code as literally as possible, like other macros i guess :),
+oh also the macro is deliminated by the new-line character, so they can only be one line macro functions..., which is what you want anyway as the macro doesnt
+want to be long in itself
+macros are iterative, that is if there is a macro inside a macro, as is reasonable, the macro will first be expanded within the macro itself
+and than will be expanded upon itself to all other macros
+also no brackets for in line function macros, instead view it as sort of a bracketless if function like syntax of
+#macro funcName(paremeter, parameter2) (parameter operation parameter2)
+so as viewed in the wonderful code of x11, macros are evil
+also they aren't typesafe, but that seems to be more of a failure of the user not the macro
+macros continued
+there are special rules for the # and ## characters inside of macros, but I do not understand... will have to look up later
+like it seems that either ## is not counted as a replace me token, while # can be counted as a replace me token, or that
+## is just deleted from the program and both whitespaces on either side of ## are also removed, I don't know which one it is
+and the language is not specific enough for me to decipher
+okay after looking over it again, and several other examples they present later on, ## results in two things,
+either if it is used inside the argument provision, something happens, I don't know and they don't provide an example, but if
+it present in the "function" section it deletes the white space to the left of it and right of it,
+such that
+#define macrofunc(a, b) a ## b
+results in 
+ab
+when called
+
+
+#undef eliminates previous macro definitions
+which isnt used to like eliminate defintions from a file at some point, its used for inner def definitions
+
+you can redefine the line number computed by the processor if you want, using the #line
+where
+#line 2003420342
+defines the next line to be number
+2003420342
+
+forcing 
+#error whatever
+forces an error upon the processor, for some reason, don't know why you would ever do this, except I guess in compilation conditionals..., im
+sure the compiler could catch the mistakes though
+
+doesnt even discuss #pragma, just says that if not followed by a standard library pragma rule it is defined per-implementation,
+which is fun I guess, 
+
+
+STORAGE TYPES:
+I just saw this interesting strorage type of register,
+like storage types are
+typedef
+extern
+static
+_Thread_local
+auto
+register
+
+you know what all these are used for except register
+
+register as far as ai can remember is an old flag, a load specific
+flag that was at least reperesented in some arm implementetations
+that basically says load this quick, or store this for quick load in
+memory, this I think is a hold over of these old style implementations
+I just cant possibly imagine any implementation will actually allow this call,
+like come on what would??!?!?!?!?!?!?!?!??!?!?!!?!?!?
+
+what is an extern?!!?!?? I don't exactly know and an actually explanation
+is not within the scope of this document \(;v;)/
+
+constant expressions are not requried to be evaluated during
+runtime, instead they can be evaluated during translation/compilation
+
+okay very weirdly there is not much in this document that isnt
+strict discussion of the c standard library, like over 250pgs are devoted to the discussion
+of the standard library, while discussion of the language in its most basic terms is defined
+in a mere 100 pgs,
+ive
+read through the pages that I think I needed more information on, everything else is
+known

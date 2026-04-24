@@ -1,0 +1,205 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+it looks like most of the dfeinitions are already handled in the original document,
+but the update does ha a few useful definitions... specifically the message format
+
+2.1
+
+HTTP-message = ( request-line | status-line ) CRLF *(field-line CRLF) CRLF [messag-body]
+
+^to make this clear request/status line refers to the request or response types like post, get, and response codes....
+field line referes to the headers, which are all defined something like this
+
+Header = Header-Token " : " header-message/data
+
+|||||||||||||||||||||| 
+we will need to check out MIME protocol eventually defined in RFC2045
+its just the email protocol
+
+2.2
+
+interestingly all http responses must be in a superset of us-ascii code
+^ remember superset means the daddy-set the set whcih a subset is comprised of,
+so by definition a http message will use a set of characters that contains us-ascii code in
+the character set...
+
+CRLF is the hexadecimal code 0Dx0A
+
+bare CR octets are not allowed outside of the message body
+
+no extra whitepsace elements are allowed between start-line and header fields... apparently old servers would use this
+clients need to remove unnecessary whitespace if present
+
+2.3
+
+http version number seems to be the same protocol...
+but they appear to introduce new syntax to the ABNF
+%s = string?
+i think I don't know
+|||||||||||||||||||||| 
+
+3.0
+
+request-line has same defintion as 1999 paper
+except it allows for any whitespace excluding crlf to fill the space hence
+request-line = method SP request-uri HTTP-Version
+^method is the get, post, etc, request-uri is the uri...
+
+3.1
+
+I dont think this was in the previous protocol, in all request
+the client must include a host header field... refer to previous document for definition
+
+3.2
+
+here they are defining the request-uri with a couple new request url types, other than just absolute and non-absolute or whatever it was called
+
+^also no whitespaces allowed in urls
+
+.1
+
+origin-form
+^ this is a format introduced since 1999 that is obviously able to handle a lot of different calls to the "same" resource
+^ for example google uses this extensively with all there request pretty much
+
+origin-form = absolute-path [ "?" query ]
+ex:
+http://www.youtube.com/vid?tz=shfaoshkq2911nkas
+
+.2
+
+apparently the host field is required because of http 1.0, which needs it
+
+.3
+
+i did nt understand this request type before but now I do...
+the request method connect uses the authority-url and is the only one to do it...
+it is demanding that a server take a connection through a tunnel to a specifici port,
+so you ask a proxy to establish a connection with a server's specific port
+and hope it works I guess
+
+.4
+
+"*" for the request-uri is used when asking for server wide options
+
+3.3
+
+dont reconstruct unwisely
+
+4.0
+
+status-line (response "header")
+has the same syntax as before refer to previous paper
+same whitespace rule applies here as it did to request-line
+
+5.0
+
+the main point of this section is to disallow any headers outside of headers for
+things with message bodies to have multiple lines
+^ this doesnt seem to be the case I have no clue what its refering too, some foolish servers syntax
+
+6.0
+
+same message definitions... which is just the body of the request/response
+
+6.1
+
+transfer encoding,
+interestingly not allowed for 1xx or 204 responses
+also the order is from left to right as recieved
+refer to defined in the previous http to understand
+
+6.2
+
+content-length as defined in previous protocol...
+but content-length header cannot be sent along with a transfer-encoing header
+
+6.3
+
+just a bunch of ways to determine content length by precedence...
+request/status-line takes precedent, than headers by order transfer-encoding than content-length, and if not than just content as either failed or a closing message
+
+7.0
+
+this section goes over transfer-codings with emphasize on chunked
+
+7.1
+
+chunked data is in effort to send data over in chunks for the benefit of compression and corruption
+... its like the reset on jpg
+
+the chunk defintion is the same as is present in 1999 protocol
+
+.1
+
+here they define chunk-extension which they dont in original?
+chunk-ext = *( " ; " chunk-ext-name [ " = " chunk-ext-val])
+syntax followed by name followed by = syntax followed by value (if applies)
+
+.3
+
+they actually follow textbook syntax for pseudocode... lol
+
+7.2
+
+some more transfer encodings are
+compress
+deflate
+gzip
+all defined in rfc9110
+
+7.3
+
+new transfer codings must be defined in the transfer coding website and registry
+https://www.iana.org/assignments/http-parameters
+
+7.4
+
+new header alert!
+TE (TransferEncoding Accepted) = "TE: " *(encoding-types BWS)
+use same accuracy determiner as defined in 1999 with q field
+
+8.0
+
+goes over server and client responses to incomplete messages, servers
+must close, clients must notify-user and store the message as incomplete
+
+9.0
+
+manage connections lol...
+
+9.1
+
+annoyingly they don't dfeine how to actually connect... just the message content
+|||||||||||||||||||||| 
+must refer to some protocl on TCP to understand that part...
+
+9.3
+
+same stuff with pipelining
+the server needs to respond to multiple recieved messages in the order they were sent...
+this is for obvious reasons
+
+I did not think of this, but to avoid the problem of pipeline backlogging some
+clients would open several connections... http recommends to only do this when necessary
+
+9.6
+
+when closing a connection with a client use the close header,
+and they define an interesting procedure to prevent a seizure in the TCP connection
+the server should disconnect the write section of the TCP connection
+send the message and than completely close the connection
+
+9.7
+
+here they define a different closing method for TLS
+similar to the first but more importantly a different connection method
+search this along with TCP
+|||||||||||||||||||||| 
+
+
+11.0
+
+this section has some pretty interesting security concerns, or hacking styles which is fun
+the most interesting one is something that codes something that looks like two request into one request... take measures to prevent this from happening

@@ -1,0 +1,4 @@
+just saw this really cool way of handling syntax for a summation
+like when you want i + 1 whatever, and dont want an overflow use (i + 1) mod n so that
+the loop will loop on itself, of course this isnt really needed in the code, but its a brilliant syntax for the paper
+

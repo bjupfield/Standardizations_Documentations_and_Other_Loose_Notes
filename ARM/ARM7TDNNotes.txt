@@ -1,0 +1,275 @@
+|||||||||||||||||||||| 
+represent a section of notes that will need to be updated later, due to references to other protocols
+
+Conventions
+italics for terminology
+bold for interspace
+monospace for code
+underlined monospace abreviation
+
+1.0
+
+||
+
+1.1
+RISC instruction set
+
+.1
+
+pipeline, the processor general runs three "processes" at the same time, fetching the instruction
+set from memore, decoding the register used for the instruction, and then executing the instruction
+
+.2
+
+only functions that can access memory are load store and swap, can only store words, halfwords and bytes, nothing higher
+
+.3 
+
+||
+
+1.2
+
+.1
+
+two instruction sets thumb and arm
+
+.1
+
+thumb is a 16 bit instructure set "programmed" for a 32 bit architecture
+
+.2
+
+okay so thumb instructions don't actually operate any differently than their arm instructions
+it says that on execution if operating on a 32-bit space thumb code is converted into arm instructions
+without any performace loss, this leads to thumb code (because it is only 16 bit) being smaller than
+arm code, and also having 160% more effeciency when it is operating on 16 bit!
+thats pretty!
+
+1.3
+
+collection of graphs, I sadly understand them so little that I cant write any notes on it
+
+1.4
+
+describes instruction set on device
+
+.1
+
+two instruction sets,
+ARM - 32 bit
+and 
+Thumb - 16 bit
+
+documentation below uses classic Backus-Naur form
+
+.2
+
+ARM First:
+
+weird adjacent definitions that help read the table below
+|||||||||||||||||||||| 
+{cond} -> dont understand what these do but they are checking conditions like greater than or equal to and stuff
+	not sure on this but I think conditions somehow chekc against flags, I don't know what they do with this informatino but that seems to be what they are doing
+<Oprnd2> -> the second operand which can be values, registers, or the bits formated in a different way?
+{field} -> absolutely no clue, 4 options though
+S -> condition codes? maybe the flag setting?
+B -> sets it to a byte operation, default is word I think
+H -> sets it to halfword operation (2 bytes)
+T -> makes it translate addresses whatever that means
+Addressing modes -> determines how the assembly stores values... i think lol :3, okay
+	looking back at this since reading a bit it looks like mode determines the privilege
+	and the signed mode of the code
+constant - a constant 8bits
+<reglist> -> list of registers syntaxly written like { register1, register2...}
+
+
+a mere 65 instructions: I'll write the syntax down now and come back and fill out hwat they do later
+|||||||||||||||||||||| 
+
+Move - MOV{cond}{S} RD, <Oprnd2>
+Move not - MVN{cond}{s} Rd, <oprnd2>
+Move SPSR to register - MRS{cond} RD, SPSR
+Move CPSR to register - MRS{cond} RD, CPSR
+Move register to SPSR - MSR{cond} SPSR{field}, Rm
+Move register to CPSR - MSR{cond} CPSR{field}, Rm
+Move immediate to SPSR flags - MSR{cond} SPSR_f, constant
+Move immediate to CPSR flags - MSR{cond} CPSR_F, constant
+
+Add - ADD{cond}{S} Rd, Rn, <Oprnd2>
+Add with carry - ADC{cond}{S} Rd, Rn, <Oprnd2>
+Subtract - SUB{cond}{S} Rd, Rn, <Oprnd2>
+Subtract with carry - SBC{cond}{S} Rd, Rn, <Oprnd2>
+Subtract reverse subtract - RSB{cond}{s} Rd, Rn, <Oprnd2>
+Subtract reverse subtract with carry - RSC{cond}{S} Rd, Rn, <Oprnd2>
+Multiply - MUL{cond}{S} Rd, Rm, Rs
+Multiply accumulate - MLA{cond}{S} Rd. Rm, Rs, Rn
+Multiply unsigned accumulate long UMLAL{cond}{S} RdLo, RdHi, Rm, Rs
+Multiply signed long - SMULL{cond}{S} RdLo, RdHi, Rm, Rs
+Multiply signed accumulate long - SMLAL{cond}{S} RdLo, RdHi, Rm, Rs
+Compare - CMP{cond} Rd, <Oprnd2>
+Compare negative - CMN{cond} Rd, <Oprnd2>
+Test -TST{cond} Rn, <Oprnd2>
+Test equivalence - TEQ{cond} Rn, <Oprnd2>
+AND - AND{cond}{S} Rd, Rn, <Oprnd2>
+EOR - EOR{COND}{S} Rd, Rn, <Oprnd2>
+ORR - ORR{cond}{S} Rd, Rn, <Oprnd2>
+Bit clear - BIC{cond}{S} Rd, Rn, <Oprnd2>
+
+Branch - B{cond} label
+Branch with link - BL{cond} label
+Branch and exchange instruction set - BX{cond} Rn
+
+Load word - LDR{cond} Rd, <a_mode2>
+Load word with user-mode-privilege - LDR{cond}T Rd, <a_mode2P>
+Load byte - LDR{cond}B Rd, <a_mode2>
+Load byte with user-mode-privilege - LDR{cond}BT Rd, <a_mode2P>
+Load byte signed - LDR{cond}SB Rd, <a_mode3>
+Load halfword - LDR{cond}H Rd, <a_mode3>
+Load halfword signed - LDR{cond}SH Rd, <a_mode3>
+<---------------- Multi-Block Operations ------------------>
+			(can do operation afer one)
+Load Increment before - LDM{cond}IB Rd{!}, <reglist>{^} - I think {^} means registeries from operation above
+Load Increment after - LDM{cond}IA Rd,{!}, <reglist>{^}
+Load Decrement before - LDM{cond}DB Rd{!}, <reglist>{^}
+Load Decrement after - LDM{cond}DA Rd{!}, <reglist>{^}
+Load Stack operation - LDM{cond}<a_mode4L> RD{!}, <reglist>
+Load Stack operation, and restor CPSR - LDM{cond}<a_mode4L> RD{!}, <reglist+pc>^ - no clue what this means
+Load Stack operation with user registers - LDM{cond}<a_mode4L> RD{!}, <reglist>^
+<---------------------------------------------------------->
+
+Store word - STR{cond} Rd, <a_mode2>
+Store word with user-mode-privilege - STR{cond}T Rd, <a_mode2P>
+Store byte - STR{cond}B Rd, <a_mode2>
+Store byte with user-mode-privilege - STR{cond}BT Rd, <a_mode2P>
+Store halfword - STR{cond}H Rd, <a_mode3> - hmm no user-mode-privilege for this one
+<---------------- Multi-Block Operations ------------------>
+Store Increment before - STM{cond}IB Rd{!}, <reglist>{^}
+Store Increment after - STM{cond}IA Rd{!}, <reglist>{^}
+Store Decrement before - STM{cond}DB Rd{!}, <reglist>{^}
+Store Decrmenet after - STM{cond}DA RD{!}, <reglist>{^}
+Store Stack operation - STM{cond}<a_mode4S> RD{!}, <reglist>
+Store Stack opertaion with user registers - STM{cond}<a_mode4S> RD{1}, <reglist>^
+<---------------- ----------------------------------------->
+
+Swap Word - SWP{cond} Rd, Rm, [Rn]
+Swap Byte - SWP{cond}B Rd, Rm, [Rn] - no halfword operation again, poor thumb
+
+This section is cool (multithreading!!!!)
+Coprocess Data Operation - CDP{cond} p<cpnum>, <op1>, CRd, Crn, Crm, <op2>
+Coprocess Move to ARM register from coprocess - MRC{cond} p<cpnum>, <op1>, Rd, Crn, Crm, <op2>
+Coprocess Move to coprocess from ARM register - MCR{cond} p<cpnum>, <op1>, Rd, CRn, CRm, <op2>
+Coprocess Load - LDC{cond} p<cpnum>, CRd, <a_mode5>
+Coprocess Store - STC{cond} p<cpnum>, CRD, <a_mode5>
+
+Software Interrupt - SWI 24
+
+for an example of what signals are sent to the processor/ALU here is the actual signal syntax for
+Data processing and FSR Transfer:
+4-bits - cond
+0
+0
+1
+4-bits - opcode
+1-bit - S condition, still not sure on what this does
+4-bits - Rn, read registery
+4-bits - Rd, write destination
+12-bit - Operand 2,
+
+with such a simple scheme we can demand our little machine do anything! AMAZING!!!!!!!!!!
+
+.3
+
+Thumb Second:
+
+76 operations, lol I thought it would be lesss
+
+Move Immediate Move - Rd, constant
+Move High to Low -  Move Rd, Hs
+Move Low to High - Move Hd, Rs
+Move High to High - Move Hd, Hs
+
+Add - ADD Rd, RS, constant
+Add Low, and Low - ADD Rd, Rs, Rn
+Add High to Low - Add Rd, Hs
+Add Low to High - ADD Hd, Rs
+Add High to High - ADD Hd, Hs
+Add Immediate - ADD Rd, constant
+ADD Value to SP - ADD SP, constant ADD SP, constant
+ADD with carry - ADC Rd, Rs
+Subtract - SUB RD, RS, Rn SUB Rd, Rs, constant
+Subtract Immediate - SUB Rd, constant
+Subtract with carry - SBC RD, Rs
+Negate - NEG Rd, Rs
+Multiply - MUL Rd, Rs
+Compare Low, and Low - CMP Rd, Rs
+Compare Low, and High - CMP Rd, Hs
+Compare High, and Low - CMP Hd, Rs
+Compare High, and High - CMP Hd, Hs
+Compare Negative - CMN Rd, Rs
+Compare Immediate - CMP Rd, constant
+
+AND - AND Rd, Rs
+EOR - EOR Rd, Rs
+OR - ORR Rd, Rs
+Bit Clear - BIC Rd, Rs
+Move Not - MVN Rd, Rs
+Test Bits - TST Rd, Rs
+
+Logical Shift Left - LSL Rd, Rs, constant, LSL, Rd, Rs
+Logical Shift Right - LSL Rd, Rs, constant, LSR, Rd, Rs
+Arithmetic Shift Right - ASR Rd, Rs, constant, ASR Rd, Rs
+Rotate rgiht - ROR Rd, Rs
+
+Branch if Z set - BEQ label
+Branch if Z clear - BNE label
+Branch if C set - BCS label
+Branch if C clear - BCC label
+Branch if N set - BMI label
+Branch if N clear - BPL label
+Branch if V set - BVS label
+Branch if V clear - BVC label
+Branch if C set and Z clear - BHI label
+Branch if C clear and Z set - BLS
+conditions get ridiculous from here not writing them
+
+Load with immediate word - LDR Rd, [Rb, constant] - wait how is this possible...
+Load with immediate halfword - LDRH Rd, [Rb, constant]
+Load with immediate byte - LDRB Rb, [Rb, constant]
+Load with register word - LDR Rd, [Rn, Ro]
+Load with register halfword - LDRH Rd, [Rb, Ro]
+Load with register signed halfword - LDRSH Rd, [Rb, Ro]
+Load with register byte - LDRB Rd, [Rb, Ro]
+Load with regiseter signed byte - LDRSB Rd, [Rb, Ro]
+Load Pc-Relative - LDR Rd, [PC, constant]
+Load Sp-relative - LRD Rd, [SP, constant]
+Load Multiple LDMIA Rb!, <reglist>
+
+Store with immediate word - STR Rd, [Rb, constant]
+Store with immediate halfword - STRH Rd, [Rb, constant]
+Store with immediate byte - STRB Rd, [Rb, constant]
+Store with register word - STR Rd, [Rb, Ro]
+Store with register halfword - STRH Rd, [Rb, Ro]
+Store with register byte - STRB Rd, [Rb, Ro]
+Store Sp-Relative - STR Rd, [Sp, constant]
+Store Multiple - STMIA RB!, <reglist>
+
+Push registers onto stack - PUSH <reglist>
+Push LR, and registers onto stack - PUSH <reglist, LR>
+Pop registers from stack - POP <reglist>
+Pop registers, and pc from stack - POP <reglist, PC>
+
+Software Interrupt - SWI 8
+
+||
+2.0
+||
+
+talks about necessary bit alignment in memory, along the 3 types of words, halfowrds, and bytes
+I was going to make fun of this because i didnt understand it... but it is the case that word quantities
+need to be aligned to four byte boundaries adn halfword... to two byte, and so on
+
+thumb, like its size only has half of the registers as arm mode, but it can push values from the
+registers it has nominal access to r0-r7 to registers it does not have regular access to
+r8-r15
+(pushing with MOV)
+

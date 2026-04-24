@@ -1,0 +1,42 @@
+
+|||CH 1 | Intro To XLib:
+
+Xlib is the library that allows interaction between client and server of an x lib application
+
+Xlibs structure is as follows
+
+Display
+	Screen1 - ScreenN
+		Root1 - RootN
+			ChildWindow1 - ChildWindowN
+				ChildOfChild....
+			Graphics Context
+	Mouse
+	Keyboard
+	Pixmaps
+
+The display is just the collection of graphical interfaces the user has available that the server
+can access, a SCREEN
+A display also has one pointer (mouse) and one keyboard
+
+Windows and pixmaps are both drawables, and xorg provides storage for pixmaps
+
+Functions in xlib mostly add request to an output buffer so the X Server can handle these request
+
+Clients are informed of events that they request to be informed of
+
+Most user accessable functions in xlib start with X, and user accessable structs gneerally start with X too
+
+||| CH 2 | Display Functions:
+
+To access a display, which is the primary way to connect to an x server through xlib
+the XOpenDisplay function is used, which opens a tcp connection (unless otherwise specificed)
+to the server from the client
+Once the display has been accessed macros and functions can be used to access the display
+data from teh structure
+
+If programming in C macros should be used, if not functions are the way to retrieve
+data from the server
+
+Applications should not directly adjust the display or screen structures (for obvious reasons)
+

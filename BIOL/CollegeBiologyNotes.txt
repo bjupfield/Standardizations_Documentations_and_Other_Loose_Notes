@@ -1,0 +1,395 @@
+hmm this is going to be quite a broad amount of notes if if
+legitmately decide upon this path, so heres how im going to write these notes
+
+First every chapter section so 2.1, 2.2, and so on, must have somen notes written on it, except for the first chapter, maybe even first unit
+Second after taking notes I will reread the chapter, not the chapter section, and further the notes.
+so notes will bed diveded by just the content table, with units being designated with a:
+||||||||||||||||||||||||||||||||||
+divided and chapters being designated with a 
+
+Chapter Name:
+
+and sections being deisgnated with a
+;Section Topic:
+
+||||||||||||||||||||||||||||||||||
+Unit 1: Chemistry of Life
+
+The Study of Life:
+
+Okay I said I wasn't going to write notes on this, but I lied, as there is apparently
+an interesting topic contained within this chapter, the phylogenetic tree, which 
+replaced the standard kingdom divisions that life was categorized by, introducing
+three standard branches instead, Bacteria, Archaea, and Eukarya, with Bacteria
+and Archae being single-celled organisms without a membrane enclosed nucleus, but
+the important difference between the two is the phylogenetic tree is based on genome mapping
+while the kingdom version was based on physical characteristics, or what could more commonly be named:
+pure vibes
+also, just like kingdoms, the phylogenetic tree is not really one big tree, but is
+a way to categorize creatures in relation to each other, one that just so happens to be more
+efffetive than physical characteristics
+
+The Chemical Foundation of Life:
+
+; Atoms, Isotopes, Ions, and Molecules:: The Building Blocks:
+Protons determine the atomic number, neutron differences result in isotopes, and electrons differences result in variable charge
+Isotopes of an element are generally denoted with ElementName-AtomicMass, ex: Carbon-14
+AtomicMass is the number of protons and neutrons present in the atom
+radiosotopes are isotopes that radioactively decay into an equal amount of neutrons and protons
+chemical reactivity of atoms is based on the "number and spatial distribution of an atom's electrons"
+
+orbitals people orbitals, yada yada yada, quantom mechanics says that there are a few most likely places for electrons to be attached to 
+an atom at, these are the orbitals, there are "threeish" positions presented by the textbook, 1s orbital, which is the circular space
+that helium and hyrdogen fill with their respective electrons, and than the
+xns
+where x is any number refering to the shell of that the electron is within, and s is a sphere which is where these two electrons are placed
+xnp
+where x is any number refering to the shell the electron is within, and p is the shape that the electron is possibly in, which is a wacky one
+basically, every element has shells equal to its proton (count - 2) / 8, with the remainder being how many electrons are filling its outer shell
+atoms are most stable when they have their shells completely filled, but being at an even number is also more stable.
+
+molecules made of different elements are called compounds, molecules made of the same element are called molecular elementName
+
+ions are atoms with a non-neutral electric charge, they have more or less electrons than their proton count
+they are formed to fulfill the orbital shells, either an atom will lose a few electrons or gain a few electrons to become orbitally stable,
+but than become electrically unstable
+ionic bonds are formed between these electrically unstabl atoms, where two ions of opposite charge will bind together to have a neutral charge
+cations are positive, anions are negatively
+
+covalent bonds are what is normally thought of when two atoms are bound together, the literally sharing of electrons between atoms orbitals
+atoms can be Polarly or Non-Polarly covalently bonded, which is determined by the electronegativity of the atoms, if one atom has a higher amount of protons
+(i think, its actually determined by the distance of the valence electrons too (outer shell), so as atoms get larger the number becomes smaller, wikepedia has a good table) they will attract the electrons around their orbitals more than the other atoms, thus the molecule becomes slightly charged at different molecules,
+which results in further bonds like the hydrogen bond and the van der Waals interactiosn
+
+Water:
+
+; Water's Polarity:
+because of water being a polar bond, it attracts other polar bonds and ions, each wanting to attach itself to the hydrogen if they are negatively charged and
+the oxygen if they are positevely charged (so cations go to hydrogen and anions to oxygen), non-polar substances tend to seperate from water because of waters
+own attraction to itself due to it being polarly charged (water doesn't want to mix with oil, but does want to mix with itself, so oil is forced into its own self
+by the force of the hydrogen bond reaction on water)
+
+; Water's States:: Gas, Liguid, and Solid:
+
+; Water's High Heat Capacity:
+due to the hydrogen bond water has the highest spececif heat capacity of any liquids, which mean it takes the most energy to change the temperature
+of water out of any liquid, cool i did not know this, very cool, I guess the hydrogen bonds prevent the friction we know as heat?
+
+; Water's Heat fo Vaporization:
+Vaporization of water also takes a lot of heat, turning from a liquid to a gas, because of the hydrogen bond (apparently doesn't have the highest amount of energy though)
+evaporation occurs in water because of hydrogen bonds, sometimes a hydrogen bond is broken and than that molecule can turn to a gas, but be lower than the normal required temperature to break that bond
+
+; Water's Solvent Properties:
+I was wondering about this earlier this week, and wow the reason this occurs is because of the hydrogen bond, thats the reason why water is a good solvent,
+because ions and polar molecules want to hydrogen bond with them. The reason it isn't infinitely soluble (or the reason why theres a limit of the amount that can
+be disolved by water) is because of the sphere of hydration. when a polar substance is dissolved in water the water molecules literally wrap around that substance
+creating the aptly named spheres of hydration, because of this an amount of water can only dissolve as much as spheres of hydration it can create around the substance
+also water can cause ionic bonds to dissociate from each other and form hydrogen bonds with it instead
+
+; Water's Cohesive and Adhesive Properties:
+water can "climb" walls if they are conductive enough (also due to the hydrogen bond)
+also water has surface tension and is cohesive (sticks together) due to hydrogen bonds
+
+; pH, Buffers, Acids, and Bases:
+pure water instantly creates 1 x 10-7 moles of H+ and 1 x 10^-7 moles of OH- per liter of water
+the OH- molecules form hydrogen bonds with other water molecules, but the H+ anions are considered free (although they technically are not)
+this relation forms the base for the ph scale, with pure water considered to have a pH of 7
+determined from the equation
+log10(x) * -1
+where x is the mole number of free Hydrogen anions in 1 liter of substance
+so acids have a high concentration of H+ while bases hava a high concentration of h-
+
+Carbon:
+
+;Hydrocarbons:
+Hydrocarbons are molecules consisting of only carbon and hydrogen
+they come in two principle forms, hydrocarbon chains and hydrocarbon rings,
+otherwise called
+alphatic hydrocarbons
+and
+aromatic hydrocarbons
+aliphatic hydrocarbons are suffixed with either, -ane, -ene, or -yne with -ane refering to the presence
+of single carbon bonds, -ene the presece of double bonds, and -yne the presence of triple bonds
+
+;Isomers:
+Isomers are molecules that have different placement and/or chemical bonds of their atoms
+structural isomers have different placement of covalent bonds, like a hydrogen atom will be north in regards to an carbon atom in one isomer, but in the other it might be to the east (i know these terms don't makes sense)
+geometrical isomers are when the placements of the atoms are similar but the bonds are different, so the hydrogen atom will be in the same location, but will be bonded to something else
+enantiomers are isomers that are mirrored, so like where a bromine and hydrogen are placed are swapped
+unsaturated fats have are -ene bonds, while saturated fats do not have double bonds
+cis fats are unsaturated fats that have bends in their molecularly formationa dn thus remain liquid at room temperature, while trans do not hav bends
+
+;Enantiomers:
+as mentioned above
+
+;Functional Groups:
+some groups of molecules can perform similar chemical reactions or other reactions, these are called functional groups
+
+Biological Macromolecules:
+
+;Synthesis of Biological MacroMolecules:
+there are four main types of biological macromolelcules:
+lipids, proteins, carbohydrates, and nuceleic acids
+they make up the majority of living cells besides water (which actually makes up the majority)
+
+;;Dehydration Synthesiss:
+most macromolecules are built from monomers, which "build into" polymers
+these monomers typcially form covalent bonds between each other and form water molecules to form these
+covalent bonds
+ex: C6H12O6 + C6H12O6 <-> H2O + C12H22011
+where two glucose lose a collective water to form a maltose, one loses an OH, the other loses an H
+
+;;Hydrolysis:
+the same reaction can be reversed as shown in the example of above, which is called hydrolysis
+
+;Carbohydrates:
+carbohydrates are molecules of the form (CH2O)n where the inner parenthesis represens a ratio of elements,
+1 carbon, 2 hydrogen, and 1 oxygen, with n meaning that they can be of any count, as long as they follow this ratio
+
+;;;Monosaccharides:
+carbons of counts 3-7
+two common monosaccharide isomers are Galactose and Fructose
+two categories of sugars are aldose and ketose
+aldose ends with a carbon linked to a carbon, double bonded to an oxygen, and single bonded to a hydrogen
+while
+ketose has c=O somewhere within its structure, meaning a carbon double bonded to an oxygen and single bonded to two seperate carbons
+theres an alpha and beta glucose depending on the position of an OH bonded carbon
+
+;;;Disacharides:
+disaccharides are two monosaccharides bonded by an dehydration synthesis
+a bond between a carbohydrates and any molecule is called a glyscosidic bond
+
+;;;Polysaccharide:
+polysaccharide are chains of monosaccharides combined, so just any monosaccharide count above 1...
+starches are all polysaccharides
+glycogen is a polysaccharide that vetebrates use to store energy
+cellulose is also a polysaccharide, made of glucose, (c6h12o6) bonded at the beta 1-4 glycosidic psotiions,
+pg 82 has an example of the cell structure
+chitin is also a polysaccharide, with nitrogen contained within it
+
+;Lipids:
+lipids are nonpolar... they don't give a specific formula
+fats are formed from glycerol attaching to three carbohydrates, via a dehydration reaction, forming ester bonds,
+which i think are the links between the former OH and HO structures, which than form an O-(O=C)-C structure linking the
+glycerol to one of three carbohydates, again good picture on pg 85.
+the carbohydrates that the glycerol bonds with to form a fat are refered to as fatty acids
+these fatty acids have 2 named categories, saturated or unsaturted, saturated means only single bonds between carbons, unsaturated means they contain a double bonded carbon pair
+as said before, unsaturated fats are liquid at room temperature, and saturated are generally solid
+cis fats mean the hydrogen attached to the double bonded carbon in unsaturated fats are on one side of the molecule, while trans switch sides, again picture pg 87
+
+;;Waxes:
+wax is also a lipid
+
+;;Phospholipids:
+phospholipids form the majority of animal cell walls, they are formed from a glycerol or sphingosine, connected to two fatty acids and a phosphate group
+a phosphate group is a phoshorous atom connected to 4 seperate atoms, and must be hydrophobic
+phoshpolipids are hydrophilic on one side (the side with the fatty acids), and hydrophobic on the other side (phosphate group side)
+
+;;Sterioids:
+steriods are also lipids, but do not contain any fatty acids, but are still hydrophobic
+they are comprised of carbon rings, so just monosaccharides formed in rings attached to each other, and generally have a "tail" (a single outcropping
+from the connected ring structure)
+
+;Proteins:
+proteins are polymers of amino acids in linear structures
+amino acids according to wikipedia are compounds formed from carboxylic acids and amines,
+amines are carbohydrates with nitrogen carbond bonds
+carboxylic acids are carbohydrates that include the structure (-c(=O)-OH), a carbon double bonded to a oxygen, and bonded to a oxygen that is bonded to a hydrogen
+
+;;Types and Functions of Proteins:
+enzymes are proteins used to create chemical reactions with other compounds, catabolic enzymes break down molecules, and anabolic create larger molecules
+Hormones are proteins (or steroids) that regulate physiological processes
+all proteins only use 20 different amino acids
+
+;;Amino Acids:
+here is the actual structure of an amino acids,
+((n-h3)-(c(-r)-h)-(c(=o)-o)
+where r just means another chain of atoms, picture pg 92
+looks like the r is always a c except in the case of glycine, where it is a single h it is attached too, pg 93 list all amino acids
+proteins combine these amino acids via somehting called the peptide bond, which is just a dehydration reaction
+between one acids oh and another acids h
+
+;;Protein Structure:
+there are four different things that actually determine a proteins use, geometric, and chemical structure, these are refered to as the
+primary, secondary, tertiary, adn quaternary structures
+
+;;;Primary Structurte:
+the unique sequence of amino acids in the polypeptide chain (polypeptide chain just means linked amino acides via peptide bonds)
+so like just the actual atoms and their positions within the sequence, so what and how they are chemically bonded to each other
+
+;;;Secondary Structure:
+the secondary structure seems to be how the r groups are arranged around the amino acids, when r groups are potruding outwarsd they are alpha-helix
+while if they are potruding upwards and downwards in respect to teh amino acid structure they are beta-pleated sheets
+
+;;;Tertiary Structure:
+cleverly the tertiary sturcture is determined also by the r groups, but how they interact in three dimensional space to create their own chemical bonds
+and specific three dimensional space for the protein
+
+;;;Quaternary Structure:
+the quaternary structure is formed through through weak non-covalent bonds between polypetides
+
+;;;Denaturation and Protein Folding:
+denaturing a protein means destroying all but its primary structure, which can be done from anyhting that can change chemical bodns, so like heat, ph, or other other chemical reactants
+once it loses its specific shape its specific purpose is ruined or changes
+proteins do not create their folds, or their own secondary,tertirary,and quaternary structures through the strength of their own chemical bonds, instead "protein helpers"
+or "chaperones" force the proteins to form the bonds in the secondary, tertirary, and quaternary parts of the structure
+
+;Nucleic Acids:
+
+;;Dna and Rna:
+Dna is the blueprint of the cell, rna are the orders given from that blueprint, they are both made from nucleotides
+which form polynucletoides
+nucleotides are constructed from a nitrogenous base, a pentose sugar, and a phoshpate group, good examples in pg 101
+okay phosphate groups appear to always be a phosphate attached to 4 oxygens
+the nitrogenous bases for dna are either, adeniane, guanine, cytosine, or thymine (the famous, A,G,C,T structure of DNA)
+both guanine and adenine are a two ringed carbon structure, each ring containing two nitrogen,
+cytosine and thymine have a single carbon ring structure, with each having two nitrogen in the ring
+the pentose sugar in dna is deoxyribose while in rna it is ribose
+(I dibn't know where i got this information (it is genuinely wrong ignore it)->)for the two dna ribbons one ribbon contians guanine and adenine and the other contians cytosine and thymine
+guanine can only match cytosine and thymine can only match adenine, so this means a single strand
+of dna is all that is needed to understand the dna double helix
+Rnas nitrogenous bases are the same as dna, except that the thymine is replaced with uracil, which is also a singl carbon ring with 2 nitrogen
+rna has four functions allr related to protein construction and cell communication, 
+messeger rna is the only rna that can do thing snot related to protein construction, as it just communicates with the cell, which can include protein creation
+for protein creation the rna encodes amino acid structure via sets of three nitrogenous bases, which is equivalent to 4^3 options, which more than cover the 20-21 amino
+acids
+ribosomal rna helps the mrna bind to the protein creation unit (which i think is called a ribosome)
+transfer rna transfer the created proteins to wherever they need to go
+micro rna disrupts certain messenger rna messenges, just for fun i guess (lol not really)
+
+||||||||||||||||||||||||||||||||||
+Unit 2: The Cell
+
+Cell Structure:
+
+;Studying Cells:
+microscopes ooooh
+electron microscopes use electrons and put the subject in a vacuum, killing the subject
+there are two types of cells, prokaryotic and eukaryotic
+
+;Prokaryotic Cells:
+prokaryotic cells don't have a nucleus, which seperates the dna from the rest of the cell in eukaryotic cells
+cells have four groups within them->
+plasma membrane -> the wall gates and sensors on the furtheset outside structure of the cell
+cytoplasm(cytosol really) -> the fluid structure within the cell, which according to wikipedia isn't very well understood currently, but is recognized as something that also helps regulate cell functions
+dna -> deoxyribonucleic acid
+ribosomes -> protein constructors
+nucleoid region is the area where the dna is stored in prokaryotic cells, which is not walled like in eukaryotic
+cells tend to divide instead of growing infinitely because diffusion of materials becomes more difficult the larger a cell becomes
+
+;Eukaryotic Cells:
+Eukaryotic cells have two extra features in comparison to prokaryotic cells ->
+membrane bound nucleus -> a wall around the dna
+membrane bound organelles -> walls around different functional areas of the cell (mitochandria)
+chromosomes -> rod shaped
+
+;;Plasma Membrane:
+plasma membranes are the cell wall that is formed from phospholipids, which remember is glycerol or sphingosine with a phosphate group and two fatty acids atttached, making the phosphate group side
+non-polar and the fatty acid side polar
+doesnt reallly discuss the mechanicsm of the plasma-membran wall
+
+;;Cytoplasm:
+cytoplasm is the inner region of the cell that is not the nuclear envelope or plasma membrane
+it has the cytosol which suspends all organelles within it, and contains useful proteins and everything else
+
+;;Nucleus
+the nuclear envelope (nucleus wall) has two membranes both made of phospholipids and pores that act as gates, just like the cell membrane
+the nuclear envelope also contians a plasma, called the nucleoplasma, which like the cytosol is to complicated for us right now, but 
+35% of human dna encoding is about the proteins that make up the nucleoplasma
+
+;;;Chromatin and Chromosomes:
+chromatin is the unwound phase of chromosomes which are where human dna is stored in, or rather where all eukaryotic dna is stored in, chromosomes
+different eukaryotic creatures have different amounts of chromosomes, but when chromosomes are in their use phase and are not duplicating for cell division
+they are in an unwound state in a jumbled mess that is called the chromatin
+
+;;;Nucleolus:
+the nucleolus is the factory that produces ribosomal subunits to communicate with the rest of the cell
+
+;;Ribosomes:
+ribosomes are the protein factories of the cell
+they have two sections a ribosome small subuint and a  ribosome large subunit, which they don't really provide any information on, but i guess the nucleolus produces the subunits
+the ribosomes than work on commands from the nuclues via mrn to produce proteins, which are than transported via trna to whever they need to go
+
+;;Mitochandria:
+produces atp via glucose and other nutrients
+
+;;Peroxisomes:
+break down fatty acids and amino acids, also detoxify the cell
+
+;;Vesicles and Vacuoles:
+membrane sacs that store and transport
+
+;;Animal Cells versus Plant Cells:
+
+;;;Centrosome:
+animal cells have a structure called the centrosome. this is a pair of two tube like structures, the roles of centrosome is not entirely clear, but it regulates cell division, and
+helps with anchoring of cell organelles
+
+;;;Lysosymes:
+lysosymes digest waste within the cell, but are only found in animal cells
+
+;;;Cell Walls:
+plant cells have cell walls, which are mostly comprised of cellulose, a poysaccharide made of glucose
+
+;;;Chloroplats:
+the plant cell organelle that conducts photosynthesis, via thykaloids, stroma, and chlorophyll, synthesizing carbon-dioxide and and water into
+oxygen and glucose, the light is absorbed via chlorophyll within the thykaloids, and than the energy is used to synthesize the glucose within the stroma
+
+;;;Central Vacuole:
+the plant cell organelle that contains most of the cells water and regulates its shape
+
+;The Endomembrane System and Proteins:
+
+;;Endoplasmic Reticulum:
+this region modifies proteins and creates lipids within the cell, it has a phospholipid wall that it attched to the nucleus own phospholipid wall
+it has two regions the rough and smooth
+
+;;;Rough Er:
+ribosomes give their proteins to the rough endoplasmic reticulum, which than conducts the later 3 of the four stucutral differences between proteins, Secondary, Tertiary, and Quaternary 
+vesticles than transport the proteins to wherever they are going
+
+;;;smooth Er:
+the smooth endoplasmic reticulum synthesizes lipids, carbohydrates, steroids, and also detoxifies and stores calcium ions
+
+;;Golgi Apparatus:
+the golgic apparatus recieves proteins and lipids from the er via vesticles on its cis side face (side facing the er), and than marks and sorts these proteins for future transport with
+phosphate groups and other "small molecules", and then outputs them to the trans side where they are taken via vesticles to wherever they need to go
+
+;The Cytoskeleton:
+the cytoskeleton is the collection of protein fibers that hold organelles in their specific positions, and also help mantain the cell shape
+
+;;Microfilaments:
+these function in cell movement and are made of the protein actin, with which in the presence of atp and myosin protein moves the cell
+
+;;Intermediate Filaments:
+The create teh cell structure and are made of many different types of proteins, like keratin
+
+;;Microtubules:
+these help with cell compression and with transporitng vesticles and dna in cell replication, also they are the strucutre for flagella and cilia
+also they are controlle by the centrosome structure
+
+;Connections between Cells and Cellular Activities:
+
+;;Extracellular Matrix of Animal Cells:
+animals release proteins and carbohydrates from their cells, this forms what is called the Extracellular matrix,
+which regulates cell cordination by these protiens within the matrix binding to the protein receptors which are contianed within the phopholipid plasma membranes of cells
+to initiate some sort of action within the cell, also carbohydrates and other stuff will be taken into cells as like food lol
+
+;;Intercellular Junctions:
+
+;;;Plasmodesmata:
+this is the channel in plant cells that goes through the cell wall, cellulose structure, and allows the passage of materials between
+
+;;;Tight Junctions:
+animal cells connect to each other through the proteins claudins and occludins in their cell walls to form water proof connections
+
+;;;Desmosomes:
+Desmosomes are connections formed by proteins called cadherins in animal cells that connect to filaments in other plasma membranes to connect two cells
+
+;;;Gap Junctions:
+gap junctions in animal cells are formed by the protein connexins and allow for transport through the animal cells, where these gap junction proteins physically link two
+cells, but also they can open cad close
+
+Structure and Function of Plasma Membranes:
+
+;Components and Structure:

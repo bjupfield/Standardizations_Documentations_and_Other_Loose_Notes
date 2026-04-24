@@ -1,0 +1,10 @@
+Okay so to apply a formula or whatever to a column in excell
+assign the formula to one cell than drag that cells box outliner
+over the cells you want to copy over
+To apply a formula to data, enter the data into the columns A
+and than write the formula with A1, and this will apply the
+data in column A row n to Column whatever you choosen Row n
+^ do it like this
+=A1 * 2 + 55
+this will insert whatever values are in column A into column wherever
+this formula is inserted into and multiply them by 2 and add 55

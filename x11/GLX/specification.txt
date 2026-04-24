@@ -1,0 +1,7 @@
+very short document, just skimming over and making brief notes
+
+for rendering/drawing purposes GLX offers GLXWindow, GLXPixmpa, and GLXPbuffer
+
+GLXBConfig assigns the properties of the listed rendering buffers above
+
+to share data between two glx context use displaylist... name glListBase
