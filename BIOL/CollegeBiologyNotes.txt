@@ -393,3 +393,29 @@ cells, but also they can open cad close
 Structure and Function of Plasma Membranes:
 
 ;Components and Structure:
+talks over the basics of a plasma membrane, made of phospholipids, proteins, and carbohydrates
+the carbohydrates are all either attached to proteins or phopspholipids and act as hydrophilics substances
+to draw water solvents closer to the cell for intake...
+the proteins are either bound inside the membrane and called integral proteins, which they give no description of what these do,
+or they lie on the outside of the membrane and are called periphal proteins, and these are used to mark the cell for identification with the rest of the body
+the phospholipids are the actual shell that makes up the membrane, and they can be made of both saturated and unsaturated fatty acids, with saturated having no double bonds
+making them flat while unsaturated having a curve because of the double bonded carbon, this makes the wall able to take minor compression and expansions
+
+;Passive Transport:
+Discusses Diffusion and osmosis.
+diffusion (that most compound find equlibrium in a system by being equally spread out throughout it) allows for substances to passively travel through
+cell walls. Non-polar substances that are small can do this directly through the lipid barrier, as they are no repelled by the non-polar substance like
+water is. Channel protein, with the subset of aquaporins, allow hydrophilic substances to enter and exit. Aquaporins allows specifically water to exit
+which through the system of osmosis attempts to distribute itself equally with the outside substance.
+
+;Active Transport:
+There are many active transport mechanism, but why they are called active transport is because they take energy to conduct (ATP). The most important and
+most active (in use for most of the time) is the sodium-potassium pump. this pump uses a protein imbedded within the plasma membrane open towards the inner cytoplasm
+of the cell that attracts three sodium ions. once these ions attach it attracts atp which than hydrolyzes a section of the protein (uses creates a chemical reaction with the protein that generates water)
+which than changes the orientation of the protien to face the outside of teh cell, where it releases the sodium, and than attracts two potassium ions, reverses its position and lets them in
+because this changes the charge of the cell it also allows other charged atoms to be attracted and they enter through passive gates protein gates because of this reaction
+
+;Bulk Transport:
+basically two options, cells surrounds outside substance with cell wall coated with molecule called cathrin and than releases it into the cell or digest it
+with a lysosyme or the cell surrounds an outside substance with the protein caveolin and than lets this substance into the cell or releases, or the cell
+will have receptor proteins that initiate a cut of their wall and letting in of the substance in a similar manner to the simple cathrin ingestion
