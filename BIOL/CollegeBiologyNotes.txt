@@ -463,3 +463,42 @@ basically enzymes do something called induced fit, which is they conform to the 
 they do this through several means, by reactions to the substrate itself, through allosteric inhibitition and activivation, which
 is a molecule that binds to the enzyme and than changes its shape, and throguh cofactors and coeznymes, which are generally ions
 that bind to the enzyme and facilitate the reactions
+
+Cellular Respiration:
+
+;Energy in Living Systems:
+Redox reactions are chemical reactions that change the amount of electrons present in a molecule,
+oxidation removes an electron
+reduction adds an electron (lol)
+discusses the transfer of energy through atp and other electron carriers like NAD+ which is 2 phopshate groups linked to a hydrogen heavy nucleotide and
+another nucleotide, atp we have already discussed extensively, look above like 2 paragraphs
+
+;Glycolysis:
+Glycolysis is how atp is made, by the deconstruction of glucose into smaller molecules called Pyruvate. its a very long process but i will attempt to
+write it down, but in all reality what you should actually do is look at the wonderful graphs provided on pg 207 to understand the process.
+1. hexokinise binds to glucose and forces an atp to phrosphorylates the glucose molecule into a glucose-6-phosphate molecule. Phrosphorylates means
+to lose a phosphate group to another compound, which is what atp does, by losing its gamma phosphate group (third). the phosphate group binds to the
+2. an isomerase converts glucose-6-phosphate into fructose-6-phosphate which is done by converting the fifth carbon into having a double bond with its oxygen
+and giving that bonds hydrogen to sixth
+3. phosphofructokinase binds to the fructose-6-phosphate and adds another phosphate groups to the carbon sixth carbon that was given extra hydrogen by the previous
+reaction, resulting in a molecule with two phosphate groups at either end
+4. aldolas splits the fructose-1-6-biphosphate into dihydroxacetone-phosphate and glyceraldehyde-3-phosphate, glyceraldehyde-3-phoshpate ever so vaquely looks like
+glycerol with one phosphate group attached to the outer carbons, dyhydroxacetone-phosphate also looks like glycerol, but with a hydrogen missing from the middle
+oxygen, and one of the outer carbons having a phosphate groups instead of a oxygen hydrogen pair attached
+5. isomerase changes dihydroxacetone-phosphate into glyceraldehyde-3-phoshpate, which operates by taking two hydrogens from the non-phosphate group outer carbon and
+giving them to the inner carbon, attaching one to the double bonded oxygen and the other to the carbon itself
+
+also steps 1-5 take energy, and two atp, steps 6-10 create energy, 2 NADH, and 4 ATP
+also steps 1-5 convert glucose into two glyceraldehyde-3-phosphate molecules, so steps 6-10 act upon both these molecules
+
+6. NAD+ oxidizes glyceraldehyde-3-phosphate, stealing a hydrogen and two electrons from the non-phosphate group outer carbon, a phosphate group is than
+attached to this carbon and NAD+ becomes NADH, and the g-3-p becomes 1,3-biphosphoglycerate
+7. phosphoglycerate kinase forces 1,3-biphosphoglycerate to give the phosphate and an oxygen it just recieved to ADP which than forms ATP, 
+and leaves the 1,3-b as a 3-phosphoglycerate
+8. mutase changes 3-phosphoglycerate into 2-phosphoglycerate, switching the position of the phosphate from the outer carbon to the inner carbon, switching a
+hydrogen oxygen pair with the phosphate group
+9. enolase subtracts an oh from the carbon chain and an h from the phosphate group to create a h20 and the molecule phosphoenolpyruvate
+10. pyrvurate kinase breaks the final phoshpate group off of the phosphoenolpyruvate and gives it to an adp forming atp, and th phosphoenolpyruvate becomes
+pyruvate, retaining the oxygen from the phosphate group, double binding to it with the center carbon and the center carbons hydrogen attaches to the outer carbon instead
+
+;Oxydation of Pyruvate and the Citric Acid Cycle:
