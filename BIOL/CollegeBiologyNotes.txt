@@ -419,3 +419,47 @@ because this changes the charge of the cell it also allows other charged atoms t
 basically two options, cells surrounds outside substance with cell wall coated with molecule called cathrin and than releases it into the cell or digest it
 with a lysosyme or the cell surrounds an outside substance with the protein caveolin and than lets this substance into the cell or releases, or the cell
 will have receptor proteins that initiate a cut of their wall and letting in of the substance in a similar manner to the simple cathrin ingestion
+
+Metabolism:
+
+;Energy and Metabolism:
+
+;;Metabolism of Carbohydrates:
+discussing the metabolism of glucose, both the photosynthesis and the eventually consumption/breakdown of the glucose
+molecule upon use of its photosynthesized energy
+the glucose equation is:
+C6H12O6 + 6O2 <-> 6CO2 + 6H2O + energy
+where glucose can by generated or broken down into 6 carbon-dioxides and 6 water molecules and some combining energy
+in plant photosynthesis the energy is provided by 18 molecules of ATP (adenosine triphoshpate [a carbohyrate with a three phoshpate linear
+chain, connected to a carbon ring, which than connects to a nitrogen filled carbon ring]) and 12 molecuels of NADPH (nicotinamide adenine
+dinucleotide phosphate [contains a total of three phosphate groups, two phosphate groups bound to each other, with each binding to a heavily oxidized carbon ring
+with one carbon ring attaching to another carbon ring with a nitrogen hydrogen 2 tail and a single nitroggen, while the other ign connects to a phosphate]), although they don't actually mention the chemical process that takes place
+
+;;Metabolic Pathways:
+the two categories of metabolism are catabolic and anabolic,
+anabolic creates larger molecules from combining smaller ones with input energy
+catabolic splits these larger molecules to create smaller ones and output energy
+all chemical processes require enzymes that encourage the chemical process to occur
+
+;Potential, Kinetic, Free, and Activation Energy:
+uh yeah energy exist, its released, generally chemical reaction take activation energy to either begin and exergonic or endergonic reaction
+where exergonic releases energy and endergonic takes in energy into the system
+
+;The Laws of THermodynamics:
+first law: no new energy
+second law: it is impossible to act in such a way that transfers energy linearly from one system to the next, there will always be energy spent on intermediary systems
+
+;ATP: Adenosine Triphosphate:
+Discusses atp which as mentioned above is comprised of three linearly chained phosphate groups, connected to a ribose, which
+is than connected to a adenine. energy is released by hydrolyzing with a h20 to break the chains between the second and third
+phoshpate group creating adp (adenosine diphoshpate), and example of this is with the sodium-potassium pump which uses atp to create
+adp which facilitates the attachment of the unlinked phosphate group onto the facilitating protein which than changes its orientation
+and releases the sodiuma dn picks up some potassium and once again rotates
+
+;Enzymes:
+enzyme is the name for catalyst of biochemical reactions
+this stuff is so non-specific that it feels quite useless,
+basically enzymes do something called induced fit, which is they conform to the substrate that they are breaking down,
+they do this through several means, by reactions to the substrate itself, through allosteric inhibitition and activivation, which
+is a molecule that binds to the enzyme and than changes its shape, and throguh cofactors and coeznymes, which are generally ions
+that bind to the enzyme and facilitate the reactions
