@@ -502,3 +502,72 @@ hydrogen oxygen pair with the phosphate group
 pyruvate, retaining the oxygen from the phosphate group, double binding to it with the center carbon and the center carbons hydrogen attaches to the outer carbon instead
 
 ;Oxydation of Pyruvate and the Citric Acid Cycle:
+okay this goes over how the body uses the remaining pyruvate, which the Glycolysis
+reaction breaks down the glucose into (2 NADH, 4 Atp, and 2 Pyruvate molecules)
+
+The fist steps are categorized as the oxidation of pyruvate
+1. Pyruvate is forced to release carbon dioxide, which is the outer-bound carbon group not contianing hydrogen, I think the enzyme that forces it to do this is
+pyruvate dehydrogenase, okay the first few lines of wikipedia are a lot more clear. Pyruvate dehydrogenase is the enzyme that makes pyruvate react with lipoamade
+to cut carbon dioxide from the pyruvate and attach it to the lipoamade to form acetylated dihydrolipoamade. the reaction also needs the enzyme thiamane pyrosphosphate
+lipoamade is a molecule with a carbon ring with two sulfur, with a carbon tail with a double bonded oxygen and nitrgoen attached to two hydrogen at the tip
+to form acetylated dihyddrolipoamade the pyruvate without the carbon dioxide attaches to the sulfure nearest to the tail, and a loose hydrogen attaches to the other
+sulfur, forming a hook like with the opened carbon ring
+2. here im not to sure what actually happens, except that the hydroxyethyl group is oxidized into a acytel group, whatever that means, but it seems it might
+gain an oxygen and lose electrons which attach to an NAD+ to form and NADH
+3. this newly formed acytel group is than to coenzyme a, which means it is broken off from its attachment to acetylated dihydrolipoamade at what looks like the sulfur
+molecule and than given to coenzyme a, coenzyme a is incredibly complicated but it is a carbon group attached to a phoshpate group, also attached to a double nitrogen carbon ring,
+also attached to a phsohpate group which is attached to a phoshpate group which has a long carbon tail, look it up for reference
+
+the next steps are taking this acytel group attached to the coenzyme a, and they can go two places depending on how much oxygen is present, we will only be taking
+notes on the process which requires oxygen and creates citric acid
+1. an acytel group from the coenzyme a is attached to a oxaoloacetate, which is a four carbon chain, with one carbon being attached to two oxygen, than attached to a carbon double bonded to an oxygen,
+attached to a carbon bonded to two hydrogen, which is than attached to another carbon bonded to two oxygen, identical to the first carbon group. attaching the
+acytel group essentially puts the acytel in the center, putting an h2 carbon above the double bonded carbon, and making the double bonded carbons have the double bonded oxygen
+take the trhydroxides carbons extra hydrogen, and attaches a Carbon dioxide group to the carbon
+2. the enzyme aconitase moves the hydrogen oxide off of the center carbon down to one of the carbons with 2 hydrogen, which gives one of the hydrogen to the
+central carbon. making the citrate into an isomer called isocitrate... very clever
+3. the enzyme icositrate dehydrogenase converts isocitrate into alpha-ketoglutarate, a carbon dioxide molecule, and gives a hydrogen and an electron to NAD+ to form NADH
+alpha-ketoglutarte is different from icositrate, as it lose the carbon dioxide attached to the center carbon, and this carbon recieves one more hydrogen from the
+carbon attached to a oxygen two oxygen (one oxygen has a hydrogen), that carbon loses its final hydrogen and than double bonds to the oxygen, releasing carbon-dioxide, and a hydrogen
+(also the carbon-dioxide group attached to the central carbon had an extra electron, which is detached and given to the nad+ to form the carbon-dioxide)
+4. alpha-ketoglutarate is coverted by the enzyme alpha-ketoglutarate dehydrogenase to succinyl which than attaches to coenzyme-a
+succinyl is alpha-ketoglutarate without the carboxyl group (carbon-dioxide with a hydrogen (fake not real hydrogen) attached to one of the oxygens so the carbon can 
+attach to another carbon instead of the double bond with two oxygens) which was attached to the carbon double bonded to oxygen, succinyl than attaches to the sulfur receptor in coenzyme-a (or has a sulfur attached to where the missing carbonxyl group was, unclear)
+so this step charges another NAD+ into NADH and also creates another carbon-dioxide
+5. a phosphate group breaks the coenzyme-a bond with succinyl, attaches itself to where the sulfur was on succinyl, than is broken off and either attached to
+a adp to form atp or a gdp to form gtp, and leaves the succinyl into succinate, which is two carboxyl groups at either end surrounding two hydrogen bonded carbons
+6. succinate gives two of its hydrogens to FAD forming FADH2, the two hydrogen atoms of succinate form a double bond and the molecule becomes known as 
+fumarate
+7. a water molecule attaches to fumarate, to form malate, which gives one of the middle carbons another hydrogen and the other carbon  oxygen attached to a carbon
+8. nad+ comes in and steals the hydrogen from malates, oxygen, forming oxaoloacetate, the molecule this process starts with
+in total the cycle releases two carbon dioxide, one FADH2, three NADH2, and either a GTP or ATP molecule.
+
+;Oxidative Phosphorylation
+most of the atp of a cell is not produced directly by Glycolysis, but is intead a byproduct of the NADH produced by glucolysis which is used in the Cheismosis chain,
+which is a molecular factory that uses the ionic gradient between the inside and outside of the plasma membrane to produce atp by transfering hydrogen ions outside through
+the molecule atp-synthase than uses this difference to ship hydrogen ions inside and uses this shipping to prouce atp from adp, unclear how, but its a very complicated
+protein (atp synthase that is)
+also this is the only part of atp production that uses oxygen, as the fourth chain in cheismosis uses dioxide to produce h2o from two hydrogen ions, which creates
+also two free electrons
+
+;Metabolism without Oxygen:
+presents several different varietes of aneorobic metabolism (metablism without oxygen, which is not used in glycolysis, but only in cheismosis)
+lactic acid is produced by us and lactic acid bacterias when there is no oxygen present, this causes lactic acid build up in our muscles, and uses the enzyme
+lactate dehydrogenase, converting a pyruvate and a NADH into a lactic acid and an NAD+, very ineffecient compared to cheismosis
+alchohal fermentation also is a aneorobic reaction, and uses pyruvate, co2, acetaldehyde, and NADH to make ethanol, and NAD+
+
+;Connections of Carbohydrate, Protein, and Lipid Metabolic Pathways:
+discusses how in the glucolysis many different amino groups, carbohydrates, lipids, and steroids can be used, and thus food isn't only glucose but other forms
+of the carbohydrates, triglycerids are used for long term energy storage, and glycogen is used for short term energy storage
+
+;Regulation of Cellular Respiration:
+mentions several different inhibitors tothe proteins that facilitate the respiration cycle, for example one was Glut proteins and insulin, glut protiens allow
+glucose to enter the cell and they only attach to cell walls in the presence of insulin, so without insulin in the body, you die
+
+Photosynthesis:
+
+;Overview of Photosynthesis:
+Photosynthesis occurs, also it occurs within the chloroplates within plants, and also the are two main parts of the cloroplates, the thylakoid, and the stroma
+also photosythesis can be categorized into two seperate reaction types, the light dependent and than the dependent upon the light dependent
+
+;The Light-Dependent Reactions of Photosynthesis
