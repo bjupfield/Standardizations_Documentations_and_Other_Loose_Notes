@@ -648,3 +648,53 @@ activate glycogen phosporylase kinase, which causes the cell to break apart glyc
 synthase prevents the creation of glycogen within the cell. so what adreniline does within the cell is essentially cause a feeding frenzy... very interesting
 
 Cell Reproduction:
+
+;Cell Division:
+discusses dna and how it is packaged across prokaryots and eukaryots, and gives further information on the packaging within eukaryots. basiaclly prokaryots have only one DNA strand, as they are 
+single celled organism. they can also have fake DNA called plasmids which are exchangable between individual bacteria and allow for rapid mutations among a colony
+human cells contain 46 individual strands of dna called chromosomes, except for the gamete cells (sperm and eggs). every chromosome matches the opposite sex's chromosome, thus named diploid,
+except for the two sex chromosomes x and y, thus named haploid
+to pack 46 individual chromosomes into a cell dna is compacted very tightly within the nucleus. the way it is packed is first by wrapping around the portien histone, forming a basiaclly
+like structure, which is than wrapped around a chromatin fiber, which is than packed by a "variety of fibrous protiens" into a incredibly compact structure
+
+;The Cell Cycle:
+2 phases of cell division, mitotic and the interphase
+
+;;Interphase:
+
+;;;G1 Interphase:
+the cell collects materials to replicate itself
+
+;;;S Interphase:
+the dna replicates, although they do not go into detail over this. also the centrosomes are duplicated and take their respective positions at opposite ends of the cell, preparing to drag the dna
+
+;;;G2 Interphase:
+Cell gathers more materials, duplicates necessary organelles, and destroys the cytoskeleton
+
+;;Mitotic Phase:
+
+;;;Karyokinesis:
+This is the period of the cell shifting its organelles around before a literal cell duplication occurs, there are five designated steps
+1. prophase stage includes the destruction of the nucleus and its respecitve organelles go to either side and the centrosomes lining up against the cell walls, being pushed by microtubules forming the mitotic spindle(which drags the chromatides)
+2. prometaphase the nucleus is fully destroyed, the mitotic spindle attaches itself to the chromatids at the kinetochore, a protein sheath it grows, and they begin to pull on the chromatids
+3. metaphase the chromatids are fully aligned within the center of the cell
+4. anaphase the chromatids split and each individual chromosome is pulled to the half of the cell it is attached to by the mitotic spindle
+5. the individual chromatins unravel a bit and a nucleus begins to form around them, and the mitotic spindle begins to be transformed into the cytoskeleton
+
+;;;Cytokinesis:
+actin filaments pull the cell walls together untill they split, offically becoming two different cells
+
+;;G0 Phase:
+not participating in cell reproduction
+
+;Control of the Cell Cycle:
+three points where cells will halt cell replication cycle, G1, G2, and the Metaphase
+at each of these halts they check the dna and see if there are enough materials to continue the split
+cyclin and cylcin-dependent kinases help regulate these checkpoints, and they are produced by the cell and cells outside themselves
+
+;Cancer and the Cell Cycle:
+cancer is caused by harmful mutations to the cell reproduction cycle, all other mutations will be stopped by the cell reproduction cycle, but if a mutation prevents itself
+from being arrested by other checks, that mutation will multiply if it is able to survive and doesn't just kill itself
+
+;Prokaryotic Cell Division:
+ill take these notes in a possible future
