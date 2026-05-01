@@ -571,3 +571,80 @@ Photosynthesis occurs, also it occurs within the chloroplates within plants, and
 also photosythesis can be categorized into two seperate reaction types, the light dependent and than the dependent upon the light dependent
 
 ;The Light-Dependent Reactions of Photosynthesis
+okay first discusses light and what it is
+than mentions the two, out of five main chlorophylls that the a and b chlorophylls are what most plants use
+the way they ues them is quite complex, two "chlorophyll factories", and electron transport chain, and an ATP Synthase are used to turn
+chlorophyll and water into ATP and NADPH, with a byproduct of dioxide
+the first of these two factories is called the Photosystem 680,
+where two chlorophyll (both a and b) receptors are linked with a reaction center that contains two a chlorophylls. the receptors become excited by light
+and pass this energy to the reaction center, which than splits open a h20 molecule, steals the hydrogens electrons (so it recieves two electrons and essentially
+releases 2 protons and oxygen) and gives these electrons to the electron transport chain
+this chain than uses a hydrogens attractiveness to these spare electrons to move hydrogens inside the thykaloid while it transports the electrons to 
+the second factory Photosystem 700
+which uses the same pylon and reaction area setup to excite the transfered electrons again, as they are sleepy, and give the electron to an NADP+ and H+ to form
+NADPH
+atp is produced by the the atp synthase and the proton gradient between the inner and outer membrane of the thykaloid, produced by the electron transport and 
+photosystem 680
+also i forgot to mention what chlorophyll looks like, its a carbohydrate that has 8 rings, with 4 nitrogen atoms at the center, and with two of these atoms connected
+to a magnesium with 2 missing electrons, it also has a very long tail with oxygen and hydrogen attached to intermittenly
+
+;The Calvin Cycle:
+I am simply to lazy to write down the calbin cycle right now
+
+
+Cell communication:
+
+cells communicate, the molecules they used to communicate are called ligands
+
+;Signaling Molecules and Cellular Receptors:
+there are four types of cell communication, paracrine, autocrine, endocrine, and gap junction communication
+
+;;Paracrine:
+this is local communication between cells. the reason it stays local is that the ligands are readily removed from the bloodstream and other areas by enzymes
+that degenerate the ligand. the example they used was neurotransmitors which are the ligands that operate between the dendrites of neurons, allowing for quick
+transmission of phyiscal stimuli.
+
+;;Endocrine:
+ligands are transported throughout the entire body, and these ligands are refered to as hormones, so like you know testosterone and estrodial are both forms of
+ligands called hormones
+
+;;Autocrine:
+autocrine signals are ligands that can alo trigger a response from the cell releasing the ligand, i assumed that almost all communication would be autocrine,
+because how would a cell differentiate between something sent by another cell andsomething sent by themselves, but apparently this is not the case, instead
+these signals are usually sent during cell birth and death
+
+;;Gap Junctions:
+this involves intercellular mediators, which are just molecules that the cells send over gap junctions to indicate physiological changes, but importantly they
+are much smaller than ligands, and much quicker
+
+;;Types of Receptors:
+there are two types of receptors, things that take ligands and intepret them to be used within the cell, which is usually used to transmitted into exposing a 
+dna binding site on a cell protien which affects the cells dna expression
+receptor type 1 is intercellular, which only operates on nonpolar ligands that can pass through the cell membrane
+receptor type 2 is extracellular, which operates on the cell membrane (which it is imbedded within), and creates intercellular mediators within the cell based
+on the ligand it recieves
+extracellular is much more commmon
+the are three types of extracellular receptors
+ion receptors, which when bound let ions of different types enter the cell
+g-protein receptors bind to gtp within the cell and split it open to form gdp and another protein group
+enzyme-linked receptors have an enzyme attached to their protein structure in the cytoplasm of the cell, when they recieve their ligand the enzyme is than
+released/activated and affects processes in the cell
+
+;;Signaling Molecules:
+there are many typse of ligands but they present a few
+Small Hydrophobic Ligands are small and hydrophobic so the pass through the cell membrane, whcih again are generally called hormones
+Water soluble Ligands cannot pass through the cell membrane as they are polar, so they attach to extracellular receptors
+Nitric Oxide is the type of ligand that relaxes muscle spasms, and is used in Viagra...
+
+;Propogation of Signals:
+there are two primary way signals are continued within the cell
+phrosphorylation is the attachment of a phosphate group to a protein or similar molecule, generally replacing the hydroxyl group
+second messangers continue the message by bindning the message to them, so like they'll attach calcium+2 to themselves and enter the cell
+
+;Response to the Signal:
+uh yeah, cells do pretty much everything depending on intercellular communication, i guess one thing that was interesting is what adreniline does, or otherwise
+known as epinphrane, epinphrane binds to beta-andrenergic receptors which release cyclic amp. cyclic amp than phrosphorylates two enzymes. the first enzyme
+activate glycogen phosporylase kinase, which causes the cell to break apart glycogen, the short term storage of two glucose molecules. the second enzyme glycogen
+synthase prevents the creation of glycogen within the cell. so what adreniline does within the cell is essentially cause a feeding frenzy... very interesting
+
+Cell Reproduction:
