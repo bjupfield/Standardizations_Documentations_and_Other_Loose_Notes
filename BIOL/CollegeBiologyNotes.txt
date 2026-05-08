@@ -698,3 +698,201 @@ from being arrested by other checks, that mutation will multiply if it is able t
 
 ;Prokaryotic Cell Division:
 ill take these notes in a possible future
+
+||||||||||||||||||||||||||||||||||
+Genetics
+
+Meiosis and Sexual Reproduction:
+
+;The Process of Meiosis:
+Meiosis is the production of gametes, which are haploids, which means that they are cells containing one set of chromosomes, which means they are the sex cells,
+which means they are eggs or sperm. Haploids in diploids (two set of chromosomes) beings are not produced through the egg/sperm reproducing but are instead produced
+through meiosis which is the reproduction of a diploid cell into a four haploid cells, apparently it is like mitosis but the cell division happens twice
+
+;;Meiosis 1:
+okay the writing in this section was difficult to understand due to a reference to paternal and maternal chormosomes, but it makes sense due to the chromosomes in
+every diploid cell either coming from the mother or the father originally, they were not meaning that eggs and sperm are reporducing into haploids, obviously,
+but the language was difficult
+anyway untill karyokinesis meisosis is identical to mitosis, but after this there the phases diverge due to the genetic reshuffling which occurs in two phases,
+the prophase and metaphase of meisosis 1
+in the prophase when the chromatids are attached at the kinetochore a synaptical complex forms between homologous chromosomes, which than have recombination
+nodules (protien) that exchange data between the two chromosomes, resulting in a crossover mix-mash remix of the dna
+in metaphas the randomness is caused by the chromatids randomly placing themselves in the center, where each pair chromatid pair that dna between itself will
+randomly be choosen to either go with one cell or with the other cell
+these are the two reactions that produce the randomness within our dna, which exceeds any "countable" number, with just the prophase combinations being
+2^23 in humans, and the prophase has an undisclosed amount of combinations
+
+;;Meiosis 1:
+this stage of meiosis has no s phase of cellular reproduction, it instead just takes the chromatids from meisosis 1 and splits them into individual chromosomes
+
+;Sexual Reproduction:
+SEX!
+also a lot of species do sex wierdly, in example ferns have two seperate life cycles, one as a haploid organism and the other as a diploid organism. both
+of these are capable of cell division, but the haploid organism will eventually combine with another version of itself to form the diploid organism, and the
+diploid will eventually produce spores (which results in its name sporophyte, haploids are called gametophytes) that become the haploid organism wierd but not
+unconciousabe
+
+Mendel's Experiment and Heredity:
+Mendels version of genetics is not the whole story but here is his framework
+
+Mendel's Experiment and the Laws of Probability:
+Okay I don't think i really need to write any notes on this chapter but i will. we all know mendel's experiments, that deduced in 1866 that genes/alleles tend
+to be expressed in pairs, where one allele is is provided by the father and one by the mother. He proposes that all gametes are either dominant or recessive,
+which all people know what this is, that when a recessive gene is present with a dominant it is the dominant gene that is expressed. this is not always entirely true.
+however, Mendel was awesome, this experiment was begun in 1856, and lasted for 10 years, with a total of 30,000 pea-bean plants being categorized, and not only did
+he keep notes, he also individually fertilize the beans for most of the expirements. what an amazing human being. however what are the cases of it not being true,
+when the meiosis prophase switches some of the genes it oculd not pass to the child, some genes might affect the same characteristics but actually not be directly
+contradictory, like the increase of production of a pigment for hair, which might not decrease the production of one pigment. furthermore x/y inherited genes
+if either sex chromosome is infected with an allele in has a 50% chance to be passed to the child, while it might not be dominant it will than be pased on down,
+like a recessive female gnee, can be present in a line that waits untill the dominant gene aligns on the male? i honeslty don't understand how this is not a 
+100% inheritance rate, but I must be stupid?
+
+Modern Understanding of Inheritance:
+
+;Chromosomal Theory of Inheritance:
+we have been thinking of mendel's theory of inheritance as based on the chromosomes attributed to each individual through meiosis and sexual reproduction,
+and this is pretty much what this is, and was theorized by Thomas Hunt Morgan in the late 1800's
+
+;Genetic Linkage and Distances:
+Yeah, due to chiasmate sometimes chromosomes given by the parents are not the same genetic material of the parents, as the allels have been switched around,
+which causes children to not be the perfect genetic imitations of their parents alleles as mendel's basic non-chromosoal theory suggest
+
+;Aneuplody:
+anueploid means a member of the species without the correct amount of chormosomes a lot of genetic diseases can occur from this, like down syndrome, which is a 
+result of three chromosomes in chromosome 21, the smallest chromosome. occurances of down syndrome increase with maternal age. monosomy, the removal of a chromosome in
+humane autosomes (the non-sex chromosomes) leads to death before birth
+trisomes, the addition of a singular chromosome, usually leads to still-birth too but there are a few chromsoomes that can withstand it, like 21
+
+;Sex Chromosomes Nondisjunction in Humans:
+sex chromosmes are able to be trisomic or monosomic with little harm caused due to two reasons.
+first in the female sex only one sex chromosome is active at a time in the body
+second in the male sex if there is multiple x chomosomes these will also be deactivated like in the female sex
+
+;Chromosome Inversion and Translocation:
+chromsomes can also be inverted at certain genes and certain genes can detach and reattach to other chromosomes
+this either results in deformity or evolution for any species
+
+Dna Structure and Function:
+
+;Historical Basis of Modern Understanding:
+goes over the history o the discovery of DNA
+Friedrich Mischer discovered "non-protein" nucleic acid, DNA, in 1860s, but was unable to determine that they were the cause of heredity inheritance
+Frederick Griffith discovered DNA transfer between cells, in 1928, were he reported the Pneumoniae R would take DNA from Pneumoniae S to transform itself into
+a lethal disease
+Martha Chase and Alfred Hershey reproted in 1952 that experiments they ran showed that DNA itself when inserted from a virus would create more viruses in bacteria
+
+;Dna Structure and Sequencing:
+goes over the disovery and structure of dna, if interested in the structure refer to notes on
+Biological Macromolecules:;;Nucleic Acids:;;Dna and Rna:
+Francis Crick and James Watson discovered the makeup of dna in the 50s
+
+;;Dna Sequencing Techniques:
+We laser that dna, also what is done is the nitrogenous bases of dna will bind to the end of cut dna based on what is the previous nitrogenous base, so if dna is
+cut and divided and than a nitrogenous base is added the dna can be selected or detected, and than adding a dye protien to the final nitrogenous base
+will determine which base is in the final position, so dna sequences can be determined in this fashion, which of course is not done by hand
+
+;Basis of Dna Replication:
+Dna replicates by taking dividing the DNA HELIX and copying each band of the helix, to forma  perfect copy of the entire helix, which results in sister chromosomes
+that are than seperated into seperate cells
+
+;;Dna Replication in Prokaryots:
+remmebr this is in prokarytoes (no nucleus having beings), and this is only a rough summary, no specific mentions of how or why the nucleotides are bound
+to the ribosomes of dna,
+okay first dna is borken open by two proteins, topoisomerase and helicase, topoisomerase interacts with the phosphate groups by breaking them and reforming
+them to be in a straight line, while helicase breaks the hyrdogen bonds that bind the nitrogenous bases together
+than rna primase and dna polymerase III create the bands new bands of dna on these two seperated bands (replicating)
+they do this with dna polymerase III using rna primase as an input to break up and attach to dna, which it to do in two different directions
+because it has to do this in two different direction DNA ligase will hold saving points on the dna band that has to be replicated backwards for the 
+dna polymerase to attach to and create dna, the other direction polymerase work the whole time
+
+;Dna Replication in Eukaryots:
+Dna replication is essentially the same but much more proteins are involved
+however interestingly there is a thing called telomerase
+telomerase is the ending strand of dna in Eukaryotes, which does not encode for anything,
+this is needed because in dna replication dna polymerase is unable to attach the final nucleotide to the sister band of dna, thus leaving dna bissing
+one nucleotide base every single time it replicates. this is generally solved by two things, first telomerase is a gene sequence that encodes for nothing, it is
+blank junk data at the two ends of every chromosome that inhibits the decay of dna through replication. secondly more telomerase is added to cells if they are not
+somatic, which means non-replicating cell. however, low telomerase counts are associated with aging and with cancer
+
+;Dna Repair:
+mistakes are generally repaired during dna replication, detections are made by dba polymerase II and incisions are made at the nucleotide base and removes the
+base and replaces it with the correct base, again not much is actually given on the exact mechanism that polymerase II uses to cut and correct these mistakes
+
+Genes and Proteins:
+
+;The Genetic Code:
+All of life on this planet (as far as we know) uses the same encoding for dna to mrna to proteins
+every amino acid in a protein is encoded by 3 nucleotide bases in dna, which means there is an excess of 
+44 3 nucleotide combinations for the amount of proteins. 
+3 of these extra nucleotide combinations program the stop mechanism of the ribosome unit, those are UAG,UAA, and UGA
+the start programming is done by AUG, which also programs the amino acid methionine
+this leaves a total of 41 nucleotides not strictly necessary for producing proteins. however, all encodings are actually used, but
+amino acids generations can be conducted by multiple different nucleotide bases, there is a chart that gives the total description of what
+each nucleotide base combination converts to on page 406
+
+;Prokaryotic Transciption:
+okay once again in this description it is not entirely detailed, instead they give a loose summary of the inner workings of mrna copying dna in prokaryots
+there are five proteins associated with mrna transcription, donated polymarase alpha, alpha', beta, beta', and omega. the alpha assemble the mrna, while the 
+beta groups bind to the dna. the omega finds the location of the start of the gene for the mrna to copy. this location is called a promoter, and is slightly
+different across all prokaryots, but shares to commanalities. at 35 nucleotides before the gene, there is the nucleotide combination TTGACG, and at 10 nucleotides
+before the gene there is the combination TATAAT, the omega binds to the TATAAT location and than the mrna transcription begins. mrna is stopped by rho-dependent termination
+and rho-independent
+rho-dependent is caused by the protein rho bumping into the mrna and kncoking it of the dna unit,
+while rho-independent is caused by unstabl connections programmed into the dna gene region
+
+;Eukaryotic Transciption:
+umm yeah, they once again give unspecific information, but here it is so unspecific that it is practically useless, like literally, all they said pretty much
+was that eukaryotic transciption is far more complciated and has far more caveats. also something actually informative that they mention is that in eukaryots the
+promoter regions appear to evolve quite rapidly, but when this book was written only preliminary research had been conducted into the topic
+
+;Rna processing in Eukaryots:
+Once again they pretty much say that this stuff is actually too complicated to write in a single small section as this
+
+;Ribosomes and Protein Synthesis:
+amino acids are combined together at one amino acids amino group and the other amino acids carboxyl group, these reactions are faciltiated by gtp catalyzed by
+peptidyl transferase which interacts with trna which binds to the ribosomes with mrna to facilitate the translation into a single protien unit
+trnas are the molecule that actually bring the amino acid into the ribosome and attach the amino acid to the protien chain based off of the mrna encoding
+
+Gene Expression:
+
+;Regulation of Gene Expression:
+the are differences in regulation between eukaryots and prokaryots, primarily based upon the nucleus and nucleoid region
+because prokaryots do not have a nucleus and ribosomes usually attached to mrna as they are being transcribed most gene regulation happens at the the transcribing
+level of the gene, when mrna is being created
+eukaryots have many more options, because of the nucleus membrane, which allows them to both regulate gene expression at mrna creation and at ribosome attachment
+
+;Prokaryotic Gene Regulation:
+
+;;Repressor Operon:
+they give an example of Tryptophan production gene repressant in ecoli. basically when tryptophan is abundant it binds to the trp repressor, a protein, has two
+tryptophans bind to it, which causes the trp repressor to bind to the starting location on the dna of the ecoli for the gene that produces tryptophan, preventing
+rna polymerase from attaching to dna in the first place, preventing further production of the protein
+
+;;Activator Regulator:
+I assumed regulators would be identical to repressor, in that they would actually just be regulators in reverse that when a substance is present in the
+environment they would detach from the dna strand. this is not the case, as regulators actually also attach to dna to facilitate expression of a gene, however
+when they attach the rna polymerase has an easier time attaching to the starting location of the gene and thus produces more
+
+;Eukaryotic Epigenitic Gene Regulation:
+basically the tight packing of dna in eukaryotic cells leads to this packing itself being used as gene regulation
+since histones have to be partially seperated to express genes this forces genes of a certain type to be close together so the histones can be seperated colllectively,
+it also force genes to have to unwind the histomes before they initiate transcription
+
+;Eukaryatoic Transcription Gene Regulation:
+same as prokaryotic
+
+;Eukaryotic Post-Transcription Gene Regulation:
+Rna splicing controls this entirely, basically sections of rna from eukaryotic cells are actually useless and these have to be removed, but the rna that
+control this splicing can splice one of these mistaken section to the next mistaken section, cutting a portion of the mrna out, effectively removing part
+of the gene expression and producing a different protein
+
+;Eukaryotic Translational and Post Translation Gene Regulation:
+More chemical can be added to protein through mysteriously unspecified operations to prevent their actual activation
+
+;Cancer and Gene Regulation:
+cancer ruins every part of this
+
+Biotechnology and Genomics:
+
+Biotechnology:
+I simply cannot be asked to write any notes on this chatper, it is the third I have read today and my brain is saying to self-terminate itself
