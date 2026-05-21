@@ -896,3 +896,36 @@ Biotechnology and Genomics:
 
 Biotechnology:
 I simply cannot be asked to write any notes on this chatper, it is the third I have read today and my brain is saying to self-terminate itself
+
+The Evolution of Populations:
+
+;Population Evolution:
+gene pool is the total number of alleles present in a population
+genetic structure is the frequency of different genotypes which are the combined alleles
+
+;Population Genetics:
+discusses population bottlenecking, genetic drift, gene flow, and clines
+population bottlenecking occurs when a catastrophe accours that result sin randomly selected genes that had no input on the survivability of the surviving population
+being selected for due to a dramatic decrease in the size of the population
+genetic drift is the change in alleles in a population due to random chance, that is a loses a gene or two due to the carriers of said gene not reproducing
+gene flow is the flow of different alleles to different populations,  in animals mostly done by migration and in plants done by pollen carriers
+clines are different gene pools present in a species due to different geographic differences, like one population might be larger in the cold or something
+
+;Adaptive Evolution:
+Um yeah sort of just dicsusses the operation of natural selection, i don't know all the different things that are present in an animal that will determine if
+it passes on its genes to the next generation, so literally everything about the creature
+
+Phylogenies and the History of Life:
+
+;Organizing Life on Earth:
+All of life must stand up and recognize its interconnected nature and fight for their collective future life...
+just kidding, reintroduces phylogenetic trees, and a few new important terms
+taxon - a branch in the phylogenetic tree
+taxa - plural
+sister taxa - twin branches in a phylogenetic tree
+polytomy - more than two branches in a phylogenetic tree
+binomial nomenclature dictates that to refer to an animal the standard method is to use its genus followed by its species name ex: homo (genus) sapiens (species)
+
+;Perspectives on the Phylogenetic Tree:
+HGT horizontal gene transfer
+genes can be transfered to organisms through non-sexual menes, they can be transfered through species by random absortion into the genetic material
