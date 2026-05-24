@@ -896,3 +896,34 @@ Biotechnology and Genomics:
 
 Biotechnology:
 I simply cannot be asked to write any notes on this chatper, it is the third I have read today and my brain is saying to self-terminate itself
+
+||||||||||||||||||||||||||||||||||
+
+Unit 4: Evolutionary Processes
+
+Evolution and the Origin of the Species:
+
+;Understanding Evolution:
+discusses evolution... um nothing was really learned in this section other than that Charles Darwin had and Alfred Russel Wallace both released findings that contributed to the modern theory
+of evolution at the same convention in (Linnean Society) in London 1858. According to wikipedia it seems that Wallace did not write "On the Origin of the Species", and his views began to introduce
+major spiritualist themes which contributed to Darwins findings being what is mostly taught. But Darwin and kept correspondance throughout their entire lives and were two incredibly influential 
+individuals in their lives
+
+;Formation of New Species:
+
+;;Speciation:
+Introduces two ways in which a speicies can diverge into seperate groups, allopatric speciation and sympatric speciation. Also a species is distinct from itself due to not being able to interbreed
+with other species, that is if a animal cannot have sex and produce viable offspring with another animal (offspring that also can breed) than it is of a different species
+
+;;Allopatric Speciation:
+The physical seperation of creatures of the same species resulting in divergent evolution, a landmass splits and a species is on both sides of the split
+Allopatric speciation can happen due to two reasons, either a physical seperation of the two diverging species or a divergance that leads to being better suited to different environments.
+Dispersal is due to physical seperation, and Vicariance is due to selecting traits that encourage seperation into different environments, like when a fish might evolve to either like cold 
+environments or not, leading to a seperation in the waterways, the one that likes cold environments might swim in the deep ocean, while the one that is akin to heat will stay near heat vents in
+the ocean floor
+
+;;Sympatric Evolution:
+Suggest that the only way for sympatric evolution to occur is for a incorrect ploidy level reproduction between two individuals in a species to result in the same ploidy level in both, leaving them
+able to reproduce with each other but no one else.
+
+;Reconnection and Rates of Speciation:
