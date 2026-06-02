@@ -960,3 +960,16 @@ binomial nomenclature dictates that to refer to an animal the standard method is
 ;Perspectives on the Phylogenetic Tree:
 HGT horizontal gene transfer
 genes can be transfered to organisms through non-sexual menes, they can be transfered through species by random absortion into the genetic material
+
+||||||||||||||||||||||||||||||||||
+Biological Diversity:
+
+Viruses:
+
+;Viral Evolution, Morphology, and Classification:
+
+;;Discovery and Detection:
+most viruses are not viewable with visible light microscopes and were notseen untill the invention of thhe electron microscope
+
+;;Viral Morphology:
+Viruses are made of a nucleic acid core (their dna), a shell consisting of protein or capsid, and an even outer shell consisting of proteins and phospholipids
