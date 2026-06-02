@@ -973,3 +973,121 @@ most viruses are not viewable with visible light microscopes and were notseen un
 
 ;;Viral Morphology:
 Viruses are made of a nucleic acid core (their dna), a shell consisting of protein or capsid, and an even outer shell consisting of proteins and phospholipids
+the protein subunits in the shell are called capsomeres
+there are four categories of viruses,
+Filamentous: longe cylindricl viruses that typically infest plants
+isometric: vaquely circular viruses
+Enveloped Viruses: have a membrane surrounding their capsid shell
+Head and Tail: Isometric viruses with a tail structure, they infect bacteria typically
+Viral Receptors are the protein identifiers on the outside of viruses that attach to protein identifiers on the outside of cells, allowing the viruses to subsequently
+penetrate the cell
+the bacteriophage t4 looks amazing
+
+;;Types of Nucleic Acid:
+Viruses use either rna or dna for replication information storage.
+rna 
+
+;;Baltimore Classification:
+the baltimore classification defines viruses based on their nucleic acid type and reproduction
+pg 563 has table but I guess I will write it down in good faith
+Group 1 -> doublestranded DNA mrna produced through transcription
+Group 2 -> singlestranded dna converted to doublestranded than transcibed
+Group 3 -> double stranded rna seperates and transcribes mrna
+Group 4 -> positive single stranded rna directly used for transcribing and a negative polarity version is made which than transcribes the rna
+Group 5 -> negative single stranded rna directly used for rna transcibing and positive polarity version is made after trnascription
+Group 6 -> two single stranded rna, converted to dna that inserted to host nucleus, which than produces viral materials
+Group 7 -> doubestranded dna with reverse transcriptase, has the entire package
+again i think i sor tof messed up with my notetaking here as I don't entirely understand the textbook, refer to page 563
+
+;Virus Infections and Host:
+
+the cells in a host that a virus infects are called permissive
+
+;;Steps of Virus Infections:
+viruses either cause budding (releases viruses individually through the host's cell membrane) or lysis (cell death) to release newly created viruses into the
+host
+not much more useful information here but ill list the stages anyway
+attachment -> either done through glycoproteins in the viral "envelope" (so only in enveloped viruses), or attachment proteins in the capsid
+entry -> the viral nucleic acid is directly entered in the cell, the cell engulfs the entire viral membrane/capsid, or the viral envelope fuses with the cell membrane
+replication and assembly -> already listed in baltimore classification, but interestingly group 6 and 7 need reverse transcriptase which is a viral specific enzyme
+so if this enzyme is blocked they cannot reproduce
+egress -> release of virus materials
+
+;;Different Host and their Viruses:
+
+;;;Bacteriophage:
+only infect bacteria, either are of the lysic cycle or the lysogenic cycle
+the lysic cycle is when the viral infection is not incorporated into the dna and once it has produced adequete viral material causes lysis
+the lysogenic cycle incorporates the viral genetic material into the dna of the bacteria which than produces viral material through budding
+
+;;;Animal Viruses:
+Can result in acute, chonic, intermediate, and asymptomatic infections, all meaning what they obviously mean,
+acute bieng painful or easily recognizable symptoms that are elimianted once the body destroys the virus, chronic are symptoms that last for life
+as the body is unable to destroy the virus, intermediate are symptoms that become dormant for periods of time and than reappear later, with infections 
+like herpes being prime examples which remain for life (chronically) but only appear intermittenly and are than destroyed by the body (the virus is capable of
+this by remaining dormant), asymptomatic are virusses that don't produce any recognizable symptoms. also virusees can cause cancer, with viral infections that
+insert themselves into host dna (group 6 and 7)
+
+;;;Plant Viruses:
+plant viruses can eihter transfer horizontally (from plant to plant) or vertically (from parent to offspring)
+
+;Prevention and Treatment of Viral Infections:
+
+;;Vaccines:
+Viral vacinnes are created by growing viruses in an environment that they are ill-suited for, which causes them to evolve for this different environment
+where they can than be inserted into patients and will still carry most of the viral information, but will be unable to infect effectively so the host can than
+develop resistance to this sort of virus including the non attenuated version
+
+;;Vaccines and Anti-viral Drugs for Treatment:
+in slow acting virus's like rabies vaccines can be used to prevent the fatality of the virus
+endemic viruses like HIV have had anti-viral drugs developed for them that take advantage of the several stages of infection tha they need
+
+;Other Accelular Entities: Prions and Viroids:
+
+;;Prions:
+Are infectious proteins, that infect by converting proteins of one type into another, which causes a cyclical cycle resulting in the normal protein being 
+replaced by the retarded protein that is infectious. the diseases that transmit in this manner are mad cow disease (bovine spongiform encophalopathy) and kuku,
+transmitted by eating the nervous tissue of the infected animals (commonly transmitted through cannabilism)
+
+;;Viroids:
+viruses without a capsid, just pure genetic material
+
+Prokaryotes: Bacteria and Archaea:
+
+;Prokayrote Diversity:
+The human body contains three times more Prokaryotes cells than Eukaryotes
+
+Prokaryotes be living, umm they were the original lifeforms, they can generally be cultured, some can enter dormant states for survival, some live in extreme
+conditions, they are the dominant domain on Earth, making up a luch marger biomass and quantity than any other organism on the planet. they also
+sometimes form biofilms which are just colonies that are bound together by an extracellular matrix that the prokaryotes secrete
+
+;Structure of Prokaryotes:
+three basic structures of prokaryotes are cocci (spherical), bacilli (cylindrical), and spirilli (cylindrical spirals)
+
+most prokaryotes have cell walls
+archaea and bacteria cell walls are typically very different
+
+;;The Cell Membrane:
+in archaea cells the membrane has the possibility of being a single layer and are generally comprised of glycerol attached to isoprene and of course a phosphate group
+to make it a phospholipid
+
+;;Reproduction:
+does not need mitosis due to being primarily done via asexual reproduction
+
+;Prokaryote Metabolism:
+obviously prokaryotes have a wide variety of nutrients that they need, but like all other forms of life they need the macronutrients; carbon, hydrogen, oxygen,
+phosphorus, sulfur, and nitrogen
+the description of how prokaryotes feed themselves is generally x-troph, with chemotrophs feeding from chemical, phototrophs feeding from light
+
+;Bacterial Diseases in Humans:
+
+Epidemology is the study of epidemics which are large scale disease outbreaks, goes over large scale diseaes like the bubonic plague, which struck Europe in
+the 550-700, and 1350-1400, each causing mass death, with an estimated 1/3 of the population being killed in the first epidemic
+90% of the indigenous peoples of America where killed by European diseases when they arrived
+discusses anti-biotic resisticance and also food borne illnesses, which are apparently primarily composed of produce and not animal products
+
+;Beneficial Prokaryotes:
+
+;;Nitrogen Fixation:
+in the ocean cynobacteria are the primary converters of atmospheric nitrogen (N2) into ammonia (NH3)
+in the soil it is primarily conducted by Clostridium bacteria
