@@ -1091,3 +1091,83 @@ discusses anti-biotic resisticance and also food borne illnesses, which are appa
 ;;Nitrogen Fixation:
 in the ocean cynobacteria are the primary converters of atmospheric nitrogen (N2) into ammonia (NH3)
 in the soil it is primarily conducted by Clostridium bacteria
+
+Protists:
+are eukaryots that are not plants, animals, or fungi
+
+;Eukaryotic Origins:
+They give a list of 8 things that all eukaryots have or an ancestor of them had,
+1. Nuclear Envelope
+2. Mitochandira
+3. Cytoskeleton
+4. Flagella and Cillia
+5. Chromosomes
+6. mitosis
+7. SEX
+8. Cell wall
+
+;;Mitochandria:
+mitochandria has mostly seperate dna that resembles alpha-proteobacteria and the dna included in the nuclueus that is not directly owned by the mitochandria also resmebles it,
+also mitochandria splits itself independently of the cell, although it will synchronize its splits with cell needs, mitochandria also resembles alpha-proteobacteria
+all which support the endosymbiotic theory that mitochandria used to be a free-living alpha-proteobacteria that was engulfed and put to work by eukaryotes
+
+;;Plastids:
+plastids the chloroplates containing vascoules of plant cells are also most likely endosymbiotic from cynobacteria
+
+;Groups of Protists:
+
+;;Excavata:
+single celled with an intake location for nutrients
+
+;;;Diplomonades:
+two nuclei mostly anaerobic
+
+;;;Parabasalids:
+mitochandria produce hydrogen gas and are called hydrogenosomes
+
+;;;Euglezoans:
+parasites, heterotrophs, autotrophs, and mixtrophed, not really any defining points presented in the min section
+
+;;Chromaveolata:
+endosymbiotic combination of red algea and host cells
+
+;;;Alveolates:
+contains an alveolates which are sacs in the cell that we don't know what they do
+
+;;;Stramenopiles:
+have a hairy flagella, a tail that has many different branching parts
+i think all algaes are in this category, and the multicellular brown algae are what we call seaweed
+nope incorrect red and green algae are in the achaeplastida group
+
+;;Rhizaria:
+contain a flagella like structure that is extremely thin and long and used to move nutrients into the cell
+
+;;;Forams:
+build macromolecules shells surrounding them, not a cell wall
+
+;;;Radiolarons:
+silica based porus shells
+
+;;Archaeplastida:
+Red and green algae
+
+;;Amoebozoa:
+flagella like structures that are tubes and used to drag in nutrients
+
+;;Opisthokanta:
+spongi
+
+;Ecology of Protists:
+most of the sea feeds n protist
+
+;;Human Pathogens:
+
+;;;Plasmodium Species:
+malaria is a Plasmodic species
+
+;;;Trypanosomes:
+These parasites prevent hteir own removal by the immune system by changing their glycoprotein receptors coating their membranes to a different type with each
+generation or division of the cell, making it impossible for the immune system to identify the most recent generation and remove them
+
+;;Plant Parasites:
+YIPEE IM done
