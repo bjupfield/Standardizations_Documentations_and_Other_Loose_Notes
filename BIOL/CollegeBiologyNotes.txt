@@ -1171,3 +1171,67 @@ generation or division of the cell, making it impossible for the immune system t
 
 ;;Plant Parasites:
 YIPEE IM done
+
+Fungi:
+the symbiotic relationship betwween fungi and tree roots are called mycorrhiza, where fungus and trees exchange key nutrients
+
+;Characteristics of Fungi:
+fungus are polyphyletic, meaning that do not seem to have a common ancestor, but have many similar traits
+fungal cell walls are comprised of chittin and glucans
+the branches of fungus cells are called hyphae, and these hyphae collectively form the mycellium,the feeding portion of the muhsroom, most fungus have cell walls
+in hyphae called septa, bt some do not
+fungus feed by using exoenzymes to break down material outside of themselves and than they ingest these broken down carbohydrates as nutrients
+fungus reproduces asexual and sexual
+
+;Classifications of Fungi:
+Fungi are seperated into five phylums,
+
+;;Chrytridiomycota:
+Chryitds are mostly unicellular and where the first phylum in the fossil record
+
+;;Zygomycotta:
+these fungi reproduce sexual and asexually.
+their sexual life-cycle is one were they are haploid creatures and form sporangiums between two haploid fungi that than are diploid, which than produces
+haploid spores that spread themselves
+
+;;Ascomycota:
+function similarly to zygots, except haploid spores are released before their combination with each other, and than are recombined on two haploid plants which 
+somehow merge their dna and than repeat the cycle
+
+;;Basidiomycota:
+these are the common grocery store mushrooms most are familiar with
+
+;;Deuteromycota:
+asexual completely
+
+;;Glomeromycota:
+phylla completely dependent on tree roots, cannot survive without them, asexual
+
+;Ecolog of Fungi:
+fungus eat the dead, and thus release the dead nutrients back into the ecosystem
+mycorrhiza are present in 90% of plants that exist on land, and are the primary way that plants can survive. fungus brings the plant water and soil
+nutrients to the roots, which than bring energy from photosynthesis directly to the fungus, that is roots themselves do not extract water from the ground,
+it is the fungi which do this for the roots in exchange for the power of photosynthesis
+lychen are a mutualistic symbiosis that fungus formed with cynobacteria and other photosynthetic microbes
+leaf cutter ants farm fungus by giving it leaves
+
+;Fungal Parasites and Pathogens:
+funguses are mean sometimes
+
+;Importance of Fungi in Human Life:
+they are important...
+
+Seedless Plants:
+
+;Early Plant Life:
+they use spores they use spores instead of "seeds"
+
+;Green Algae: Precursors of Land Plants:
+
+;Byrophytes:
+
+;Seedles Vascular Plants:
+most of earth's land vegitation are vascular plants, around 90%
+xylem is the plant tissue that transports and stores water and nutrients
+phloem is the plant tissue that transports and stores proteins and other complex nutrients
+yipeee im done
