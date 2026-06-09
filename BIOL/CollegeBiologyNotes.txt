@@ -1239,3 +1239,62 @@ yipeee im done
 Seed Plants:
 
 ;Evolution of Seed Plants:
+all seed plants are heterosporous, meaning they both form megaspores (female) and microspores (male)
+seed plants are also refered to as spermatophytes
+
+;;Evolution of Gymnosperms:
+okay so gymnosperms are seed plants that do not have flowers
+
+;;Evolution of Angiosperms:
+these are seed plants that do have flowers
+
+;Gymnosperms:
+yes angiosperms are seed plants that do not have a singular structure for sexual reproduction, pollinate by wind, and have tracheids, cedar is a gymnosperm
+
+;Angiosperms:
+
+;;Flowers:
+anatomy of a flower
+sepals (calyx) -> enclosing leaf structure that protects unopened floral buds (flowers that have not bloomed)
+petals (corolla) -> enclosed by the calyx and used to either attract pollinators or catch wind blown pollen
+perianth -> calyx and corolla structure
+carpels -> megasporangium structure that can be one large carpel or many large carpels, when it is one large capel it is called a pistil
+    stigma -> pollen deposite for carpel that is sticky
+    style -> pathway for the pollen to travel to the ovule from the stigma
+    ovule -> place were the megaspores are stored and fertilized
+stamens (androecium)-> microsporangium containing structure that releases and prodcues them
+    filament -> supporting stalk
+    anther -> production of microspores and storage into pollen grains
+
+endosperm is a triploid cell formed through fertilization that will feed the actually correctly formed diploid cell, so every single pollen has two sperms contianed within it, one that is to form the food for the other, which is insane
+
+
+;The Role of Seed Plants:
+believe it or not these things are very important
+
+Introduction to Animal Diversity:
+
+;;Complex Tissue Structure:
+Animals differ from their fellow Eukaryotes, fungi and plants, because their cells do not have the rigid cell wall structure. Animals also have neurons?
+
+;;Animal Reproduction and Development:
+the original fetus cell is called a zygote, it is diploid
+incomplete metamorphise is when most stages of the animals life look the same but just smaller, like human children, and complete metamorphisis is when different stages of animal life look substantionally different like a caterpillar and a butterfly
+in the development of the animal from the zygote the first few stages of development of the cells is cleavage, which is meisois of the cell into different cells, than what proceeds this is the formation of the blastula,
+which is a  hollow structure of cells, like a sphere made of cells but with no cells in the center, which is than compressed on one side to form the "digestive cavity" called the gatrula
+the genes that mostly control the activation of other genes are called hox genes
+
+;Features used to Classify Animals:
+
+;;Animal Characterization Based on Body Symmetry:
+radial and bilateral symmetry...
+
+;;Animal Characterization Based on Features of Embryological Development:
+funnily enough the germ layer counts are one of two categories, diploblasts and triploblasts.
+diploblasts are all radial, and have two germ layers,
+triploblasts are all bilateral and have 3 germ layers, the endoderm that turns into inner organs, the ectoderm that turns into the nervous system and skin, and the mesoderm which turns into the skeleton and muscles
+coelem development also is another category. the coelem is a organ expansion area
+protostomes develop the mouth first in embryotic form
+deuterostomes develop the anus first in embryotic form
+
+;Animal Phylogeny:
