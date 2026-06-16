@@ -1298,3 +1298,156 @@ protostomes develop the mouth first in embryotic form
 deuterostomes develop the anus first in embryotic form
 
 ;Animal Phylogeny:
+uhhh yeah, their divided
+
+;The Evolutionary History of the Animal Kingdom:
+the book claims that animals first appeared in the Ediacaran period, which was 635 million years ago, first evolving from some sort of protist
+the first large scale amount collection of animals in the fossil record is in the cambrian explosion during the cambrian period, which was 542-488 million years
+ago, which had the first animals with some sort of visual retina
+
+Invertebrates:
+invertebrates make up 97% of the animals in the world?, or maybe just of the animal types, unclear
+invertebrates are defined as something that has no spine or skull
+
+;Morphology of Sponges:
+sponges have no organs
+all digestion is done through diffusion, and some sponges have specific digesting cells, but these cells than simply release the nutrients which are carried 
+through the sponge body by being diffused through the water that is constantly flowing through it (which is not being pumped by the sponge but by the currents
+around it)
+most sponges use asexual reproduction to normally reproduce but will reproduced through sexual reproduction under stress, also sponges don't really move
+
+;Phylum Cnideria:
+cnideria are animals that are diploblasts and have biradial or radial symmetry. 99% are marine animals
+most cniderias contain stinging cells called cnidocytes to catch prey apparently
+animals of this type or either medusa or polyp, with medusa having bell like shapes and polyp having cylindrical shapes
+a common medusa type is a jellyfish,
+all cnideria digest things extracellularly in a single dual purpose anus/mouth. they also do not have circulatory systems so everything
+must be very thin
+there are four classes of these cnideria
+
+;;Class Anthoza:
+these only have the polyp body plan in their life cycle
+
+;;Class Scyphozoa:
+have most of their life cycle in the medusa body plan
+
+;;Class Cubozoa:
+same as Scyphozoa but their medusa stage has a box like cross-section, this class is also the most venomous
+
+;;Class Hydrozoa:
+variable life cycle body plans?
+
+;Superphylum Lophotrochozoa:
+these creatures have the protosomes (inner cavity intially developed in embryotic life) develop into the mouth in the embryotic stage of life
+ummm they are mostly flatworms and mollusk (mollusk being things ranging from octopi to clams)
+
+;Superphylum Ecdysozoa:
+this phylum contians worms, insects, and crabs
+
+;Superphylum Deuterostomia:
+this class has the protosome develop into the anus, and it includes humans
+
+Vertebrates:
+these are the cute and cool animals!
+
+;Chordates:
+these are what all vertebrates are and ahve four distinct features, a pos-anal tail, a notochord (which develops into the spine in vertebrates), pharyngeal slits (which
+develop into the gills in marine animals), and a dorsal hollow nerve cord (Developed from the blastula endoderm and converts into the nervous system)
+
+;;Urochordata:
+an invertebrate sponge like class that are part of the chordates
+
+;;Cephalochordata:
+lancelets, also non-invertebrate, sort of look like the polyp cnideria
+
+;;Craniata and Vertebrata:
+things with a skull are craniata, things with a spine vertebrata. craniata and vertebrate seem to have eveolved from cephalochordata, like 500 million years ago
+
+;Fishes:
+
+;;Jawless:
+
+;;;Myxini:Hagfishes:
+slimy bottom feeders on the ocean floor with cylindrical like structures, found only in marine environments
+
+;;;Pertromyzontidea:Lampreys:
+similar to hagfishes but these have semi-developed spinal chords where the hagfishes do not, they are found in coastal and freshwater areas
+
+;;Gnathostomes:Jawed Fish:
+Evolved during the Denovian period
+
+;;;Chrondrichthyes:Cartiloginous Fish:
+Jawed fish that have cartilage skeletons, things like sharks
+
+;;;Osteichthyes: Bone Fish:
+these fish have bones (calcium phosphate matrix bone cells)
+
+;Amphibians:
+Vertebrate Tetrapods
+moist permeable skin in which the respiratory system exchanges oxygen and carbon dioxide
+early tetrapods evolved in the Denovian period like 400 million years ago, and usually had gills and lived on the coast
+
+amphibians/tetrapods are classified into 3 groups
+;;Urodela:Salamanders:
+these use internal fertilization to reproduce
+;;Anura:Frogs:
+these are frogs, don't really provide a distinction between these, other than the fertilize externally
+;;Apoda:Caecillians:
+these are wormlike creatures (even though they have a spine) that spend most of their life in the soil
+
+;Reptiles:
+reptiles, birds, and mammals all have amniotic membranes (part of the placenta) upon embryotic development, 
+which allows fertilization and subsequent pregnancy outside the water
+
+;;Characteristics of Amniotes:
+eggs or placenta of amniotes have 6 key features
+the shell protects the egg while allowing oxygen and carbon dioxide exchange
+the albumim (egg white) gives water and protein
+the yolk is fat storage for energy supply
+the chorion surrounds the albumim and yolk and allows for respiratory exchange
+the amnion is a sack around the embryo itself that protects it from shock
+the allantois provides nitrogenous waste storage
+
+;;Evolution of Amniotes:
+ummm hmmmm
+
+;;Characteristics of Reptiles:
+reptiles scales are made of lipids and keratin, allowing them to live in dry environments, they also have eggs that they lay on land or let hatch withi themselves
+reptiles evolved around 300 million years ago
+modern reptiles are divided into four clades
+
+;;Crocodillia:
+Crocodiles, alligators, and caimans (cute "small" alligators, more curved snout structures)
+
+;;Sphenodontia:
+2 small specie in New Zealand
+
+;;Squamata:
+snakes and lizards, snakes apparently lack eyelids and external ears
+
+;;Testudines:
+Turtle
+
+;Birds:
+there are three evolutionary advances that allow for birds to fly (all weight reducing),
+first hollow bones,
+second no urinary bladder instead water in the bladder organ is reabsorbed into the bloodstream,
+third a single ovary instead of the usual two found in other amniotes
+
+;Mammals:
+mammals have mammalian glands and hair, largely divided into three clades
+
+mammal jaws are comprised of 1 bone
+mammal of the clades monotromes and eutherians have mammary glands :)
+
+mammals evolved 200 million years ago
+monotromes are the clade of mammals that lay eggs, three species exist
+marsupials are the clade of mammals that have young that are born with very undeveloped outside of the placenta and thus latch on to the parents nipple
+eutherian are the clade of mammals with a complex placenta
+
+;The Evolution of Primates:
+primates have evolved brachiation (two limbs developed for hanging from trees), stereoscopic vision (two frontal pointing eyes for depth perception), and a big
+toe, and also larger brains
+two primary orders the prosimians and the anthropoids, anthropoids have humans...
+
+yeah humans 
