@@ -53,3 +53,32 @@ City is allowed to create departments city provisions for said departments have 
 Chapter 11 Budget:
 On the 15th of August Every Year the city manager presents the budget to the council for a vote
 Council shall pass the ordinance on first read? I don't know? than it has to be presented to the public somehow
+
+Chapter 12 Pig Department:
+Sec 4 says the Chief of Police has the right to discipline police officers, this doesn't seem to be the reason
+why police are so laize-faire with how they operate that's probably due to other laws, and it seems that the police
+chief should be able to punish their employees? but also, shouldn't punishment for their actions really just go to
+criminal courts and not be at the direction of the police chief, like if they do some sort of non-violent misdemeanor
+sure the police can "punish" them by I don't know... humiliating them in the precinct? otherwise the police should
+be tried and held accountable for their actions
+
+Chapter 13 Fire-Rescue Department:
+Sec 6, says that only real-estate owners are allowed to assess something within a city... vaguely makes sense, but I don't think
+citizen rights shoudl be determined by their landownership
+
+Chapter 14 Franchises:
+City can grant any franchise except water franchieses to citizens, this means just any sort of public utilities
+can be farmed out to corporations instead
+disallows contracts for over 40 years and monopoly contracts
+again, the city of Dallas says it has the rights to fix the rates at which franchises (utility companies)
+are allowed to sell their goods
+
+Chapter 15 Planning and ZOning:
+and may from time to time modify, (what is the point of the word time to time, that seems to be a useless bit language, why not just modify)
+Sec 1.2 City manager provides or screens the plans
+Sec 2 very vaguely says ordinances may be provided to prevent slums... blight... and achieve the most appropriate use of land
+Sec 3 Zoning Commision, 15 Dallas Citizens shall be on the commission
+Sec 4 goes over very little of actual zoning, other than requiring that streets are made available to buildings, or that if someone wants to develop something
+new on old land that streets have to be designated that will go to that new development
+
+Chapter 16 Civil Service and Personnel:
