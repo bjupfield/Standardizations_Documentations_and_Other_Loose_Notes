@@ -962,7 +962,7 @@ HGT horizontal gene transfer
 genes can be transfered to organisms through non-sexual menes, they can be transfered through species by random absortion into the genetic material
 
 ||||||||||||||||||||||||||||||||||
-Biological Diversity:
+Unit 5: Biological Diversity
 
 Viruses:
 
@@ -1451,3 +1451,91 @@ toe, and also larger brains
 two primary orders the prosimians and the anthropoids, anthropoids have humans...
 
 yeah humans 
+
+||||||||||||||||||||||||||||||||||
+Unit 6: Plant Structures and Functions
+
+Plant Form and Physiology:
+
+;The Plant Body:
+the plant has two different types of tissue meristematic tissue (meristem) which is growing tissue that than turns into the second type of tissue, permanent tissue 
+there are than a host of different cell types that support the various structures, like the stems, roots, and whatnot
+
+;Stems:
+nodes are the branching intersection of a stem, internodes are the branch themselves
+apical buds are the flowers at the types of branches, auxilarry buds are the flowers branching from a main branch
+stems are comprised of three types of cells
+Parenchyma Cells -> they do photosynthesis and repair stem wounds
+Collenchyma Cells -> provide structural support, alive at plant maturity or cell use
+Sclerenchyma -> provide structural support, dead at plant maturity or cell use, full of lignon
+in plant stems there are three different tissues
+dermal -> skin tissue that i do not know what it is comprised of. it does contain gaurd cells that allow for respiration of the cells behind the dermal layer
+vascular -> this is the "bloodstream" in monocot plants it is chaotic and the artieris are randomly placed, in dicotes they form orderly rings that are recognizable as tree rings
+    they are composed of xylem, phloem, and Sclerenchyma, in that order with the sclerenchyma facing the outisde of the tree. the xylem transports water, the phloem transports other nutrients
+    and the sclerenchyma provides structure
+ground -> this seems to just be the rest of the tissue of the stem, which is mostly comprised of parenchyma cells
+
+;;Growth in Stems:
+two types, primary (upwards) and secondary (thickening)
+apparently the apical bud/stem is given the most like growth materials or something, so plants will grow in the direction of their apical bud, unless it is cut, where they will focus on other brnaches instead
+cork cells form what is known as bark on trees, which contains a chemical called suberin which is water repelleant. some cork layers contain lenticells to allow for cell respiration, but most don't
+wood rings, or tree rings, are formed during secondary growth. this occurs due to secondary growth having different conditions placed on it because of the seasons. when the tree has less energy,
+during the winter the xylem of the extending vascular tissues forms thicker walls, but during the spring and summer it forms thinner walls, which results in the visibly different wood colors
+
+;Roots:
+roots are different from stems in two ways really. first the vascular tissue is placed only at the center of the root, in both dicot and monocots (with the dicot having an x pattern at the center and moncot having a circular pattern)
+and that the endoderm/dermal layer uses suberin to only allow nutrients that the root wishes to absorb into the plant
+
+;Leaves:
+(this stuff is fun because it is giving me plant identification vocabulary)
+the flesh of a leaf or the blade is called the lamina, if it has an attaching branch that branch is called the petiole, if it does not the type of leaf is called sessile, or the plant is said to have
+a leafing type of sessile, stipules are small growth at the base of the petiole (so like just any growth that isnt the petiole at the node which it connects to the "main" branch)
+the veins that a leaf has are arranged in differnet ventation patterns based on specie
+phyllotaxy is the arrangement of leaves on the stem, one leaf per node is known as alternate or spiraled, two leaves as opposite, three or more is known as whorled
+leaves can also be classified base dof their lamina divison, if there is no division in the lamina it is known as simple, if there is it is known as compound
+;;Leaf Structure and Function:
+leaves usually have a single epidermal cell layer, but can have more to prevent water loss. the epidermal layer has gaurd cells as previously mentioned that allow for respiration. trichomes
+are the hair that some leaves have, which do things like slow air flow and water loss or deter predators. a wax called cuticle covers all leaves
+leaf body cells are are either vascular or mesophyll.
+the mesophyll is comprissed of palisade parenchyma and spongey parenchyma. palisade are the layer directly below the endoderm and are tightly packed. spongey are below the palisade and are loosely
+packed to allow gaseous exchange and respiration throuughout the leaf
+
+;Transport of Water and Solutes in Plants:
+water transport in plants is obviously completely due to pressure changes in the plant (as that's the only way to transport water [sort of]). these pressure changes are induced by the plant in two ways
+evaporation and solubility change. when chemicals are dissolved in water energy is loss in the system causing a negative pressure in the area the chemicals were dissolved due to hydrogen bonds
+evaporation causing pressure changes due to vacuums being created in cells...
+the phloem transports sucrose and other plant chemicals via a water channel, thats right, its plant sap
+
+;Plant Sensory Systems and Responses:
+wow, plants are so cool, wow, wowowwowowow,
+plants respond to light via a class of chemicals called chromoproteins, which decay into and out of Pr and Pf forms, due to the amount of red light present. this allows plants to "plan" or react to 
+the environment by detecting what time of year it is or just how much light they are getting in their environment. they can start blooming because of the time of year or they can dircet their growth
+via the indole acetic acid which allows them to gain more sunlight
+here are a list of hormones that plants use to modulate growth
+Auxins, mostly indole acetic acids are used to induce cell growth
+cytokins are used to induce cell divison
+gibberlins are used to induce seed germination
+absidic acid block seed germination
+ethylene is the gaseuous molecule that causes ripening (C2H4)
+Jasmonates are produced in response to herbivore attacks
+oligorasccharins are produced in response to fungi and bacterial attacks
+
+Soil and Plant Nutrition:
+
+;Nutritional Requirements of Plants:
+here is the list of nutrients that plants need, 
+carbon, nitrogen, oxygen, hydrogen, phosphorus, potassium, calcium, magnesium, sulfur, iron, magnanese, boron, molybdenum, copper, zinc, chlorine, nickel, cobalt, sodium, silicon
+
+;The Soil:
+soil is comprised of humus (organic material), inorganic material, water and air. non compact soil typcially contains 50% air and water(which is variable based on drought or whatever), humus
+is usually 1/9 the size of inorganic material.
+soil deposites form differently, the toplayer of soil deposite is typically very rich in humus, due to it being the top, with the progressive layers having less and less undigested organic material present
+the layer below the toplayer, refered to as horizon A usually conisst of large amounts of humus, water, and semi-weathered inorganic materials. horizon b, below horizon a, typically has sandy or finer
+inorganic materials, horzion c, the final layer is composed of completely broken down organic material and silty inorganic material
+
+;Nutritional Adaptations of Plants:
+;;Rhizobia:
+bacteria that have formed symbiotic relationships with the legume class of plants, the bacteria form around their roots and provide the plant nitrogen while the plant provides the bacteria nutrients and a place to grow,
+;;Mycorrhizae:
+fungi attach to 90% of plant root structures, and like the rhizobia of legume plants have a symbioisis with the roots to facilitate water and other nutrient absorbtion, exchange for a piece of the nutrients
+these are essential parts of any plant, if these structures are not already in the soil, than the plants will be unable to grow, or maybe they come with the seeds, i do not know actually.
