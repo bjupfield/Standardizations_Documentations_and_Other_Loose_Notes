@@ -1539,3 +1539,57 @@ bacteria that have formed symbiotic relationships with the legume class of plant
 ;;Mycorrhizae:
 fungi attach to 90% of plant root structures, and like the rhizobia of legume plants have a symbioisis with the roots to facilitate water and other nutrient absorbtion, exchange for a piece of the nutrients
 these are essential parts of any plant, if these structures are not already in the soil, than the plants will be unable to grow, or maybe they come with the seeds, i do not know actually.
+
+Plant Reproduction:
+;Reproductive Development and Structure:
+brief rediscussion of haploid and diploid lifecycle of plants, were for one "life" cycle the plants dna is of haploid type (only one chromosome strand per chromatid), where in the diploid stage
+the haploid stage provides dna from two distinct life forms to create the diploid, most diploids are more complex than their haploid half self's but a few like most mosses are not
+;;Sexual Reproduction in Angiosperms:
+angiosperms are plants with flowers, remember
+we wrote this down before but here is a basic anatomy of the flower, divided into its distinct "sections"
+flower->
+    perianth->
+        calyx-> structure which is comprised of the sepals
+            sepals-> the more fibrous sheaths of plant material that protect the flower before it buds, these are typcially green I think
+        corolla-> structure which is comprised of the petals
+            petals-> hmm I wonder what these are
+        androecium-> male reproductive structure
+            stamen-> mini flowers within a flower that produce pollen
+                filament-> stalk that holds the anther up 
+                anther-> organ that cases the microsporangium
+                    microsporangium-> thing that produces pollen the "male" genetic material
+        gynoecium-> "female" reproductive structure
+            carpel->structure wrapping the ovarys
+                ovarys->contian eggs and evenntually turn into the flesh of the fruit
+                stigma->
+                style-> 
+flowers can sometimes only include androeciumor a gynoecium, when they only include an androecium they are called staminate, while only a gynoecium they are called carpellate
+monoecious plants have both staminate and carpellate organs while dioecious flowers have only staminate or carpellate organs
+;;;sproangium:
+the sporangium works by literally exploding itself onsce the pollen inside it has fully developed
+;;;gymnosperms:
+evil pine trees polinate themselves though wind, they have no need of anything else, also they use a ery specific example of a certian pine tree so I don't know how useful this information is
+if it is useful at all even
+;Pollination and Fertilization:
+plants do try to not self-pollinate usually... as it leads to an undiverse genetic pool
+"the impact on commercial fruit growers could be devestating" #ILikeJazz
+uhhh angiosperms are pollinated by a great many different kinds of species, from bees to water...
+okay here is how a the pollen germinates the ovary and than forms a cells with the created diploid
+the pollen lands on the stigma, sort of the vagina of a plant (i think i am using that term correctly but don't know enough about animal reproduction to say if so or not). but than the pollen has two
+cells within it, a tube transport cell and the gamete itself. the tube transport cell literally creates a tube along the stigma structure untill it reaches the ovaries where it will insert or allow
+the gamete cell to fertilize the ovaries gamete cell. actually the pollen contained two sperm cells, one of these gametes binds and fertilizes the normal egg, the other fertilizes the freakish creation
+of evolution that is the polar nucelied, to create a triploid which becomes the food of its brother cell (the endosperm). the non-endosperm cell than divides itself into a suspensor cell and a pro-embryo,
+the suspensor attaches to the seed/ovary wall to provide nutrients to the devlopment of the pro-embryo which than divides into the cotyledons (or doesn't if its a monocot), and grows to fill the seed/ovary.
+once it has successfully filled its container it stops growing and waits to be disperesed
+the endosperm is utilized differently by plants
+monocots use the endosperm by absorbing releasing enzymes via the aleurone and than eating it once the seed germinates via the cotyledon
+endospermic dicotes do the same thing
+non-endospermic dicotes do a very similar thing but before the seed is done developing eat the endosperm
+fruit->
+    pericarp->whole fruit lol
+        exocarp->skin
+        mesocarp->flesh
+        endocarp->seed container section
+;Asexual Reproduction:
+plants that produce seeds without even self-feritlization are called apomixis
+dahlia, interested in this plant
