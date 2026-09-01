@@ -1593,3 +1593,44 @@ fruit->
 ;Asexual Reproduction:
 plants that produce seeds without even self-feritlization are called apomixis
 dahlia, interested in this plant
+
+||||||||||||||||||||||||||||||||||
+Unit 7: Animal Structure and Function
+
+The Animal Body: Basic Form and Structure:
+;Animal Form and Function:
+Fusiform is the name for the aerodynamic shape of most fish, which are bilaterial sea creatures usually
+apodeme's are the "tendons" of exoskeleton, ingrowths that allow for muscualar attachments to allow the creatures to move and be controlled
+multicellularlism allows for greater diffusion outside cells, due to more surface area per volume being present in multiple cells than in one mega cell
+;;Animal Bioenergetics:
+due to energy loss due to heat smaller animals need more energy proportionally to maintian their body weight, so smaller creatures typically eat more proportionally than larger creatures
+torpor, the process of reducing energy utilization during periods with low food avalability (so like hibernation and estivation)
+animals have several different cavities, but they can be divided into dorsal and ventral
+;Animal Primary Tissues:
+;;Epithelial Tissues:
+tissue that surrounds and provides protective layers to organs, it is called simple when it is a single layer or stratified when it has multiple layers
+there are several types of epithelial tissue
+squamous-> flat round and usually found in diffusing blood?
+cubodial-> cube like, usually found in filtering blood like in the kidneys
+columnar-> tubelike, used in the digestive tracks and the lungs
+transitional-> these are stratified that become stretched in the bladder untill they are almost singe layer, to hold more and more urine lol...
+;;Connective Tissues:
+uhhh like so much, to begin fibroblasts are cells that produce connective tissue
+bones are created by a collection of three cells, osteoblasts (which make bones grow and remodel them), ostecytes (which I don't know what they do), osteclasts (which break down bone matrix)
+uh bones sort of form ring of bone which rely on blood flow through their center for nutrients
+andipose are fat tissues, which store fat and help things stay warm...
+blood is also a tissue, and the blood cells are called Erythrocytes, and in mammals they have no nuclei after they are produced in the bone marrow
+;;Muscle Tissues:
+three types
+smooth -> no striations, "unvoluntary" umm they don't really say where this is located
+skelatal -> striations, "voluntary" not central nuclei
+cardiac -> straitions, central nuclei, mostly "unvoluntary"
+;;Nervous Tissues:
+neurons... very complicated strucuture... ughhhhh i guess I'll write it down...
+dendrites of one nervous cell connect to the axon of a previous neuron. the signal than travels down the axon due to I believe some sort of hydrogen exchange that is very fast
+;Homoestatis:
+apparently the contractions at childbirth are not entirely voluntary? like they are produced by a hormone called oxytocin? hmmm I don't think its entirely unvoluntary, like I can sort of tell my heart to
+beat faster or when i run or something im not not producing hormones to encourage the process.... hmmm intriquing, I think its best to go to Simone de Beoivour on this sort of thing, that our ideas of what is voluntary is in the
+end a reflection of the power structures of the day, and saying any part of the reproductive process is more voluntary than another is in the end a bit ridciulous
+ummm wonderful we are done
+
