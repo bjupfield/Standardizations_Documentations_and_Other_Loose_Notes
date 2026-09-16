@@ -1703,3 +1703,82 @@ okay the reason lipids are emulsified in the duodenum is that they will form und
 they are emulsified via bile salts which are hydrophobic and hyrophilic, like phospholipids, the small blobs are than digested by pancreatic lipase
 
 The Nervous System:
+;Neurons and Glial Cells:
+nervous system of animals varies widely, sea cucumbers have no nervous system at all, octupus and their relatives have decentralized node nervous systems, bugs have nerves pockets fully individually controlling
+their limbs, and so forth. it seems that they are implieng that a central nervous system like the one humans and all vertebrates have (remember spinal cord is in the end a part of the system containing a central nervous system)
+came about at the same time a bilateral symmetry evolution suggesting that a centralization occured due to efficiency of controling identical body parts
+;;Neurons:
+neurons have the common cell organelles that other cells have, like nuclei, mitochandria, vacuoles, golgi apparatus, and so forth, but they also have some form specific cell members
+dendrites -> where the neuron recieves chemical signals from other neurons
+axons -> the pathway to the synapse of the neuron, these can be rather long, as the neuron that communicates from toe to hip is a single neuron
+synapses/axon-terminals -> connection point from propogating neuron to recieving neuron, a synapse is the connection between an axon-terminal and a dendrite
+myelin -> axons are globed with this, and it acts as an insulator for the electrochemical signal that neurons send, this insulator is produced by glial cells
+nodes of ranvier -> hspd between myelin sheaths on the axons
+four categories of neurons
+unipolar -> single axon, only found in invetebrates (stimulates muscles, i think by themselves, freaky)
+bipolar -> single axon, single dendrite, found in retina and other locations
+multipolar -> single axon, many dendrites, most neurons are of this sort, of course most being the brain
+pseudounipolar -> single axon that branches, lots of sensory neurons on pseudounipolar
+;;Glia Cells:
+ten times as many glia cells in brain than neurons
+astrocyte glia cells provide food for neurons, prevent poisons from reaching them, and somehow modulate their function...
+satelite glia cells provede nutrients and structural support for neurons in the Pns... whatever that means
+microglia are the white blood cells of the brian
+oligodendrocytes coat the neurons with myelin, at least in the brain?
+schwann coat the neurons with myelin in the pns
+radial glia transport newly developed neurons
+ependymal glia produce cerebrospinal fluid, the suspension of the brain
+;How Neurons Communicate:
+neurons have a resting negative potential of around 70millivolts, which is caused by the chemical concentration gradient difference between the inside and outside of teh neuron, the inside has more
+K+ than the outside, which causes a negative electric difference
+due to neurochemical transmitting chemical NA+ molecule gates open in the cell membrane which causes the chemical gradient within the cell to equalize, which causes the inner-neuron cell to begin to transmit through the axon
+the signal (which is a depolarized one, so sort of a lack of energy is the signal that transmits through neurons strangely) travels through the myelin covered axon, and is recharged at the nodes 
+of ranvier, where more gates open and further neutralize the charge to propogate the signal
+the signals once they reach the axon-terminal is than propogated either to another neuron's axon-terminal or dendrite. it does this by emmiting neurochemical transmitters via attaching previously created vacuoles 
+full of these chemicals to the membrane of the axon-terminal and releasing them to the outside where they travel to other neurons and attach to gates at these neurons to either inhibit the opening of the gates
+or promote the opening of the gate, depending on what sort of neurochemical transmitter they are
+there are some neurons that are directly connected to other neurons, so they do not use neurochemical transmission but directly transmit the chemical signal through gates that they are connected to the
+other neuron through
+multiple neurons are connected to single neurons, so to actually propogate the signal the total signals from all connected neurons must be enough to overcome the action potential and cause a chemical equalization within the neuron
+;;Synaptic Plasticity:
+Long-Term Potentation occurs due to magnesium ions like changing the structure of a neuron somehow (literally not understood how) to make it more likely to fire (pass the neuron signal), usually more gates to allow cations (CA+) in are added
+Long-Term Depression occurs due to something (doesn't say) but basically gates are taken away instead of added, decreasing the likelyhood of the neuron activation
+;The Central Nervous System:
+the brain has fourish wrappings collectively called the
+meninges
+    dura matter -> transports blood to the brian and provides a thick cushioning
+    arachnoid mater -> i don't know, spiderlike though
+    cerebrospinal fluid -> cushioning for our beautiful brain, also provides the cation and ions i think
+    pia mater -> holds the cerebropsinal fluid back
+;;Brain
+;;;Cerebral Cortex
+the cerebral cortex i think contains most of what people thinkof when they think of the brain, it is the big mass of flesh that surrounds the brain stem really
+it is divided into fourish sections for our identification purposes, although different functions of the brain operate in all four section usually
+frontal lobe -> the front of the brain, directly above the eyes, handles motor control and "decision" making
+parietal lobe -> above the temporal lobe and behind the frontal lobe, the front handles touch sensations (pressure, heat, pain) the back handles dimesnional perception/orientation the ability to place oneself in the 3dimensional world
+temporal lobe -> behind the frontal lobe and below the parietal lobe, contains the hiccocampus (Memory map) and handles hearing
+occipital lobe -> behind both the temproal and frontal lobe, above the cerrebelum, handles sight perception
+;;;Basal Ganglia:
+this is the interconnection between brain regions, and apparently handles motivation
+;;;Thalamus:
+connection between cortex and brain stem, communication channel between "brain" and sensations
+;;;Hypothalamus:
+located directly below the thalamus, this controls hormone levels and moderates body temperature, food desire, water desire and other things
+;;;Limbic System:
+somehow related to emotions, important section is the amygadala which controls fear. the system is spread across the thalamuses and the hippocampus
+;;;Cerebellum:
+Controls balance and learning new motor skills
+;;;Brainstem:
+what do you think chief
+;;Spinal Cord:
+yeah, these cells don't regenerate so try not to break them, obvsiously they attach to the peripheral nervous system to communicate with the rest of the body, continueing the work of the brainstem
+;The Peripheral Nervous System:
+two sections
+;;Automatic Nervous System:
+controls heart and internal organs, regulates them automatically so we don't have to, work my little machines
+;;Sensory-Somatic Nervous System:
+controls muscles and sensory organs
+;Nervous System Disorders:
+their bad and mean don't get them...
+
+Sensory Systems:
