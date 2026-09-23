@@ -1758,6 +1758,7 @@ frontal lobe -> the front of the brain, directly above the eyes, handles motor c
 parietal lobe -> above the temporal lobe and behind the frontal lobe, the front handles touch sensations (pressure, heat, pain) the back handles dimesnional perception/orientation the ability to place oneself in the 3dimensional world
 temporal lobe -> behind the frontal lobe and below the parietal lobe, contains the hiccocampus (Memory map) and handles hearing
 occipital lobe -> behind both the temproal and frontal lobe, above the cerrebelum, handles sight perception
+the peaks in brain matter are called gyri while the maximum depressions are called sulci
 ;;;Basal Ganglia:
 this is the interconnection between brain regions, and apparently handles motivation
 ;;;Thalamus:
@@ -1781,4 +1782,65 @@ controls muscles and sensory organs
 ;Nervous System Disorders:
 their bad and mean don't get them...
 
+
 Sensory Systems:
+;Sensory Processes:
+humans have the five common known senses, vision, hearing, taste, smell, and (?)equilibrium(?) but there are other sense a well, ones
+that we don't physically notice, which they list as Vestibular (physical oritentation), proprioception (muscles, joints, bones), and kinesthesia (limb movement)
+sensing things is either done with a special cell connected to a neuron, or kjust a plain neuron
+for touch sensation the neurons are usually activated by compression of the neuron physically or decompression, as when the neuron is compressed or decompressed
+the dendrite will be further away from the axon which creates a neruochemical differential that might activate the neurons gate, creating the signal
+they also work by physically opening the channels in the cell membrane, which is also very cool
+apparently the smell sensations are not sent through the brainstem..., all other senstations signals go through tthe brain steam to the thalamus, and than to their respecitve areas in the cortex
+;;Somatosensation:
+;;;Mechanoreceptors:
+there are like 5 types of mechanoreceptors which detect "touch" perceptions
+merkel's disk -> disk like detect, touching bottom of epidermis (skin), light touch the best, most densely populated at finger tips
+meissner's corpuscles -> cylinder like, touching bottom of epidermis, fine touch and pressure, most densely found at finger tips
+ruuffini endings -> no shape given, in dermis, these detect heat, skin stretch, and joint deformation
+Pacinian capsules -> no shape given, deep in dermis and other organs, detect vibrations and pressure
+Krause Corpsucles -> bulb like, found in genetalia, detect sex
+heres some more weird ones
+muscle spindeles -> streatch receptors, found in muscles
+baroreceptors -> found in arteries and the lung, monitor pressure
+the skin is thicker on the hands and the lips (both of them) than other areas, a large part of this is due to the 
+;;;Thermoreception:
+temperature receptions are conducted ont he same nerve paths as pain, so when temperature gets to "intense" it feels like pain
+;;;Nociception:
+um yeah pain, they don't really say anything other than pain
+;;Taste and Smell:
+we have 350 olfactory receptors that allow us to detect 10,000 different smells, other animals have many more
+the way things are smelled is the chemicals are dissolved in the olfactory epithelium (nose mucuse) and are than different chemicals will open ion gates in the dendrites of the olfactory bulb, which is comprised of around 12 million neurons in humans, bloodhounds
+have around 4 billion neurons in the olfactory bulb
+taste is very similar to smell, except its on the tongue and in distributed bulb networks with eight taste cells in each bulb. each bulb taste a specific chemical group, like salty or whatever
+;Hearing and Vestibular Sensation:
+ears, their made of these parts
+ears ->
+    pinna -> outer cartiledge
+    tympanum -> diaphragm that pinna transfers sound too
+    malleus -> bone that transfer sound from tympanum to the incus
+    incus -> bone that transfers sound from malleus to stapes
+    stapes -> bone that transfer sound from incus to oval window
+    oval window -> fleshy connected section that transfer sound to the cochlea
+    cochlea -> viscous wet sack that hodls the basilar membrane which are the collection of mechanoreceptors that detect sound
+okay apparently hearing aids arent little speakers in the ear, but they are literal electrical signals directly to the nervous system, very cool, I didnt know
+the cochlea operates in a spiral tube, in this spiral tube are the where a basilear membrane is present that has hair attaceh dto it, which than sense movements in this spiral place and send the signal to the brain
+there are around 12000 of these hairs
+the ears also handle gravity, through many more hairs, with some in a chamber that allows them to always be pulled down to to calcium carbonate at their tipes, and others in gelatin that allows them to detect ear tilt, so to determine if the head is being rotated or the 
+creature is falling to their death
+;;Vision:
+the eye is comprised of
+eye
+    cornea -> transparent skin of eye
+    iris -> muscles that restrict amount of light into or out of the eye (it contracts or expands the pupil)
+    lens -> convex lens that refracts light onto cornea
+    retina -> bundle of nerves that detects light (like the cones and rods)
+rods detect dim light, cones intense light
+rhodopsin is the main photopigment, which deforms based on light wavelength which than is detected by cells whic open their ion channels to send signals to the brain
+there are three cone types in humans,
+s cones -> 380-420nm
+m cones -> 420-530nm
+l cones -> 530-740nm
+the actual processing of visual information is to complicated, they don't really say that much about it
+
+The Endocrine System:
