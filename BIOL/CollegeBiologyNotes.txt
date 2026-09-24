@@ -1844,3 +1844,35 @@ l cones -> 530-740nm
 the actual processing of visual information is to complicated, they don't really say that much about it
 
 The Endocrine System:
+hormone production and use in the body
+;Types of Hormones:
+there are apparently 3 types of hormones, or three classes not like actually 3 types, these types are lipid, amino acid, and peptide, and they are all based on how these hormones are derived
+or rather how they are produced in the body
+;;Lipid-Derived Hormones:
+Derived from cholesterol, the sex hormones, estradiol, and testosterone are all derived from cholesterol, so I guess I should probably practice attempting to decrease my own cholesterol intake,
+probably should ask a professional before I do anything so vulgar though
+;;Amino Acid-Derived Hormones:
+these are produced from tyrosine and tryptophan, the thyroid and other glands use this hormone
+;;Peptide Hormones:
+I think the greatest variety of hormones exist in this category, but i do not know if the physical amount present/produced in the body is larger than the other categories, anyways, these hormones
+can't pass through cell membranes, so their receptors are on the outside of cells
+;How Hormones Work:
+Um they work by binding to hormone receptors in cells, which than changes the physiology of said cells to do something else or something, lol I'm sure it will get a bit more extenseive
+uhh they say more in this section, but not enough to be actually useful, also I'm not too interested in cell biology
+;Regulation of Body Processes:
+the hypothalamus regulates and detects water levels in the body through hormones. osmoreceptors on the outershell of the hypothalamus neurons are activated by electrolytes in the blood,
+receptors than activate the production of antidiuretic hormone, which than regulates the water reabsorbtion by the kidneys, allowing the body to either retain more water or retain less, regulating
+water density
+Insulin is a hormone produced by the beta cells of the pancreas. insulin just tells cells to eat more glucose, also tells liver to convert glucose into glycogen
+low blood-sugar levels (low glucogen levels in the blood because our cells are feasting too much) causes the pancreas to release glucagon, which encourages the liver and skeleton to break
+down stored glycogen into glucose
+the thyroid apparently regulates overall metabolism, although I am unsure how, but it is done with the horomones thyroxine and triiodothyronine, and when these hormones are unable to be produced
+due to a lack of iodine intake the thyroid enlarges into a goiter, which is common in countries without proper iodine intake
+the parathyroid, a gland located just above the collarbone in the neck, below the thyroid, regulates calcium levels in the blood through the apply named parathyroid hormone
+stress hormones (or flight-or-fight) are regulated also by the hypothalamus, much like water levels. the hypothalamus regulates stress in two ways. in the short term it tells the adrenal cortex
+to release epinephrine and norepinephrine which tell the heart to pump more blood and also increase the glucose availability in said blood by telling the liver and skeleton to break down glycogen storage
+for long term response it also tells the adrenal gland, which by the way is near the fornt of the brain sort of in front the cerebellum, whcih than releases corticosoids which are a category of hormones
+that affect the long term strategy of cells via activating certian dna chains. the main corticosoids is cortisol which causes the breakdown of fat in andipose tissue and releases this, why do people
+dislike high cortisol than wouldn't that very brief summary of its actions mean that its good than
+;Regulation of Hormone Production:
+there are actually very few hormone produces in the human body... very cool
