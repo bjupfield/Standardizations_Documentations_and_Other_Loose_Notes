@@ -1979,3 +1979,32 @@ legs ->
             intermeditate phalages -> intermediate phalanx x (2 -5 pointer finger is intermediate phalange 2, thumb does not possess intermediatate phalanx)
             proximal phalanges -> proximal phalanx x (1-5, thumb is proximal phalanx 1)
 ;Bone:
+"bone" is created through the calcification which is the deposite of mineral salts into the collagen matrix of bones
+two types of bone tissue compact and spongey
+compact has cylindrical sections named osteons which are just calcified bones. also they contian haversian channels which have nerves and transport blood
+spongey bones are not like this, but I am unsure how
+bone matter is replaced at a rate of 5-7% a week
+;Joints and Skeletal Movement:
+three types of joints
+;;Fibrous Joints:
+all fibrous joints make the bones physically tough each other, and prevent almost all movement or seperation, they essentially glue bones together
+three types of fibrous joints, sutures (only found in the skull), syndesomes allow for more movement an example being the talus connection to the tibia, gomphosomes are the joints between the teeth and bone socket
+;;Cartilaginous Joints:
+bones connected via cartilage (like the ribs and sternum?)
+synchondrosis is cartilage joints are found in children but only symphases occur in adults
+;;Synovial Joints:
+synovial joints have synovial fluid in between the bones, and the bones do not actually touch. these are the joints that are typically thought of as joints on the human body
+;Muscle Contractions and Locomotion:
+three types of muscles skeletal, smooth, and cardiac
+cardiac only occurs in the heart, and is comprised of short and branched cells
+smooth occurs in other internal organs and are comprised of short tapered cells
+skeletal muscles are the muscle that we consider to be muscle, the muscle that we can control and that controls locomotion in the body
+okay I had to look this up, because the book is a bit poorly written in this section, but apparently muscle cells are primarily comprised of structures called myofibrils, which are tubelike structures
+comprised of thin and thick muscle fibers
+be warned I am not entirely sure whether myofibrils are as long as the muscle cell itself, I looked at wikipedia and a couple sites but could not find a satisfactory answer
+anyway these myofibrils are pretty much the whole cell and run parallel to the cell wall.
+the way the muscle forces movement is through the two different fibers, thick and thin
+the thin fibers are primarily composed of actin
+the thick fibers are primarily composed of myosin
+the mysoin (thick) fiber recieves Ca2+ ions which cause an actin binding site to open, this causes the thick fiber to grab onto the thin fiber and pull them closer to itself, it than relaxes with the
+presence of atp which breaks down and binds to the actin binding site instead
