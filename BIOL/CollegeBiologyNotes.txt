@@ -1876,3 +1876,106 @@ that affect the long term strategy of cells via activating certian dna chains. t
 dislike high cortisol than wouldn't that very brief summary of its actions mean that its good than
 ;Regulation of Hormone Production:
 there are actually very few hormone produces in the human body... very cool
+
+The Musculoskeletal System:
+;Types of Skeletal Systems:
+worms and starfish have a semi-skeletal system that operates by creating pressure changes in organs called coelems, that than propel creature forward
+exoskeleton,made of chitin, which is made of glucose, also in some creatures calcium carbonate is added
+endoskeleton
+Human skeleton is divided into two sections, the axial section and the appendicular skeleton
+;;Axial Human Skeleton:
+;;;skull:
+contains the skull, the ossicles (ear bones), the hyoid bone, the vetebral column, and the thoracic cage (ribcage)
+the skull consist of 22 bones, 8 which form the cranial cavity and the other 14 which or the facial bones.
+cranial ->
+    occipital -> absolute back of the skull sort of surrounds the cerebellum, connects to two temporal bones, two parietal bones, and the sphenoid
+    2 parietal -> behind the forehead above the occipital and temporal (ear bones), connect to each other, each sides temporal bones, the sphenoid bone, the occipital bone, and the frontal bone
+    frontal -> forehead bone top of eye sockets, connects to the sphenoid, the ethnoid, and the two parietal
+    2 temporal -> ears or the area around them, connects to occipital, the sphenoid bone, and the corresponding parietal bone
+    sphenoid bone -> the connecting bone of all bones, situated behind the eye sockets it sort of connects the bones together, its connected to all of them
+    ethmoid bone -> directly below sphenoid and frontal and behind nose, connects to sphenoid and frontal
+facial ->
+    2 nasal bones -> these form the ridge of the nose yes theres two of them split in the middle of course, connected to frontal and ethmoid, nasal and maxilla
+    2 maxillary bone -> from the base of the nose to the lower eye socket to the upper jaw split in the middle are these two bones, connected to the frontal ethmoid, nasal zygomatic lacrimal palantine and vomer and inferior nasal concha
+    2 zygomatic bones -> lower outer corner third of eye socket and checkbone, connected to frontal sphenoid respective temporal, and respective maxilarry bone
+    2 palatine bones -> lower floor of eye socket and roof of mouth, connected to sphenoid and ethmoid, respective maxillary bone inferior nasal conch and vomer
+    vomer bone -> lower surface of nasal cavity (ethmoid is upper surface), connected to sphenoid and ethmoid, both palatine and both maxilarry bones
+    2 lacrimal bones -> these dont form the eye socket but they are sort of layed on the maxilla bones and help with the tear ducts, connected to frontal ethmoid, respective maxillary and respecitve inferior nasal conch
+    2 inferior nasal concha -> walls of nasal cavity, attached to ethmoid, respecive maxillary lacrimal palantine 
+    mandible -> jaw, connected to temporal bones
+hyoid bone is an uncconnected bone unde the tongue, it allows crazy tongue movements
+;;;oscicles:
+kind of already went over this in the sensory system,
+ear is comprised of malleus, incus, and stapes
+;;;Vertebral column:
+adults have 26, start with 33 but some fuse. divided into 3ish sections with the sacrum and conyx bones being on the end
+each vetebra has a disk in between each called the intervertebral disk that is made of cartilage that assist with shock absorbtion and movement 
+the first 7 vertebra are part of the cervical curve and are labeled Cx (1-7)
+vetebra 8-20 are part of the thoracic curve and are labeled Tx (1-12)
+vetebra 21-25 are part of the lumbar curve and are labeled Lx (1-5)
+the last two vetebra  are the sacrum and the conyx with the conyx being the tailbone
+;;;Thoracic Cage:
+the ribcage is formed from "costal" cartilage that connects the ribs which protrude from the thoracic vetebra (2 each, 24 ribs, 12 pairs) to the sternum
+the sternum is not connected to any vertebra, but instead forms a newish structure that supports the rest of the body
+only 22 of the ribs attach to the sternum with the top 5 having their own cotasl cartilage conneections but the bottom five all connecting via 1 cartilage to to two locations on the sternum
+tried to feel myself out on the ribs, but I couldn't Im too fat?
+;;Human Appendicular Skeleton:
+this is the rest of the bones, divided into two sections, pectoral girdle and pelvic girdle, each the two major "collar" bones
+;;;pectoral girdle:
+the pectoral girdle attaches the arms to the sternum, the 4 bones are
+pectoral ->
+    2 clavicles -> collarbones which attach to the sternum in a joint covered with cartilage and muscle and also attaches to the scapula
+    2 scapula -> shoulder blade, yes that is appararently 1 bone, which attaches to the clavicles and also to the humerus, the middle of the scapula can be so thin as to be transparent, wikipedia has like 3 different pictures and they all are varyingly transclucent, and yes this connects to the clavicle and the humerus
+the upper limb (arm) has 30 bones and connects to the scapula of course, also like the scapula there are two of them (oh also i guess techincally the arm is only comprsised of the humerus and the forearm is the next section of the limb, but I believe modern language refers to the arm as the whole limb so i will use the two interchangably in a hopefully understandable manner)
+2 arms ->
+    arm ->
+        humerus -> only bone in the arm (section from shoulder to elbow), connects to scapula, and radius and ulna
+    forearm ->
+        radius ->  connects to humerus and to the carpus, which i believe is like the wrist bone section thing
+        ulna -> runs full length of forearm connectsto humerus, and than connects to the distal radius which which is on the "pinky side of the hand" of the wrist, 
+            this bone forms the pinky side ridge on the hair side of the fararm attaching to the wrist, whcih is formed because of the triangular articular disk
+    hand ->
+        carpus -> wrist bone collectino thing, 8 bones, 3 "columns" of bones, two "rows" 4 bones in second row attaching to metacarpus (4th finger/3rd thumb bones)
+            Radial Scaphoid Column -> connects to thumb and pointer finger
+                scaphoid -> "innermost" first row bone connected to all its surrounding bones but positionally below the thumb in the wrist and connected to the radius directly
+                trapezium -> "innermost" second row bone connects the scaphoid bone to the thumbs metacarpus bone, so connects the thumb to the hand
+                trapezoid -> 2nd "innermost" second row bone connects the scaphoid bone to the pointer fingers metacarpus connecting the pointer finger to the arm
+            Lunate Column -> connects middle finger
+                lunate -> center first row bone connected to radius and to its column mate capitate
+                capitate -> center 2nd "outermost" 2nd row bone connected to the metacarpus of the middle finger and the lunate bone, connecting the middle finger to the hand
+            Ulnar Triquetral Column -> connects ring and pinky fingers
+                triquetrum -> "outermost" 1st row bone connects to the triangular fibocartilage disc which than connects to the ulna and connects to the hamate
+                hamate -> "outermost" 2nd row boneconnects to triquetrum and ring and pinky finger metacarpum bones, connecting both these fingers to the hand, because both of thes connect to the same second second row bone this is why they are hard to move seperately
+        metacarpus -> palm, 5 bones, each ligament has its own attaching bone, that really looks like a continuation of the phalanges, 
+            metacarpal x (1-5, thumb metacarpal is metacarpal 1)
+        phalanges -> fingers, 14 bones
+            distal phalanges -> distal phalanx x (1-5, thumb is distal phalange 1)
+            intermeditate phalages -> intermediate phalanx x (2 -5 pointer finger is intermediate phalange 2, thumb does not possess intermediatate phalanx)
+            proximal phalanges -> proximal phalanx x (1-5, thumb is proximal phalanx 1)
+;;;pelvic girdle:
+pelvic ->
+    2 coxal bones -> hip bones, attach to the sacrum and femur
+legs ->
+    thigh ->
+        femur -> only bone in thigh, attaches to corresponding coxal bone and patella (kneecap) and tibia (shinbone)
+        patella -> kneecap (including in thigh i guess), connects to femur and tibia
+    shin ->
+        tibia -> actually bear weight unlike its sibling the fibula who is uselss, attaches to patella femur and tarsals
+        fibula -> this bone is used for muscle attachments only
+    foot ->
+        tarsals -> wrist of foot only 7 bones, unlike the carpus, these are completely unlike the hand carpus actually, completely different which is cool and makes a lot of sense, incredible that people can "walk" on their hands without them exploding into dust now that I think about it
+            talus -> connected to both the tibia and fibula, this is the ankle bone and it is the toughest 1, connected to the calcuneus and the navicular bone
+            calcuneus -> heel bone, this supports the weight of the foot at the back, connected to the talus
+            navicular bone -> upper arch of foot, connects with talus and cunieform bones and cuboid bone
+            cunieform bones -> 3 bones that connect the middle to large toe metatarals to the navicular
+                medial bone -> connects large toe metatataral to navicular bone
+                intermediary -> connects second largest toe metataral to navicular bone
+                lateral -> connects third largest metataral to navicular bone
+            cuboid bone -> connects the pinky and ring toe metatartals to the navicular
+        metatarals -> foot "palm" 5 bones
+            metataral x (1-5, thumb metacarpal is metataral 1)
+        phalanges -> toes 14 bones
+            distal phalanges -> distal phalanx x (1-5, thumb is distal phalange 1)
+            intermeditate phalages -> intermediate phalanx x (2 -5 pointer finger is intermediate phalange 2, thumb does not possess intermediatate phalanx)
+            proximal phalanges -> proximal phalanx x (1-5, thumb is proximal phalanx 1)
+;Bone:
