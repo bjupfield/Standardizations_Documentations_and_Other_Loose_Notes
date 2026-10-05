@@ -2008,3 +2008,68 @@ the thin fibers are primarily composed of actin
 the thick fibers are primarily composed of myosin
 the mysoin (thick) fiber recieves Ca2+ ions which cause an actin binding site to open, this causes the thick fiber to grab onto the thin fiber and pull them closer to itself, it than relaxes with the
 presence of atp which breaks down and binds to the actin binding site instead
+
+The Respiratory System:
+;Systems of Gas Exchange:
+Animals like flatworms and cniderians use direct diffusion, which is letting cells directly take oxygen by being placed in contact with it
+Amphibians use their skin, which acts a semi-permeable layer that has capillaries directly below that work through the principle of diffusion from an area with a higher concentration to a lesser
+in fish and other gilled creatures the gills work in the same manner
+insects use something similar to flatworms and cniderians, they have channels that directly allows air into their bodies, called spiracles, and than this air direclty diffuses into cells
+mammals, like fish are complicated
+;;Mammalian Respiratory System:
+the mammalian respiratory system begins at the nostril where mucus begins to filter and moisturize the air that enters the lungs. it than enters the pharynx, than the larynx, and finally into the
+trachea, which is a composite muscle comprised of cartilage and smooth muscle, which allows it to contract and be able to cough
+the trachea divides into the two lungs, become multifaceted with many bronchiole (the paths of the trachea that divide to attach to different areas in the lungs)
+the lungs are actually not identical, the right lung is larger. i lied, the bronchiole do not like attach to the lungs that than actually diffuse the oxygen, no the bronchiole turn into 
+over 50 million terminal bronchiole, which than have alvelor sacs attached to their ends, where the "direct diffusion" occurs between blood and air. this is what the lungs are comprised of, 100s of millions
+of these alveoli that each tranfuse blood directly with air
+;;Proctetive Mechanism:
+cilia (which exist in the bronchiole and bronchi of the trachea) and mucus both protect the lungs from particulants and bacteria, mucus through a sticky dissolvant, cillia through physically moving
+particulants and bacteria out of the trachea, by beating "in unison"
+;Gas Exchange Across Respiratoy Surfaces:
+Adult males usually breath in .5 liters per breath (which is called the tidal volume)
+;Breathing:
+I really am having difficulty concentrating on anything in life
+;Transport of Gases in Human Bodily Fluids:
+um hemoglobin
+interestingly hemoglobin can both transport oxygen and carbon dioxie, although it transports much more oxygen. 4 oxygen can be carried by an individual hemoglobin, but they are much more likely to 
+carry two or three. only 1 carbon dioxide can bind to hemoglobin, while hemoglobin carries 80-95% of the oxygen in the blood, in only carries 5-10% of the carbon dioxide. carbon dioxide is instead
+removed and expelled from the syetem via carbonic andryhase which metablosises carbon dioxide into h+ and H2C03 (carbonic acid), which is than transported to the lungs where h+ is released from hemoglobin,
+which rebinds to the carbonic acid and than is diffused out of the lungs
+yaaaah. done for now...
+
+Osmotic Regulation and Excretion:
+;Osmoregulation and Osmotic Balance:
+osmosis is the transfer of water between membranes to reach an equilibrium between said membranes, this can either be caused by a difference in water density or a difference in salt (which require different amount of water densities) density
+across the membrane
+Sodium Chloride dissassociates in water, becoming NA+ and Cl-, I assume NA+ attaches to the hydrogen atoms of the water molecule and Cl- attaches to the oxygen molecules, as the oxygen has more of the 
+electrons... sort of
+the ions important to our bodily fluids (blood plasma and intercellular fluids) are potassium, calcium, magnesium, sodium, and chlorine 
+electrolytes are molecules that dissassociate in water, this include sodium chloride, bicarbonate, and phosphate
+the osmotic pressure, or osmoticly perfect water salt balance is determineed by the amount of free floating electrons attached to electrolytes, and this is measured by a term called
+millomoleequivalents which is the amount of millimoles of a electrolyte present in a liter of water times the amount of "freeish" electrons attached to the electrolyte
+fish that can survive in both saltwater and freshwater environments do this by heavily excreting either salts or water out of their systems in the respective environment
+;The Kidneys and Osmoregulatory Organs:
+;;Kidneys:
+Kidneys filter most of the blood, and use 25% of the bodies oxygen in the process
+okay kidneys are complicated and I will try to explain them but will probably fail. there are two regions of the kidney that are used for osmoregulation, these regions are the renal medulla
+and renal cortex, the renal medulla is high in salts concentration, while teh renal cortex is not as high. these region form 9 (usually) different pyramids called renal pyramids with the medulla
+surrounded by the cortex. this structure is surrounded by the protective cells of first the renal fascia and than the perineral fat capsule. blood enters through the renal artery and leaves through
+the renal vein. urine is excreted through the ureter. 
+the kidneys operate through filtering structures called nephrons which are located in both the renal medulla and renal cortex. the structre begines with a renal artery attaching a capillary to the
+glomerulus located in the renal medulla, which filters out most salts due to high blood pressure and a very permeable membrane. these salts than flow down the renal tubule, which is surrounded by
+a vein mesh filled with blood exiting from the glomerulus (so this blood has very little salts). first the renal tube briefly exits the medulla where the cortex adds ammonia to it to increase its
+ph to allow for the reabsorbtion fo the good salts, and filters out the toxins, somehow. than it descends back into the medulla where it absorbs some more water?, which it than continues on
+where it allows the surrounding capillaries to absorb more salts due to the higher water concentration in the renal tube. any leftover salts than go to the collecting ducts, where they are excreted
+via the ureter to exit the body
+;Excretion Systems:
+three primitive osmoregulation organs (not in mammals or more "complex" animals)
+Contractile Vacuoles -> single cellular, and multi-cellular, organisms sometimes use vacuoles to just throw waste outside of their cells
+Flame Cells -> Cells that look like a candle wick that just shoots waste matter out of their system, using a system of tubes and flame cells to transport waste all over the body
+Malphigian Tubules -> some insects use these, its a tube along the intestinal lining that absorbs waste matter both from blood and all other intercellular fluid, and than directly filters it to the intestine, which further filters the waste
+;Nitrogenous Waste:
+ammonia must be taken out of the body system. this is done in humans by converting it to urea and excreting it, the conversion from ammonia to urea cost one atp. in birds they form uric acid instead,
+which is a white powder, the reason why bird excrement is white
+umm  thats all folks
+
+The Immune System:
