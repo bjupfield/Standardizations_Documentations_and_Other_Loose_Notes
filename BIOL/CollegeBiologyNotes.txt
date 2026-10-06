@@ -2073,3 +2073,33 @@ which is a white powder, the reason why bird excrement is white
 umm  thats all folks
 
 The Immune System:
+;The Innate Immune Response:
+physical barriers like skin are a large part of the immune system, both physically and effectively, hmmm, hmmmm, hmmm
+this is complicated, i guess the main way that the body recognizes that a virus or bacteria has entered the blood stream and what to target is through the obvious only way they could, a 
+pathogen-associated molecular patterns (or how cells that are not part of the body have different signal receptors on their cell walls) and this is done through the bodies macrophages which 
+use pattern recognition receptors, things that recogniz these different signal receptors on the outside of enemy cells there  is a wonderful list of said cells that help with the indentification and
+removal on page (1245/297)
+cytokines are the chemicals that macrophages emit to tell other macrophages that an infection is present and an immune system response needs to occur
+cytokines can also tell normal cells to adjust their physiology to do things like not produce as many proteins, which a type of cytokin called an interferon does
+immune system cells are called leukocytes, and numerous are needed to defend against infections
+macrophages and dendritic cells both eat debris released from infectious growth and the infectious growth itself, neutrophils and eosinophils both also kill local infections
+mast cells and basophils both produce hormones and cytokins that encourage a further immune response
+Lymphocytes are leukocytes that have extremely large nuclei, T cells are lymphocytes that mature in the thymus gland and B cells are lymphocytes that mature in the bone marrow
+lymphocytes identify cells infected cells based of the deterioration of the major histocompatability class molecules 1, there are class 2 molecules that tell the t cells to release certain cytokines
+lymphocytes kill cells by the release of perforin and granzyme, the first creates a hole within the cell wall, the second digest cell proteins
+;Adaptive Immune Response:
+the adaptive immune system is a less immediate response that responds to specific pathogens that have grown too powerful within the body
+it seems to be primarily activated through the humoral immune response which is carried out by the B-Cells
+antigens are non cell material that flow through fluid systems to help with responses to pathogens... I think
+cells present antigens on tehir surface to indicate to other cells that an immune response vs a specific type of invading cell is necessary
+t helper cells do two things, one group produces inflamattory cytokins, while another produces antibodies to identify bacteria
+memory cells are leukocytes that do not react to new pathogens but only hold antigens that work against a specific pathogen that has already been encountered, allowing quick response to previously
+encountered infections
+uhh I guess Lymph Nodes, are little section of immune response filtering areas in the body, they appear to work similar to the blood stream, okay what lymph is a fluid that is supplied to organs,
+lymph node filters this fluid for infections, I don't think this includes blood but i think it is more intercellular fluid present in organs, so like if lymph was drained through the lymph nodes than
+the organs would be dried of fluid and the cells would gradually become husk with no fluid
+;Antibodies:
+;Disruptions in the Immune System:
+I cannot be asked to read more of this
+
+Animal Reproduction and Development:
